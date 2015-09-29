@@ -1,6 +1,7 @@
 <?php
 
 function wpbootstrap_scripts_with_jquery(){
+	//CDN and non CDN scripts MUST hace different names.
 	$scripts_CDN = array(
 		'script0' => 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js',
 		'script1' => 'https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js',
@@ -12,13 +13,15 @@ function wpbootstrap_scripts_with_jquery(){
 		wp_enqueue_script( $key );
 	}
 
-	/*$scripts = array(
-		'script0' => '/js/jquery.matchHeight-min.js'
+	$scripts = array(
+		'scriptA' => '/js/init.js',
+		'scriptB' => '/js/menuFixed.js'
 		);
 	foreach( $scripts as $key=>$sc ){
 		wp_register_script( $key , get_template_directory_uri() . $sc , array('jquery'));
 		wp_enqueue_script( $key );
-	}*/
+	}
+
 }
 add_action( 'wp_enqueue_scripts' , 'wpbootstrap_scripts_with_jquery' );
 
