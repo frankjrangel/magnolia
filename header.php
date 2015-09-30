@@ -27,34 +27,36 @@
     </a>
   </div>
 
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="menu">
+  <div id="nav-wrapper">
+    <nav class="navbar navbar-default">
 
-        <div class="menu-items">
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="collapse navbar-collapse" id="collapse-menu">
-                <ul class="nav navbar-nav">
-                    <?php wp_list_pages(array(
-                      'title_li' => ''
-                    )); ?>
-                </ul>
-              </div><!-- collapse -->
+        <div class="menu">
+
+          <div class="menu-items">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="collapse navbar-collapse" id="collapse-menu">
+                  <ul class="nav navbar-nav">
+                      <?php wp_list_pages(array(
+                        'title_li' => ''
+                      )); ?>
+                  </ul>
+                </div><!-- collapse -->
+              </div>
             </div>
           </div>
-        </div>
 
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu">
-          <span class="sr-only">toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu">
+            <span class="sr-only">toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 
-      </div>
-    </div><!-- container -->
+        </div><!-- menu -->
 
-  </nav>
+    </nav>
+  </div>
+
 
   <div class="container content">
