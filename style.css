@@ -7,13 +7,21 @@ Description: Tema personalizado de wordpress con catalogo de compra para Magnoli
 Version: 1.0
 */
 body {
+  background-image: url(assets/img/fondo_turquesa.png);
+  background-size: 36px 54px;
   background-color: #48968f;
+  background-position: center;
   padding: 5px 15px 50px 15px; }
 
+#nav-wrapper {
+  position: relative; }
+
 .content {
+  background-image: url(assets/img/fondo_amarillo.png);
+  background-position: center;
   background-color: #fff8e9;
   background-origin: content-box;
-  padding-top: 246px; }
+  padding-top: 219px; }
 
 .banda-logo {
   background-color: #cac1b0;
@@ -21,7 +29,14 @@ body {
   top: 35px;
   right: 0;
   left: 0;
-  height: 132px; }
+  height: 105px; }
+
+.brand {
+  max-width: 100%;
+  padding: 0; }
+
+.brand img {
+  max-width: 150px; }
 
 .navbar,
 .navbar-default,
@@ -34,15 +49,16 @@ body {
   z-index: 1031; }
 
 .navbar {
-  position: relative;
-  top: 202px;
+  position: absolute;
+  top: 175px;
+  padding-top: 10px;
   right: 0;
   left: 0;
   border: 0; }
 
-.fixed {
+.navbar.fixed {
   position: fixed;
-  top: 10px;
+  top: 0;
   left: 15px;
   right: 15px; }
 
@@ -57,6 +73,29 @@ body {
 
 .navbar-collapse {
   padding: 0; }
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.navbar a {
+  display: block;
+  text-decoration: none; }
+
+.navbar-default {
+  border: 0; }
+
+.navbar-default .navbar-nav li.page_item > a {
+  background-color: #67c5b8;
+  color: #ffffff;
+  margin-bottom: 7px;
+  height: 44px;
+  text-align: center; }
+
+.navbar-default .navbar-nav li.current_page_item > a {
+  background-color: #cac1b0;
+  color: #ffffff; }
 
 .navbar button {
   position: absolute;
@@ -74,43 +113,17 @@ body {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 3px; }
 
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-.navbar a {
-  display: block;
-  text-decoration: none; }
-
-.brand {
-  max-width: 100%;
-  padding: 0; }
-
-.brand img {
-  max-width: 150px; }
-
-.navbar-default {
-  border: 0; }
-
-.navbar-default .navbar-nav li.page_item > a {
-  background-color: #67c5b8;
-  color: #ffffff;
-  margin-bottom: 7px;
-  height: 44px;
-  text-align: center; }
-
-.navbar-default .navbar-nav li.current_page_item > a {
-  background-color: #cac1b0;
-  color: #ffffff; }
-
 #footer {
   position: fixed;
   right: 0;
   bottom: 0;
   left: 0;
   height: 44px;
-  padding: 5px;
-  background-color: #67c5b8; }
+  padding: 5px; }
+
+.redes {
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 /*# sourceMappingURL=style.css.map */

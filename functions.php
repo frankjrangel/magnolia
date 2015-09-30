@@ -30,3 +30,33 @@ function cc_mime_types( $mimes ){
 	return $mimes;
 }
 add_filter('upload_mimes','cc_mime_types');
+
+// ===== Post Types =====
+
+/*function red_post_type() {
+  $labels = array(
+    'name'               => _x( 'Redes', 'post type general name' ),
+    'singular_name'      => _x( 'Red', 'post type singular name' ),
+    'add_new'            => _x( 'Add New', 'Red' ),
+    'add_new_item'       => __( 'Agregar Red' ),
+    'edit_item'          => __( 'Editar Red' ),
+    'new_item'           => __( 'Nuevo Red' ),
+    'all_items'          => __( 'Todos las redes' ),
+    'view_item'          => __( 'Ver Red' ),
+    'search_items'       => __( 'Buscar Red' ),
+    'not_found'          => __( 'La Red no existe' ),
+    'not_found_in_trash' => __( 'La Red no existe en la papelera' ),
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Redes'
+  );
+  $args = array(
+    'labels'        => $labels,
+    'description'   => 'Redes',
+    'public'        => true,
+    'menu_position' => 4,
+    'supports'      => array(  'title' , 'page-attributes'  ),
+    'has_archive'   => true
+  );
+  register_post_type( 'red', $args );
+}
+add_action( 'init', 'red_post_type' );*/
