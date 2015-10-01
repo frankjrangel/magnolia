@@ -23,6 +23,54 @@ Version: 1.0
         font-style: normal;
     }
 
+    @font-face {
+        font-family: 'yanone_bold';
+        src: url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot');
+        src: url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot?#iefix') format('embedded-opentype'),
+             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff2') format('woff2'),
+             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff') format('woff'),
+             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.ttf') format('truetype'),
+             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'yanone_light';
+        src: url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot');
+        src: url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot?#iefix') format('embedded-opentype'),
+             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff2') format('woff2'),
+             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff') format('woff'),
+             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.ttf') format('truetype'),
+             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'yanone_regular';
+        src: url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot');
+        src: url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix') format('embedded-opentype'),
+             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff2') format('woff2'),
+             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff') format('woff'),
+             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.ttf') format('truetype'),
+             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'yanone_thin';
+        src: url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot');
+        src: url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix') format('embedded-opentype'),
+             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff2') format('woff2'),
+             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff') format('woff'),
+             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.ttf') format('truetype'),
+             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     // Escalas
 
     $h1:3rem;

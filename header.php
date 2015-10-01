@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Magnolia Gift</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le styles -->
@@ -40,9 +40,11 @@
               <div class="col-xs-12">
                 <div class="collapse navbar-collapse" id="collapse-menu">
                   <ul class="nav navbar-nav">
-                      <?php wp_list_pages(array(
-                        'title_li' => ''
-                      )); ?>
+                      <?php //wp_list_pages(array(
+                       // 'title_li' => ''
+                      // )); ?>
+                    <li><a href="">¿QUÉ OFRECEMOS?</a></li>
+                    
                   </ul>
                 </div><!-- collapse -->
               </div>

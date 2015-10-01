@@ -60,3 +60,18 @@ add_filter('upload_mimes','cc_mime_types');
   register_post_type( 'red', $args );
 }
 add_action( 'init', 'red_post_type' );*/
+
+function preguntas_y_consejos_post_type() {
+  $labels = array(
+    'name'               => 'Preguntas y Consejos',
+    'singular_name'      => 'Pregunta o Consejo',
+  );
+  $args = array(
+    'labels'        => $labels,
+    'public'        => true,
+    //'menu_position' => 4,
+    'has_archive'   => true
+  );
+  register_post_type( 'preguntas_y_consejos', $args );
+}
+add_action( 'init', 'preguntas_y_consejos_post_type' );
