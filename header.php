@@ -40,11 +40,10 @@
               <div class="col-xs-12">
                 <div class="collapse navbar-collapse" id="collapse-menu">
                   <ul class="nav navbar-nav">
-                      <?php //wp_list_pages(array(
-                       // 'title_li' => ''
-                      // )); ?>
                     <li><a href="">¿QUÉ OFRECEMOS?</a></li>
-                    
+                    <li><a href="">CATÁLOGO</a></li>
+                    <li><a href="">¿CÓMO COMPRAR?</a></li>
+                    <li><a href="">CONTACTO</a></li> 
                   </ul>
                 </div><!-- collapse -->
               </div>

@@ -200,7 +200,7 @@ body{
 .navbar-default{
   border: 0;
 }
-.navbar-default .navbar-nav li.page_item>a {
+.navbar-default .navbar-nav > li > a {
   background-color: $turquesa-claro;
   color: $texto-claro;
   margin-bottom: 7px;
