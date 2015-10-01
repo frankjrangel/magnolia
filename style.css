@@ -21,7 +21,7 @@ body {
   background-size: 36px 54px;
   background-color: #48968f;
   background-position: center;
-  padding: 5px 15px 50px 15px; }
+  padding: 5px 15px 0 15px; }
 
 #nav-wrapper {
   position: relative; }
@@ -31,22 +31,37 @@ body {
   background-position: center;
   background-color: #fff8e9;
   background-origin: content-box;
-  padding-top: 219px; }
+  padding-top: 239px; }
 
 .banda-logo {
+  background-image: url(assets/img/banda.png);
   background-color: #cac1b0;
   position: absolute;
-  top: 35px;
+  top: 45px;
   right: 0;
   left: 0;
   height: 105px; }
+
+.logo-magnolia {
+  position: relative;
+  width: 218px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .brand {
   max-width: 100%;
   padding: 0; }
 
-.brand img {
-  max-width: 150px; }
+.brand div {
+  position: absolute;
+  top: -42px;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 218px 188px;
+  width: 218px;
+  height: 188px; }
 
 .navbar,
 .navbar-default,
@@ -60,7 +75,7 @@ body {
 
 .navbar {
   position: absolute;
-  top: 175px;
+  top: 195px;
   padding-top: 10px;
   right: 0;
   left: 0;
@@ -124,15 +139,29 @@ body {
   margin-top: 3px; }
 
 #footer {
-  position: fixed;
+  position: static;
   right: 0;
   bottom: 0;
   left: 0;
   height: 44px;
   padding: 5px; }
 
+#footer .container {
+  position: relative; }
+
 .redes {
+  position: absolute;
+  width: 176px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.redes a {
+  display: block;
+  float: left;
   height: 44px;
+  width: 44px;
   background-repeat: no-repeat;
   background-position: center; }
 

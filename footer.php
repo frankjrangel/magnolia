@@ -1,16 +1,20 @@
     </div> <!-- /container -->
 
 	<div id="footer">
-		<div id="container">
-      <div class="redes" style="background-image:
-        url(wp-content/themes/magnolia/assets/img/twitter_logo.svg ),
-        url(wp-content/themes/magnolia/assets/img/facebook_logo.svg ),
-        url(wp-content/themes/magnolia/assets/img/instagram_logo.svg ),
-        url(wp-content/themes/magnolia/assets/img/pinterest_logo.svg );
-      ">
-      </div>
-      <div class="copyright">
-        <p>© Magnolia</p>
+		<div class="container">
+      <div class="redes">
+        <a href="#"
+        style="background-image:url(wp-content/themes/magnolia/assets/img/twitter_logo.svg );">
+        </a>
+        <a href="#"
+        style="background-image:url(wp-content/themes/magnolia/assets/img/facebook_logo.svg );">
+        </a>
+        <a href="#"
+        style="background-image:url(wp-content/themes/magnolia/assets/img/instagram_logo.svg );">
+        </a>
+        <a href="#"
+        style="background-image:url(wp-content/themes/magnolia/assets/img/pinterest_logo.svg );">
+        </a>
       </div>
 		</div>
 	</div>
