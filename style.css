@@ -6,6 +6,16 @@ Author URI: http://movatic.com/
 Description: Tema personalizado de wordpress con catalogo de compra para Magnolia Gift
 Version: 1.0
 */
+@font-face {
+  font-family: 'jenna_sue';
+  src: url("assets/fonts/JennaSue/jennasue-webfont.eot");
+  src: url("assets/fonts/JennaSue/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/JennaSue/jennasue-webfont.woff2") format("woff2"), url("assets/fonts/JennaSue/jennasue-webfont.woff") format("woff"), url("assets/fonts/JennaSue/jennasue-webfont.ttf") format("truetype"), url("assets/fonts/JennaSue/jennasue-webfont.svg#jenna_sueregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+h1 {
+  font-family: 'jenna_sue',sans-serif;
+  font-size: 3rem; }
+
 body {
   background-image: url(assets/img/fondo_turquesa.png);
   background-size: 36px 54px;
