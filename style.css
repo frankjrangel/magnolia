@@ -38,7 +38,14 @@ Version: 1.0
   font-style: normal; }
 h1 {
   font-family: 'jenna_sue',sans-serif;
-  font-size: 3rem; }
+  font-size: 5rem;
+  color: #cac1b0; }
+
+a {
+  text-decoration: none; }
+
+p {
+  color: #cac1b0; }
 
 body {
   background-image: url("assets/img/fondo_turquesa.png");
@@ -55,16 +62,23 @@ body {
   background-position: center;
   background-color: #fff8e9;
   background-origin: content-box;
-  padding-top: 239px; }
+  padding-top: 248px; }
 
-.banda-logo {
-  background-image: url("assets/img/banda.png");
+.background-banda-logo {
   background-color: #cac1b0;
+  background-position: center;
   position: absolute;
   top: 45px;
   right: 0;
   left: 0;
   height: 105px; }
+  .background-banda-logo .banda-logo {
+    position: absolute;
+    right: 0;
+    left: 0;
+    opacity: 0.3;
+    background-image: url("assets/img/banda.png");
+    height: 105px; }
 
 .logo-magnolia {
   position: relative;
@@ -116,6 +130,7 @@ body {
 
 .navbar .menu-items {
   position: absolute;
+  background: none;
   left: 0;
   right: 0;
   padding: 0 44px; }
@@ -189,29 +204,41 @@ body {
   background-repeat: no-repeat;
   background-position: center; }
 
-.intro {
-  color: #cac1b0; }
-  .intro h1 {
-    text-align: center; }
-  .intro p {
-    text-align: center;
-    font-weight: bold;
-    line-height: 15px; }
-  .intro .shortcut {
-    background-color: #cac1b0; }
-    .intro .shortcut a {
-      position: relative;
-      display: block;
-      min-height: 44px; }
-    .intro .shortcut p {
-      position: relative;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 15px;
-      margin: auto;
-      vertical-align: middle;
-      color: #ffffff; }
+.intro h1 {
+  text-align: center;
+  line-height: 20px; }
+.intro p {
+  text-align: center;
+  font-weight: bold;
+  line-height: 15px; }
+.intro .shortcut {
+  background-color: #cac1b0; }
+  .intro .shortcut a {
+    position: relative;
+    display: block;
+    min-height: 44px; }
+  .intro .shortcut p {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15px;
+    margin: auto;
+    vertical-align: middle;
+    color: #ffffff; }
+
+/* Ultra small devices (phones, less than 480px) */
+/* Extra small devices (tablets, 480px and up) */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar .menu-items {
+    position: absolute;
+    background-color: #67c5b8;
+    left: 0;
+    right: 0;
+    padding: 0 44px; } }
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
 
 /*# sourceMappingURL=style.css.map */

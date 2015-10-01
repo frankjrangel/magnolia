@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="intro">
   <div class="row">
-    <h1>Qué<br>
+    <h1>Que<br>
       ofrecemos</h1>
     <div class="col-xs-10 col-xs-offset-1">
       <p>Regala un momento Magnolia, con un detalle único, personalizado y en una presentación inolvidable.</p>
@@ -21,37 +21,58 @@
 <div class="row">
 
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
   </div>
   <div class="col-sm-6">
-    <h3>Tema Magnolia</h3>
+    <p>Tema Magnolia</p>
+  </div>
+  <div class="col-sm-6">
+    <p>Tema Magnolia</p>
+  </div>
+  <div class="col-sm-6">
+    <p>Tema Magnolia</p>
+  </div>
+  <div class="col-sm-6">
+    <p>Tema Magnolia</p>
+  </div>
+  <div class="col-sm-6">
+    <p>Tema Magnolia</p>
+  </div>
+  <div class="col-sm-6">
+    <p>Tema Magnolia</p>
+  </div>
+  <div class="col-sm-6">
+    <p>Tema Magnolia</p>
+  </div>
+  <div class="col-sm-6">
+    <p>Tema Magnolia</p>
   </div>
 </div>
 <?php get_footer(); ?>

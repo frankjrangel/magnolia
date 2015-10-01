@@ -20,15 +20,16 @@
   </head>
   <body>
 
+<div class="background-banda-logo">
   <div class="banda-logo">
-    <div class="logo-magnolia">
-      <a class="navbar-brand brand" href="/magnolia/">
-        <div class="img-responsive" style="background-image: url(wp-content/themes/magnolia/assets/img/logo_magnolia_gift.svg );">
-        </div>
-      </a>
-    </div>
-
   </div>
+  <div class="logo-magnolia">
+    <a class="navbar-brand brand" href="/magnolia/">
+      <div class="img-responsive" style="background-image: url(wp-content/themes/magnolia/assets/img/logo_magnolia_gift.svg );">
+      </div>
+    </a>
+  </div>
+</div>
 
   <div id="nav-wrapper">
     <nav class="navbar navbar-default">
@@ -43,7 +44,7 @@
                     <li><a href="">¿QUÉ OFRECEMOS?</a></li>
                     <li><a href="">CATÁLOGO</a></li>
                     <li><a href="">¿CÓMO COMPRAR?</a></li>
-                    <li><a href="">CONTACTO</a></li> 
+                    <li><a href="">CONTACTO</a></li>
                   </ul>
                 </div><!-- collapse -->
               </div>
