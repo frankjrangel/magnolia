@@ -6,113 +6,78 @@ Author URI: http://movatic.com/
 Description: Tema personalizado de wordpress con catalogo de compra para Magnolia Gift
 Version: 1.0
 */
-
 // ===== Tipografías =====
+// Embeds
+@font-face {
+  font-family: 'jenna_sue';
+  src: url("assets/fonts/JennaSue/jennasue-webfont.eot");
+  src: url("assets/fonts/JennaSue/jennasue-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/JennaSue/jennasue-webfont.woff2") format('woff2'), url("assets/fonts/JennaSue/jennasue-webfont.woff") format('woff'), url("assets/fonts/JennaSue/jennasue-webfont.ttf") format('truetype'), url("assets/fonts/JennaSue/jennasue-webfont.svg#jenna_sueregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'yanone_bold';
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'yanone_light';
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'yanone_regular';
+  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'yanone_thin';
+  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
-    // Embeds
-
-    @font-face {
-        font-family: 'jenna_sue';
-        src: url('assets/fonts/JennaSue/jennasue-webfont.eot');
-        src: url('assets/fonts/JennaSue/jennasue-webfont.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/JennaSue/jennasue-webfont.woff2') format('woff2'),
-             url('assets/fonts/JennaSue/jennasue-webfont.woff') format('woff'),
-             url('assets/fonts/JennaSue/jennasue-webfont.ttf') format('truetype'),
-             url('assets/fonts/JennaSue/jennasue-webfont.svg#jenna_sueregular') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'yanone_bold';
-        src: url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot');
-        src: url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff2') format('woff2'),
-             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff') format('woff'),
-             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.ttf') format('truetype'),
-             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'yanone_light';
-        src: url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot');
-        src: url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff2') format('woff2'),
-             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff') format('woff'),
-             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.ttf') format('truetype'),
-             url('assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'yanone_regular';
-        src: url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot');
-        src: url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff2') format('woff2'),
-             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff') format('woff'),
-             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.ttf') format('truetype'),
-             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'yanone_thin';
-        src: url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot');
-        src: url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff2') format('woff2'),
-             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff') format('woff'),
-             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.ttf') format('truetype'),
-             url('assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    // Escalas
-
-    $h1:3rem;
-
+// Escalas
+$h1: 3rem;
 
 // ===== Headings =====
-
-h1
-{
-    font-family:'jenna_sue',sans-serif;
-    font-size:$h1;
+h1 {
+  font-family: 'jenna_sue',sans-serif;
+  font-size: $h1;
 }
 
 // ===== Paleta ======
-
 $turquesa-claro: #67c5b8;
 $turquesa-sombra: #48968f;
-$fondo-marron: #cac1b0;
-$texto-claro: #ffffff;
+$marron: #cac1b0;
+$texto-claro: #fff;
 $icon-bar: #bbd9d6;
 $fondo-amarillo: #fff8e9;
 
-
 // ===== X ======
-
 $alto-banda-magnolia: 105px;
 $caja-banda-magnolia: 45px;
 $xy-menu-button: 44px;
 $padding-top-content: ($caja-banda-magnolia * 2) + $alto-banda-magnolia + $xy-menu-button;
-
-body{
-  background-image: url(assets/img/fondo_turquesa.png);
+body {
+  background-image: url("assets/img/fondo_turquesa.png");
   background-size: 36px 54px;
   background-color: $turquesa-sombra;
   background-position: center;
-  padding: 5px 15px 0 15px;
+  padding: 5px 15px 0;
 }
-#nav-wrapper{
+#nav-wrapper {
   position: relative;
 }
-.content{
-  background-image: url(assets/img/fondo_amarillo.png);
+.content {
+  background-image: url("assets/img/fondo_amarillo.png");
   background-position: center;
   background-color: $fondo-amarillo;
   background-origin: content-box;
@@ -120,17 +85,16 @@ body{
 }
 
 // ===== Header ======
-
-.banda-logo{
-  background-image: url(assets/img/banda.png);
-  background-color: $fondo-marron;
+.banda-logo {
+  background-image: url("assets/img/banda.png");
+  background-color: $marron;
   position: absolute;
   top: $caja-banda-magnolia;
   right: 0;
   left: 0;
   height: $alto-banda-magnolia;
 }
-.logo-magnolia{
+.logo-magnolia {
   position: relative;
   width: 218px;
   margin-left: auto;
@@ -142,7 +106,7 @@ body{
 }
 .brand div {
   position: absolute;
-  top:-42px;
+  top: -42px;
   left: 0;
   right: 0;
   background-repeat: no-repeat;
@@ -156,12 +120,12 @@ body{
 .navbar-collapse,
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:hover,
-.navbar button{
+.navbar button {
   background: none;
   border: none;
   z-index: 1031;
 }
-.navbar{
+.navbar {
   position: absolute;
   top: ($caja-banda-magnolia * 2) + $alto-banda-magnolia;
   padding-top: 10px;
@@ -169,35 +133,34 @@ body{
   left: 0;
   border: 0;
 }
-.navbar.fixed{
+.navbar.fixed {
   position: fixed;
   top: 0;
   left: 15px;
   right: 15px;
-
 }
-.navbar .menu{
+.navbar .menu {
   position: relative;
 }
-.navbar .menu-items{
+.navbar .menu-items {
   position: absolute;
   left: 0;
   right: 0;
   padding: 0 $xy-menu-button;
 }
 .navbar-collapse {
-    padding: 0;
+  padding: 0;
 }
-.navbar ul{
-  list-style-type:none;
+.navbar ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.navbar a{
+.navbar a {
   display: block;
   text-decoration: none;
 }
-.navbar-default{
+.navbar-default {
   border: 0;
 }
 .navbar-default .navbar-nav li.page_item>a {
@@ -206,58 +169,54 @@ body{
   margin-bottom: 7px;
   height: $xy-menu-button;
   text-align: center;
-
 }
 .navbar-default .navbar-nav li.current_page_item>a {
-  background-color: $fondo-marron;
+  background-color: $marron;
   color: $texto-claro;
 }
-.navbar button{
+.navbar button {
   position: absolute;
   right: 0;
   height: $xy-menu-button;
   width: $xy-menu-button;
   margin: 0;
   padding: 9px 12px;
-
 }
-.navbar-default .navbar-toggle .icon-bar{
+.navbar-default .navbar-toggle .icon-bar {
   background-color: $icon-bar;
   height: 4px;
   width: 20px;
 }
 .navbar-toggle .icon-bar+.icon-bar {
-    margin-top: 3px;
+  margin-top: 3px;
 }
 
-
 // ===== Footer ======
-
-#footer{
+#footer {
   position: static;
   right: 0;
   bottom: 0;
   left: 0;
-
   height: 44px;
   padding: 5px;
+
   //background-color: $turquesa-claro;
 }
-#footer .container{
+#footer .container {
   position: relative;
 }
-.redes{
+.redes {
   position: absolute;
   width: 44px * 4;
   left: 0;
   right: 0;
+
   //width: 44px * 4;
   //height: 44px;
   margin-left: auto;
   margin-right: auto;
 }
-
-.redes a{
+.redes a {
   display: block;
   float: left;
   height: 44px;
@@ -265,4 +224,35 @@ body{
   background-repeat: no-repeat;
   background-position: center;
 }
-//
+
+// ===== Que Ofrecemos ======
+.intro {
+  color: $marron;
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    font-weight: bold;
+    line-height: 15px;
+  }
+  .shortcut {
+    background-color: $marron;
+    a {
+      position: relative;
+      display: block;
+      min-height: 44px;
+    }
+    p {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 15px;
+      margin: auto;
+      vertical-align: middle;
+      color: #ffffff;
+    }
+  }
+}
