@@ -41,24 +41,24 @@ h1 {
   font-size: 3rem; }
 
 body {
-  background-image: url(assets/img/fondo_turquesa.png);
+  background-image: url("assets/img/fondo_turquesa.png");
   background-size: 36px 54px;
   background-color: #48968f;
   background-position: center;
-  padding: 5px 15px 0 15px; }
+  padding: 5px 15px 0; }
 
 #nav-wrapper {
   position: relative; }
 
 .content {
-  background-image: url(assets/img/fondo_amarillo.png);
+  background-image: url("assets/img/fondo_amarillo.png");
   background-position: center;
   background-color: #fff8e9;
   background-origin: content-box;
   padding-top: 239px; }
 
 .banda-logo {
-  background-image: url(assets/img/banda.png);
+  background-image: url("assets/img/banda.png");
   background-color: #cac1b0;
   position: absolute;
   top: 45px;
@@ -137,14 +137,14 @@ body {
 
 .navbar-default .navbar-nav > li > a {
   background-color: #67c5b8;
-  color: #ffffff;
+  color: #fff;
   margin-bottom: 7px;
   height: 44px;
   text-align: center; }
 
 .navbar-default .navbar-nav li.current_page_item > a {
   background-color: #cac1b0;
-  color: #ffffff; }
+  color: #fff; }
 
 .navbar button {
   position: absolute;
@@ -188,5 +188,30 @@ body {
   width: 44px;
   background-repeat: no-repeat;
   background-position: center; }
+
+.intro {
+  color: #cac1b0; }
+  .intro h1 {
+    text-align: center; }
+  .intro p {
+    text-align: center;
+    font-weight: bold;
+    line-height: 15px; }
+  .intro .shortcut {
+    background-color: #cac1b0; }
+    .intro .shortcut a {
+      position: relative;
+      display: block;
+      min-height: 44px; }
+    .intro .shortcut p {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 15px;
+      margin: auto;
+      vertical-align: middle;
+      color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */
