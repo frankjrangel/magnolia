@@ -135,7 +135,7 @@ body {
 .navbar-default {
   border: 0; }
 
-.navbar-default .navbar-nav li.page_item > a {
+.navbar-default .navbar-nav > li > a {
   background-color: #67c5b8;
   color: #fff;
   margin-bottom: 7px;

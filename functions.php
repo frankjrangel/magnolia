@@ -70,9 +70,24 @@ function preguntas_y_consejos_post_type() {
   $args = array(
     'labels'        => $labels,
     'public'        => true,
-    //'menu_position' => 4,
+    'menu_position' => 3,
     'has_archive'   => true
   );
   register_post_type( 'preguntas_y_consejos', $args );
 }
 add_action( 'init', 'preguntas_y_consejos_post_type' );
+
+function catalogo_post_type() {
+  $labels = array(
+    'name'               => 'Catálogo',
+    'singular_name'      => 'Producto',
+  );
+  $args = array(
+    'labels'        => $labels,
+    'public'        => true,
+    'menu_position' => 2,
+    'has_archive'   => true
+  );
+  register_post_type( 'catalogo', $args );
+}
+add_action( 'init', 'catalogo_post_type' );
