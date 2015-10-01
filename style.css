@@ -6,12 +6,46 @@ Author URI: http://movatic.com/
 Description: Tema personalizado de wordpress con catalogo de compra para Magnolia Gift
 Version: 1.0
 */
+@font-face {
+  font-family: 'jenna_sue';
+  src: url("assets/fonts/JennaSue/jennasue-webfont.eot");
+  src: url("assets/fonts/JennaSue/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/JennaSue/jennasue-webfont.woff2") format("woff2"), url("assets/fonts/JennaSue/jennasue-webfont.woff") format("woff"), url("assets/fonts/JennaSue/jennasue-webfont.ttf") format("truetype"), url("assets/fonts/JennaSue/jennasue-webfont.svg#jenna_sueregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'yanone_bold';
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff2") format("woff2"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff") format("woff"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.ttf") format("truetype"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'yanone_light';
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff2") format("woff2"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff") format("woff"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.ttf") format("truetype"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'yanone_regular';
+  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff2") format("woff2"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff") format("woff"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.ttf") format("truetype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'yanone_thin';
+  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff2") format("woff2"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff") format("woff"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.ttf") format("truetype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+h1 {
+  font-family: 'jenna_sue',sans-serif;
+  font-size: 3rem; }
+
 body {
   background-image: url(assets/img/fondo_turquesa.png);
   background-size: 36px 54px;
   background-color: #48968f;
   background-position: center;
-  padding: 5px 15px 50px 15px; }
+  padding: 5px 15px 0 15px; }
 
 #nav-wrapper {
   position: relative; }
@@ -21,22 +55,37 @@ body {
   background-position: center;
   background-color: #fff8e9;
   background-origin: content-box;
-  padding-top: 219px; }
+  padding-top: 239px; }
 
 .banda-logo {
+  background-image: url(assets/img/banda.png);
   background-color: #cac1b0;
   position: absolute;
-  top: 35px;
+  top: 45px;
   right: 0;
   left: 0;
   height: 105px; }
+
+.logo-magnolia {
+  position: relative;
+  width: 218px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .brand {
   max-width: 100%;
   padding: 0; }
 
-.brand img {
-  max-width: 150px; }
+.brand div {
+  position: absolute;
+  top: -42px;
+  left: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 218px 188px;
+  width: 218px;
+  height: 188px; }
 
 .navbar,
 .navbar-default,
@@ -50,7 +99,7 @@ body {
 
 .navbar {
   position: absolute;
-  top: 175px;
+  top: 195px;
   padding-top: 10px;
   right: 0;
   left: 0;
@@ -114,15 +163,29 @@ body {
   margin-top: 3px; }
 
 #footer {
-  position: fixed;
+  position: static;
   right: 0;
   bottom: 0;
   left: 0;
   height: 44px;
   padding: 5px; }
 
+#footer .container {
+  position: relative; }
+
 .redes {
+  position: absolute;
+  width: 176px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto; }
+
+.redes a {
+  display: block;
+  float: left;
   height: 44px;
+  width: 44px;
   background-repeat: no-repeat;
   background-position: center; }
 

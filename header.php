@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
+    <title>Magnolia Gift</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le styles -->
@@ -21,10 +21,13 @@
   <body>
 
   <div class="banda-logo">
-    <a class="navbar-brand brand" href="/magnolia/">
-      <div class="img-responsive" style="background-image: url(<?php the_field('magnolia');?>);">
-      </div>
-    </a>
+    <div class="logo-magnolia">
+      <a class="navbar-brand brand" href="/magnolia/">
+        <div class="img-responsive" style="background-image: url(wp-content/themes/magnolia/assets/img/logo_magnolia_gift.svg );">
+        </div>
+      </a>
+    </div>
+
   </div>
 
   <div id="nav-wrapper">
@@ -37,9 +40,11 @@
               <div class="col-xs-12">
                 <div class="collapse navbar-collapse" id="collapse-menu">
                   <ul class="nav navbar-nav">
-                      <?php wp_list_pages(array(
-                        'title_li' => ''
-                      )); ?>
+                      <?php //wp_list_pages(array(
+                       // 'title_li' => ''
+                      // )); ?>
+                    <li><a href="">¿QUÉ OFRECEMOS?</a></li>
+                    
                   </ul>
                 </div><!-- collapse -->
               </div>
