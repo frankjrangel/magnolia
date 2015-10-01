@@ -21,10 +21,13 @@
   <body>
 
   <div class="banda-logo">
-    <a class="navbar-brand brand" href="/magnolia/">
-      <div class="img-responsive" style="background-image: url(<?php the_field('magnolia');?>);">
-      </div>
-    </a>
+    <div class="logo-magnolia">
+      <a class="navbar-brand brand" href="/magnolia/">
+        <div class="img-responsive" style="background-image: url(wp-content/themes/magnolia/assets/img/logo_magnolia_gift.svg );">
+        </div>
+      </a>
+    </div>
+
   </div>
 
   <div id="nav-wrapper">
