@@ -36,16 +36,24 @@ Version: 1.0
   src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff2") format("woff2"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff") format("woff"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.ttf") format("truetype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format("svg");
   font-weight: normal;
   font-style: normal; }
+html {
+  font-size: 14px; }
+
 h1 {
   font-family: 'jenna_sue',sans-serif;
-  font-size: 5rem;
+  font-size: 5.6px;
+  font-size: 4rem;
   color: #cac1b0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 1.4px;
+  font-size: 1rem; }
 
 p {
-  color: #cac1b0; }
+  color: #cac1b0;
+  font-size: 1.4px;
+  font-size: 1rem; }
 
 body {
   background-image: url("assets/img/fondo_turquesa.png");
