@@ -46,6 +46,7 @@ Version: 1.0
 
 
 // ===== Paleta ======
+$turquesa-pastel: #bcdbd6;
 $turquesa-claro: #67c5b8;
 $turquesa-sombra: #48968f;
 $marron: #cac1b0;
@@ -91,9 +92,9 @@ p{
 $alto-banda-magnolia: 105px;
 $caja-banda-magnolia: 45px;
 $xy-menu-button: 44px;
-$padding-top-content: ($caja-banda-magnolia * 2) + $alto-banda-magnolia + $xy-menu-button;
+$padding-top-content: ($caja-banda-magnolia * 2) + $alto-banda-magnolia;
 body {
-  background-image: url("assets/img/fondo_turquesa.png");
+  background-image: url("assets/img/fondos/fondo_turquesa.png");
   background-size: 36px 54px;
   background-color: $turquesa-sombra;
   background-position: center;
@@ -103,11 +104,11 @@ body {
   position: relative;
 }
 .content {
-  background-image: url("assets/img/fondo_amarillo.png");
+  background-image: url("assets/img/fondos/fondo_amarillo.png");
   background-position: center;
   background-color: $fondo-amarillo;
   background-origin: content-box;
-  padding-top: $padding-top-content + 9px;
+  padding-top: $padding-top-content + 10px;
 }
 
 // ===== Header ======
@@ -125,7 +126,7 @@ body {
     right: 0;
     left: 0;
     opacity: 0.3;
-    background-image: url("assets/img/banda.png");
+    background-image: url("assets/img/fondos/banda.png");
     height: $alto-banda-magnolia;
   }
 }
@@ -179,10 +180,13 @@ body {
 }
 .navbar .menu-items {
   position: absolute;
-  background: none;
+  background-image: url("assets/img/fondos/fondo_amarillo.png");
+  background-position: center;
+  background-color: $fondo-amarillo;
+  background-origin: content-box;
   left: 0;
   right: 0;
-  padding: 0 $xy-menu-button;
+  padding: 0 $xy-menu-button 10px;
 }
 .navbar-collapse {
   padding: 0;
@@ -199,17 +203,25 @@ body {
 .navbar-default {
   border: 0;
 }
-.navbar-default .navbar-nav > li > a {
-  background-color: $turquesa-claro;
-  color: $texto-claro;
-  margin-bottom: 7px;
-  height: $xy-menu-button;
-  text-align: center;
+.navbar-default .navbar-nav > {
+  li {
+    background-color: $turquesa-claro;
+    margin-bottom: 7px;
+    height: $xy-menu-button;
+    text-align: center;
+    a,a:active,a:visited,a:hover,a:link,a:focus{
+      color: $texto-claro;
+    }
+  }
+  li:nth-child(even) {
+      background-color: $turquesa-pastel;
+  }
+  li.current_page_item {
+    background-color: $marron;
+  }
 }
-.navbar-default .navbar-nav li.current_page_item>a {
-  background-color: $marron;
-  color: $texto-claro;
-}
+
+
 .navbar button {
   position: absolute;
   right: 0;
@@ -218,13 +230,15 @@ body {
   margin: 0;
   padding: 9px 12px;
 }
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: $icon-bar;
-  height: 4px;
-  width: 20px;
-}
-.navbar-toggle .icon-bar+.icon-bar {
-  margin-top: 3px;
+.navbar-default .navbar-toggle {
+  .icon-bar {
+    background-color: $icon-bar;
+    height: 4px;
+    width: 20px;
+  }
+  .icon-bar+.icon-bar {
+    margin-top: 3px;
+  }
 }
 
 // ===== Footer ======
@@ -234,7 +248,6 @@ body {
   bottom: 0;
   left: 0;
   height: 44px;
-  padding: 5px;
 
   //background-color: $turquesa-claro;
 }
@@ -243,7 +256,7 @@ body {
 }
 .redes {
   position: absolute;
-  width: 44px * 4;
+  width: 36px * 4;
   left: 0;
   right: 0;
 
@@ -256,42 +269,55 @@ body {
   display: block;
   float: left;
   height: 44px;
-  width: 44px;
+  width: 36px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 // ===== Que Ofrecemos ======
+.heading{
+  padding: 0px 44px 10px;
+  margin: 0 -15px;
+
+  .que_ofrecemos {
+    background-color: $turquesa-claro;
+    height: $xy-menu-button;
+    text-align: center;
+    color: $texto-claro;
+  }
+}
 .intro {
   h1 {
     text-align: center;
-    line-height: 20px;
+    line-height: 21px;
+    padding-bottom: 5px;
   }
   p {
     text-align: center;
     font-weight: bold;
     line-height: 15px;
   }
-  .shortcut {
+}
+.shortcuts {
+  .shortcut{
     background-color: $marron;
-    a {
-      position: relative;
-      display: block;
-      min-height: 44px;
-    }
-    p {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 15px;
-      margin: auto;
-      vertical-align: middle;
-      color: #ffffff;
-    }
+  }
+  a {
+    display: block;
+    padding: 10px 15px;
+    min-height: 44px;
+    text-align: center;
+  }
+  p {
+    margin: 0;
+    color: #ffffff;
+    font-weight: bold;
   }
 }
+.productos-mes{
+  margin: 15px 0;
+}
+
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
 @media (min-width: 480px) {

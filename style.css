@@ -56,7 +56,7 @@ p {
   font-size: 1rem; }
 
 body {
-  background-image: url("assets/img/fondo_turquesa.png");
+  background-image: url("assets/img/fondos/fondo_turquesa.png");
   background-size: 36px 54px;
   background-color: #48968f;
   background-position: center;
@@ -66,11 +66,11 @@ body {
   position: relative; }
 
 .content {
-  background-image: url("assets/img/fondo_amarillo.png");
+  background-image: url("assets/img/fondos/fondo_amarillo.png");
   background-position: center;
   background-color: #fff8e9;
   background-origin: content-box;
-  padding-top: 248px; }
+  padding-top: 205px; }
 
 .background-banda-logo {
   background-color: #cac1b0;
@@ -85,7 +85,7 @@ body {
     right: 0;
     left: 0;
     opacity: 0.3;
-    background-image: url("assets/img/banda.png");
+    background-image: url("assets/img/fondos/banda.png");
     height: 105px; }
 
 .logo-magnolia {
@@ -138,10 +138,13 @@ body {
 
 .navbar .menu-items {
   position: absolute;
-  background: none;
+  background-image: url("assets/img/fondos/fondo_amarillo.png");
+  background-position: center;
+  background-color: #fff8e9;
+  background-origin: content-box;
   left: 0;
   right: 0;
-  padding: 0 44px; }
+  padding: 0 44px 10px; }
 
 .navbar-collapse {
   padding: 0; }
@@ -158,16 +161,17 @@ body {
 .navbar-default {
   border: 0; }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-nav > li {
   background-color: #67c5b8;
-  color: #fff;
   margin-bottom: 7px;
   height: 44px;
   text-align: center; }
-
-.navbar-default .navbar-nav li.current_page_item > a {
-  background-color: #cac1b0;
-  color: #fff; }
+  .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus {
+    color: #fff; }
+.navbar-default .navbar-nav > li:nth-child(even) {
+  background-color: #bcdbd6; }
+.navbar-default .navbar-nav > li.current_page_item {
+  background-color: #cac1b0; }
 
 .navbar button {
   position: absolute;
@@ -181,8 +185,7 @@ body {
   background-color: #bbd9d6;
   height: 4px;
   width: 20px; }
-
-.navbar-toggle .icon-bar + .icon-bar {
+.navbar-default .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 3px; }
 
 #footer {
@@ -190,15 +193,14 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 44px;
-  padding: 5px; }
+  height: 44px; }
 
 #footer .container {
   position: relative; }
 
 .redes {
   position: absolute;
-  width: 176px;
+  width: 144px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -208,33 +210,42 @@ body {
   display: block;
   float: left;
   height: 44px;
-  width: 44px;
+  width: 36px;
   background-repeat: no-repeat;
   background-position: center; }
 
+.heading {
+  padding: 0px 44px 10px;
+  margin: 0 -15px; }
+  .heading .que_ofrecemos {
+    background-color: #67c5b8;
+    height: 44px;
+    text-align: center;
+    color: #fff; }
+
 .intro h1 {
   text-align: center;
-  line-height: 20px; }
+  line-height: 21px;
+  padding-bottom: 5px; }
 .intro p {
   text-align: center;
   font-weight: bold;
   line-height: 15px; }
-.intro .shortcut {
+
+.shortcuts .shortcut {
   background-color: #cac1b0; }
-  .intro .shortcut a {
-    position: relative;
-    display: block;
-    min-height: 44px; }
-  .intro .shortcut p {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 15px;
-    margin: auto;
-    vertical-align: middle;
-    color: #ffffff; }
+.shortcuts a {
+  display: block;
+  padding: 10px 15px;
+  min-height: 44px;
+  text-align: center; }
+.shortcuts p {
+  margin: 0;
+  color: #ffffff;
+  font-weight: bold; }
+
+.productos-mes {
+  margin: 15px 0; }
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */

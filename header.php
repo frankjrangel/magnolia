@@ -24,7 +24,7 @@
   </div>
   <div class="logo-magnolia">
     <a class="navbar-brand brand" href="/magnolia/">
-      <div class="img-responsive" style="background-image: url(wp-content/themes/magnolia/assets/img/logo_magnolia_gift.svg );">
+      <div class="img-responsive" style="background-image: url(wp-content/themes/magnolia/assets/img/magnolia/logo_magnolia_gift.svg );">
       </div>
     </a>
   </div>
@@ -35,20 +35,18 @@
 
         <div class="menu">
 
-          <div class="menu-items">
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="collapse navbar-collapse" id="collapse-menu">
+          <div class="menu-items collapse navbar-collapse" id="collapse-menu">
+              <div class="row">
+                <div class="col-xs-12">
                   <ul class="nav navbar-nav">
                     <li><a href="">¿QUÉ OFRECEMOS?</a></li>
                     <li><a href="">CATÁLOGO</a></li>
                     <li><a href="">¿CÓMO COMPRAR?</a></li>
                     <li><a href="">CONTACTO</a></li>
                   </ul>
-                </div><!-- collapse -->
+                </div>
               </div>
-            </div>
-          </div>
+          </div><!-- collapse -->
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu">
             <span class="sr-only">toggle navigation</span>
