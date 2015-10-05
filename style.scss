@@ -85,6 +85,7 @@ a{
 }
 p{
   color: $marron;
+  margin: 0;
   @include font-size(1);
 }
 
@@ -207,10 +208,11 @@ body {
   li {
     background-color: $turquesa-claro;
     margin-bottom: 7px;
-    height: $xy-menu-button;
     text-align: center;
     a,a:active,a:visited,a:hover,a:link,a:focus{
+      padding: 12px 0;
       color: $texto-claro;
+      font-family: 'yanone_regular';
     }
   }
   li:nth-child(even) {
@@ -281,9 +283,12 @@ body {
 
   .que_ofrecemos {
     background-color: $turquesa-claro;
-    height: $xy-menu-button;
-    text-align: center;
-    color: $texto-claro;
+    padding: 12px 0;
+    p{
+      color: $texto-claro;
+      text-align: center;
+      font-family: 'yanone_regular';
+    }
   }
 }
 .intro {
@@ -304,7 +309,7 @@ body {
   }
   a {
     display: block;
-    padding: 10px 15px;
+    padding: 12px 15px;
     min-height: 44px;
     text-align: center;
   }

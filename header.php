@@ -40,9 +40,10 @@
                 <div class="col-xs-12">
                   <ul class="nav navbar-nav">
                     <li><a href="">¿QUÉ OFRECEMOS?</a></li>
-                    <li><a href="">CATÁLOGO</a></li>
-                    <li><a href="">¿CÓMO COMPRAR?</a></li>
-                    <li><a href="">CONTACTO</a></li>
+                    <li><a href="catalogo">CATÁLOGO</a></li>
+                    <li><a href="como-comprar">¿CÓMO COMPRAR?</a></li>
+                    <li><a href="preguntas-consejos">PREGUNTAS Y CONSEJOS</a></li>
+                    <li><a href="contacto">CONTACTO</a></li>
                   </ul>
                 </div>
               </div>

@@ -52,6 +52,7 @@ a {
 
 p {
   color: #cac1b0;
+  margin: 0;
   font-size: 1.4px;
   font-size: 1rem; }
 
@@ -164,10 +165,11 @@ body {
 .navbar-default .navbar-nav > li {
   background-color: #67c5b8;
   margin-bottom: 7px;
-  height: 44px;
   text-align: center; }
   .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus {
-    color: #fff; }
+    padding: 12px 0;
+    color: #fff;
+    font-family: 'yanone_regular'; }
 .navbar-default .navbar-nav > li:nth-child(even) {
   background-color: #bcdbd6; }
 .navbar-default .navbar-nav > li.current_page_item {
@@ -219,9 +221,11 @@ body {
   margin: 0 -15px; }
   .heading .que_ofrecemos {
     background-color: #67c5b8;
-    height: 44px;
-    text-align: center;
-    color: #fff; }
+    padding: 12px 0; }
+    .heading .que_ofrecemos p {
+      color: #fff;
+      text-align: center;
+      font-family: 'yanone_regular'; }
 
 .intro h1 {
   text-align: center;
@@ -236,7 +240,7 @@ body {
   background-color: #cac1b0; }
 .shortcuts a {
   display: block;
-  padding: 10px 15px;
+  padding: 12px 15px;
   min-height: 44px;
   text-align: center; }
 .shortcuts p {
