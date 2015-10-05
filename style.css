@@ -234,7 +234,8 @@ body {
 .intro p {
   text-align: center;
   font-weight: bold;
-  line-height: 15px; }
+  line-height: 15px;
+  margin: 15px 0; }
 
 .shortcuts .shortcut {
   background-color: #cac1b0; }

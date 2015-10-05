@@ -39,11 +39,11 @@
               <div class="row">
                 <div class="col-xs-12">
                   <ul class="nav navbar-nav">
-                    <li><a href="">¿QUÉ OFRECEMOS?</a></li>
-                    <li><a href="catalogo">CATÁLOGO</a></li>
-                    <li><a href="como-comprar">¿CÓMO COMPRAR?</a></li>
-                    <li><a href="preguntas-consejos">PREGUNTAS Y CONSEJOS</a></li>
-                    <li><a href="contacto">CONTACTO</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/')) ?>">¿QUÉ OFRECEMOS?</a></li>
+                    <li><a href="<?php echo get_post_type_archive_link('catalogo') ?>">CATÁLOGO</a></li>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('como-comprar'))) ?>">¿CÓMO COMPRAR?</a></li>
+                    <li><a href="<?php echo get_post_type_archive_link('preguntas-consejos') ?>">PREGUNTAS Y CONSEJOS</a></li>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('contacto'))) ?>">CONTACTO</a></li>
                   </ul>
                 </div>
               </div>
