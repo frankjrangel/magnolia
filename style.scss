@@ -31,28 +31,28 @@ Version: 1.0
 }
 @font-face {
   font-family: 'yanone_regular';
-  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot");
-  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular") format('svg');
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'yanone_thin';
-  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot");
-  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format('svg');
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 
 // ===== Paleta ======
-$turquesa-pastel: #bcdbd6;
-$turquesa-claro: #67c5b8;
+$turquesa-pastel: #bcdad6;//menu-item
+$turquesa-claro: #66c5bd;//menu-item
 $turquesa-sombra: #48968f;
-$marron: #cac1b0;
+$marron: #ccc0af;//texto-oscuro, menu-item active, fondo banda
 $texto-claro: #fff;
-$icon-bar: #bbd9d6;
-$fondo-amarillo: #fff8e9;
+$icon-bar: $turquesa-pastel;
+$amarillo: #fff9e9;//fondo
 
 // ===== Escalas =====
 
@@ -89,27 +89,41 @@ p{
   @include font-size(1);
 }
 
-// ===== X ======
+// ===== Objetos ======
 $alto-banda-magnolia: 105px;
 $caja-banda-magnolia: 45px;
 $xy-menu-button: 44px;
 $padding-top-content: ($caja-banda-magnolia * 2) + $alto-banda-magnolia;
+
 body {
   background-image: url("assets/img/fondos/fondo_turquesa.png");
   background-size: 36px 54px;
   background-color: $turquesa-sombra;
-  background-position: center;
+  background-position: center top;
   padding: 5px 15px 0;
 }
-#nav-wrapper {
+.wrapper {
   position: relative;
 }
-.content {
+#content-background {
   background-image: url("assets/img/fondos/fondo_amarillo.png");
-  background-position: center;
-  background-color: $fondo-amarillo;
+  background-position: center top;
+  background-color: $amarillo;
   background-origin: content-box;
-  padding-top: $padding-top-content + 10px;
+}
+#content {
+  padding-top: $padding-top-content;
+}
+#collapse-menu{
+  position: absolute;
+  background-image: url("assets/img/fondos/fondo_amarillo.png");
+  background-position: center -205px;
+  background-color: $amarillo;
+  background-origin: content-box;
+  left: 0;
+  right: 0;
+  padding: 0 $xy-menu-button 10px;
+  margin: 0;
 }
 
 // ===== Header ======
@@ -118,6 +132,7 @@ body {
   background-color: $marron;
   background-position: center;
   position: absolute;
+  z-index: 1000;
   top: $caja-banda-magnolia;
   right: 0;
   left: 0;
@@ -128,6 +143,7 @@ body {
     left: 0;
     opacity: 0.3;
     background-image: url("assets/img/fondos/banda.png");
+    background-position: center;
     height: $alto-banda-magnolia;
   }
 }
@@ -164,8 +180,7 @@ body {
 }
 .navbar {
   position: absolute;
-  top: ($caja-banda-magnolia * 2) + $alto-banda-magnolia;
-  padding-top: 10px;
+  top: $padding-top-content;
   right: 0;
   left: 0;
   border: 0;
@@ -175,19 +190,6 @@ body {
   top: 0;
   left: 15px;
   right: 15px;
-}
-.navbar .menu {
-  position: relative;
-}
-.navbar .menu-items {
-  position: absolute;
-  background-image: url("assets/img/fondos/fondo_amarillo.png");
-  background-position: center;
-  background-color: $fondo-amarillo;
-  background-origin: content-box;
-  left: 0;
-  right: 0;
-  padding: 0 $xy-menu-button 10px;
 }
 .navbar-collapse {
   padding: 0;
@@ -242,6 +244,25 @@ body {
     margin-top: 3px;
   }
 }
+.heading{
+  padding: 0px 44px 10px;
+  margin: 0 -15px;
+  display: block;
+  .titulo{
+    padding: 12px 0;
+    p{
+      color: $texto-claro;
+      text-align: center;
+      font-family: 'yanone_regular';
+    }
+  }
+  .que_ofrecemos {
+    background-color: $turquesa-claro;
+  }
+  .que_ofrecemos {
+    background-color: $turquesa-claro;
+  }
+}
 
 // ===== Footer ======
 #footer {
@@ -277,20 +298,6 @@ body {
 }
 
 // ===== Que Ofrecemos ======
-.heading{
-  padding: 0px 44px 10px;
-  margin: 0 -15px;
-
-  .que_ofrecemos {
-    background-color: $turquesa-claro;
-    padding: 12px 0;
-    p{
-      color: $texto-claro;
-      text-align: center;
-      font-family: 'yanone_regular';
-    }
-  }
-}
 .intro {
   h1 {
     text-align: center;
@@ -332,16 +339,42 @@ body {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-  // ===== Header ======
+// ===== Objetos ======
+body {
+  padding: 5px 0 0 0;
+}
+#collapse-menu {
+  background-color: $turquesa-claro;
+  background-image: none;
+  padding: 0 30px;
+  margin-right: -30px;
+  margin-left: -30px;
+}
+#content-background {
+  background-image: url("assets/img/fondos/fondo_amarillo.png");
+  background-position: center -205px;
+  margin-top: 205px;
+  background-color: $amarillo;
+  background-origin: content-box;
+}
+#content {
+  padding-top: $xy-menu-button;
+}
 
-  .navbar .menu-items {
-    position: absolute;
+// ===== Header ======
+
+.navbar-default .navbar-nav > {
+  li,li:nth-child(even) {
     background-color: $turquesa-claro;
-    left: 0;
-    right: 0;
-    padding: 0 $xy-menu-button;
+    margin: 0;
+    a,a:active,a:visited,a:hover,a:link,a:focus{
+      padding: 12px 25px;
+    }
   }
-
+}
+.heading{
+  display: none;
+}
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {

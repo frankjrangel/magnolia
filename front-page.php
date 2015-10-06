@@ -2,7 +2,7 @@
 <div class="heading">
   <div class="row">
     <div class="col-xs-12">
-      <div class="que_ofrecemos">
+      <div class="titulo que_ofrecemos">
         <p>¿QUÉ OFRECEMOS?</p>
       </div>
     </div>

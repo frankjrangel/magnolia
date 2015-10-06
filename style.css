@@ -26,14 +26,14 @@ Version: 1.0
   font-style: normal; }
 @font-face {
   font-family: 'yanone_regular';
-  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot");
-  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff2") format("woff2"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.woff") format("woff"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.ttf") format("truetype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular") format("svg");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff2") format("woff2"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff") format("woff"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.ttf") format("truetype"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'yanone_thin';
-  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot");
-  src: url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff2") format("woff2"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.woff") format("woff"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.ttf") format("truetype"), url("assets/fonts/YanoneKaffeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format("svg");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot");
+  src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff2") format("woff2"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff") format("woff"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.ttf") format("truetype"), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format("svg");
   font-weight: normal;
   font-style: normal; }
 html {
@@ -43,7 +43,7 @@ h1 {
   font-family: 'jenna_sue',sans-serif;
   font-size: 5.6px;
   font-size: 4rem;
-  color: #cac1b0; }
+  color: #ccc0af; }
 
 a {
   text-decoration: none;
@@ -51,7 +51,7 @@ a {
   font-size: 1rem; }
 
 p {
-  color: #cac1b0;
+  color: #ccc0af;
   margin: 0;
   font-size: 1.4px;
   font-size: 1rem; }
@@ -60,23 +60,37 @@ body {
   background-image: url("assets/img/fondos/fondo_turquesa.png");
   background-size: 36px 54px;
   background-color: #48968f;
-  background-position: center;
+  background-position: center top;
   padding: 5px 15px 0; }
 
-#nav-wrapper {
+.wrapper {
   position: relative; }
 
-.content {
+#content-background {
   background-image: url("assets/img/fondos/fondo_amarillo.png");
-  background-position: center;
-  background-color: #fff8e9;
+  background-position: center top;
+  background-color: #fff9e9;
+  background-origin: content-box; }
+
+#content {
+  padding-top: 195px; }
+
+#collapse-menu {
+  position: absolute;
+  background-image: url("assets/img/fondos/fondo_amarillo.png");
+  background-position: center -205px;
+  background-color: #fff9e9;
   background-origin: content-box;
-  padding-top: 205px; }
+  left: 0;
+  right: 0;
+  padding: 0 44px 10px;
+  margin: 0; }
 
 .background-banda-logo {
-  background-color: #cac1b0;
+  background-color: #ccc0af;
   background-position: center;
   position: absolute;
+  z-index: 1000;
   top: 45px;
   right: 0;
   left: 0;
@@ -87,6 +101,7 @@ body {
     left: 0;
     opacity: 0.3;
     background-image: url("assets/img/fondos/banda.png");
+    background-position: center;
     height: 105px; }
 
 .logo-magnolia {
@@ -123,7 +138,6 @@ body {
 .navbar {
   position: absolute;
   top: 195px;
-  padding-top: 10px;
   right: 0;
   left: 0;
   border: 0; }
@@ -133,19 +147,6 @@ body {
   top: 0;
   left: 15px;
   right: 15px; }
-
-.navbar .menu {
-  position: relative; }
-
-.navbar .menu-items {
-  position: absolute;
-  background-image: url("assets/img/fondos/fondo_amarillo.png");
-  background-position: center;
-  background-color: #fff8e9;
-  background-origin: content-box;
-  left: 0;
-  right: 0;
-  padding: 0 44px 10px; }
 
 .navbar-collapse {
   padding: 0; }
@@ -163,7 +164,7 @@ body {
   border: 0; }
 
 .navbar-default .navbar-nav > li {
-  background-color: #67c5b8;
+  background-color: #66c5bd;
   margin-bottom: 7px;
   text-align: center; }
   .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus {
@@ -171,9 +172,9 @@ body {
     color: #fff;
     font-family: 'yanone_regular'; }
 .navbar-default .navbar-nav > li:nth-child(even) {
-  background-color: #bcdbd6; }
+  background-color: #bcdad6; }
 .navbar-default .navbar-nav > li.current_page_item {
-  background-color: #cac1b0; }
+  background-color: #ccc0af; }
 
 .navbar button {
   position: absolute;
@@ -184,11 +185,26 @@ body {
   padding: 9px 12px; }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #bbd9d6;
+  background-color: #bcdad6;
   height: 4px;
   width: 20px; }
 .navbar-default .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 3px; }
+
+.heading {
+  padding: 0px 44px 10px;
+  margin: 0 -15px;
+  display: block; }
+  .heading .titulo {
+    padding: 12px 0; }
+    .heading .titulo p {
+      color: #fff;
+      text-align: center;
+      font-family: 'yanone_regular'; }
+  .heading .que_ofrecemos {
+    background-color: #66c5bd; }
+  .heading .que_ofrecemos {
+    background-color: #66c5bd; }
 
 #footer {
   position: static;
@@ -216,17 +232,6 @@ body {
   background-repeat: no-repeat;
   background-position: center; }
 
-.heading {
-  padding: 0px 44px 10px;
-  margin: 0 -15px; }
-  .heading .que_ofrecemos {
-    background-color: #67c5b8;
-    padding: 12px 0; }
-    .heading .que_ofrecemos p {
-      color: #fff;
-      text-align: center;
-      font-family: 'yanone_regular'; }
-
 .intro h1 {
   text-align: center;
   line-height: 21px;
@@ -238,7 +243,7 @@ body {
   margin: 15px 0; }
 
 .shortcuts .shortcut {
-  background-color: #cac1b0; }
+  background-color: #ccc0af; }
 .shortcuts a {
   display: block;
   padding: 12px 15px;
@@ -256,12 +261,34 @@ body {
 /* Extra small devices (tablets, 480px and up) */
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .navbar .menu-items {
-    position: absolute;
-    background-color: #67c5b8;
-    left: 0;
-    right: 0;
-    padding: 0 44px; } }
+  body {
+    padding: 5px 0 0 0; }
+
+  #collapse-menu {
+    background-color: #66c5bd;
+    background-image: none;
+    padding: 0 30px;
+    margin-right: -30px;
+    margin-left: -30px; }
+
+  #content-background {
+    background-image: url("assets/img/fondos/fondo_amarillo.png");
+    background-position: center -205px;
+    margin-top: 205px;
+    background-color: #fff9e9;
+    background-origin: content-box; }
+
+  #content {
+    padding-top: 44px; }
+
+  .navbar-default .navbar-nav > li, .navbar-default .navbar-nav > li:nth-child(even) {
+    background-color: #66c5bd;
+    margin: 0; }
+    .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus, .navbar-default .navbar-nav > li:nth-child(even) a, .navbar-default .navbar-nav > li:nth-child(even) a:active, .navbar-default .navbar-nav > li:nth-child(even) a:visited, .navbar-default .navbar-nav > li:nth-child(even) a:hover, .navbar-default .navbar-nav > li:nth-child(even) a:link, .navbar-default .navbar-nav > li:nth-child(even) a:focus {
+      padding: 12px 25px; }
+
+  .heading {
+    display: none; } }
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
 
