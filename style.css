@@ -37,23 +37,23 @@ Version: 1.0
   font-weight: normal;
   font-style: normal; }
 html {
-  font-size: 14px; }
+  font-size: 12px; }
 
 h1 {
   font-family: 'jenna_sue',sans-serif;
-  font-size: 5.6px;
+  font-size: 4.8px;
   font-size: 4rem;
   color: #ccc0af; }
 
 a {
   text-decoration: none;
-  font-size: 1.4px;
+  font-size: 1.2px;
   font-size: 1rem; }
 
 p {
   color: #ccc0af;
   margin: 0;
-  font-size: 1.4px;
+  font-size: 1.2px;
   font-size: 1rem; }
 
 body {
@@ -69,8 +69,7 @@ body {
 #content-background {
   background-image: url("assets/img/fondos/fondo_amarillo.png");
   background-position: center top;
-  background-color: #fff9e9;
-  background-origin: content-box; }
+  background-color: #fff9e9; }
 
 #content {
   padding-top: 195px; }
@@ -78,31 +77,23 @@ body {
 #collapse-menu {
   position: absolute;
   background-image: url("assets/img/fondos/fondo_amarillo.png");
-  background-position: center -205px;
+  background-position: center -195px;
   background-color: #fff9e9;
-  background-origin: content-box;
   left: 0;
   right: 0;
   padding: 0 44px 10px;
   margin: 0; }
 
 .background-banda-logo {
-  background-color: #ccc0af;
-  background-position: center;
   position: absolute;
   z-index: 1000;
+  background-image: url("assets/img/fondos/banda.png");
+  background-position: center;
+  background-color: #ccc0af;
   top: 45px;
   right: 0;
   left: 0;
   height: 105px; }
-  .background-banda-logo .banda-logo {
-    position: absolute;
-    right: 0;
-    left: 0;
-    opacity: 0.3;
-    background-image: url("assets/img/fondos/banda.png");
-    background-position: center;
-    height: 105px; }
 
 .logo-magnolia {
   position: relative;
@@ -192,7 +183,7 @@ body {
   margin-top: 3px; }
 
 .heading {
-  padding: 0px 44px 10px;
+  padding: 0 44px;
   margin: 0 -15px;
   display: block; }
   .heading .titulo {
@@ -203,7 +194,7 @@ body {
       font-family: 'yanone_regular'; }
   .heading .que_ofrecemos {
     background-color: #66c5bd; }
-  .heading .que_ofrecemos {
+  .heading .catalogo {
     background-color: #66c5bd; }
 
 #footer {
@@ -242,23 +233,49 @@ body {
   line-height: 15px;
   margin: 15px 0; }
 
-.shortcuts .shortcut {
-  background-color: #ccc0af; }
-.shortcuts a {
-  display: block;
-  padding: 12px 15px;
-  min-height: 44px;
-  text-align: center; }
-.shortcuts p {
-  margin: 0;
-  color: #ffffff;
-  font-weight: bold; }
+.shortcuts {
+  margin-right: -7.5px;
+  margin-left: -7.5px; }
+  .shortcuts .shortcut {
+    width: 50%;
+    float: left;
+    padding: 0 7.5px; }
+  .shortcuts a {
+    background-color: #ccc0af;
+    display: block;
+    padding: 12px 15px;
+    min-height: 44px;
+    text-align: center; }
+  .shortcuts p {
+    margin: 0;
+    color: #ffffff;
+    font-weight: bold; }
 
 .productos-mes {
   margin: 15px 0; }
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
+@media (min-width: 480px) {
+  html {
+    font-size: 14px; }
+
+  h1 {
+    font-family: 'jenna_sue',sans-serif;
+    font-size: 5.6px;
+    font-size: 4rem;
+    color: #ccc0af; }
+
+  a {
+    text-decoration: none;
+    font-size: 1.4px;
+    font-size: 1rem; }
+
+  p {
+    color: #ccc0af;
+    margin: 0;
+    font-size: 1.4px;
+    font-size: 1rem; } }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   body {
@@ -268,15 +285,24 @@ body {
     background-color: #66c5bd;
     background-image: none;
     padding: 0 30px;
-    margin-right: -30px;
-    margin-left: -30px; }
+    margin: 0 -30px; }
+
+  #wings-menu-background {
+    position: absolute;
+    z-index: -10;
+    margin: 195px -27px 0;
+    background-image: url("assets/img/fondos/triangulito_izq.png"), url("assets/img/fondos/triangulito_der.png");
+    background-position: left 44px, right 44px;
+    background-repeat: no-repeat, no-repeat;
+    left: 0;
+    right: 0;
+    height: 72px; }
 
   #content-background {
     background-image: url("assets/img/fondos/fondo_amarillo.png");
-    background-position: center -205px;
-    margin-top: 205px;
-    background-color: #fff9e9;
-    background-origin: content-box; }
+    background-position: center -195px;
+    margin-top: 195px;
+    background-color: #fff9e9; }
 
   #content {
     padding-top: 44px; }
@@ -285,11 +311,14 @@ body {
     background-color: #66c5bd;
     margin: 0; }
     .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus, .navbar-default .navbar-nav > li:nth-child(even) a, .navbar-default .navbar-nav > li:nth-child(even) a:active, .navbar-default .navbar-nav > li:nth-child(even) a:visited, .navbar-default .navbar-nav > li:nth-child(even) a:hover, .navbar-default .navbar-nav > li:nth-child(even) a:link, .navbar-default .navbar-nav > li:nth-child(even) a:focus {
-      padding: 12px 25px; }
+      padding: 12px 28px; }
 
   .heading {
     display: none; } }
 /* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus {
+    padding: 12px 57px; } }
 /* Large devices (large desktops, 1200px and up) */
 
 /*# sourceMappingURL=style.css.map */
