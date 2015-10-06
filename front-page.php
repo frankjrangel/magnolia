@@ -2,18 +2,14 @@
 <div class="heading">
   <div class="row">
     <div class="col-xs-12">
-      <div class="que_ofrecemos">
-        <a href="">¿QUÉ OFRECEMOS?</a>
+      <div class="titulo que_ofrecemos">
+        <p>¿QUÉ OFRECEMOS?</p>
       </div>
     </div>
   </div>
 </div>
 <div class="intro">
   <div class="row">
-    <!--<div class="col-xs-12">
-      <h1>Que<br>
-        ofrecemos</h1>
-    </div>-->
     <div class="col-xs-10 col-xs-offset-1">
       <p>Regala un momento Magnolia, con un detalle único, personalizado y en una presentación inolvidable.</p>
     </div>

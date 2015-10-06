@@ -30,23 +30,22 @@
   </div>
 </div>
 
-  <div id="nav-wrapper">
+  <div class="wrapper container">
     <nav class="navbar navbar-default">
-
-        <div class="menu">
-
-          <div class="menu-items collapse navbar-collapse" id="collapse-menu">
-              <div class="row">
-                <div class="col-xs-12">
+          <div class="row">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10">
+              <div class="wrapper">
+                <div class="collapse navbar-collapse" id="collapse-menu">
                   <ul class="nav navbar-nav">
-                    <li><a href="">¿QUÉ OFRECEMOS?</a></li>
-                    <li><a href="">CATÁLOGO</a></li>
-                    <li><a href="">¿CÓMO COMPRAR?</a></li>
-                    <li><a href="">CONTACTO</a></li>
+                    <li><a href="<?php echo esc_url( home_url('/')) ?>">¿QUÉ OFRECEMOS?</a></li>
+                    <li><a href="<?php echo get_post_type_archive_link('catalogo') ?>">CATÁLOGO</a></li>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('como-comprar'))) ?>">¿CÓMO COMPRAR?</a></li>
+                    <li><a href="<?php echo get_post_type_archive_link('preguntas-consejos') ?>">PREGUNTAS Y CONSEJOS</a></li>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_path('contacto'))) ?>">CONTACTO</a></li>
                   </ul>
-                </div>
+                </div><!-- collapse -->
               </div>
-          </div><!-- collapse -->
+          </div>
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-menu">
             <span class="sr-only">toggle navigation</span>
@@ -60,5 +59,7 @@
     </nav>
   </div>
 
-
-  <div class="container content">
+  <div class="container">
+    <div class="row">
+      <div id="content-background" class="wrapper col-xs-12 col-sm-offset-1 col-sm-10">
+          <div id="content">
