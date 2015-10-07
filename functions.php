@@ -34,62 +34,172 @@ function cc_mime_types( $mimes ){
 }
 add_filter('upload_mimes','cc_mime_types');
 
+
 // ===== Post Types =====
 
-/*function red_post_type() {
+/*
+	EJEMPLO FULL DATA
+
+function nombre_post_type() {
   $labels = array(
-    'name'               => _x( 'Redes', 'post type general name' ),
-    'singular_name'      => _x( 'Red', 'post type singular name' ),
-    'add_new'            => _x( 'Add New', 'Red' ),
-    'add_new_item'       => __( 'Agregar Red' ),
-    'edit_item'          => __( 'Editar Red' ),
-    'new_item'           => __( 'Nuevo Red' ),
-    'all_items'          => __( 'Todos las redes' ),
-    'view_item'          => __( 'Ver Red' ),
-    'search_items'       => __( 'Buscar Red' ),
-    'not_found'          => __( 'La Red no existe' ),
-    'not_found_in_trash' => __( 'La Red no existe en la papelera' ),
-    'parent_item_colon'  => '',
-    'menu_name'          => 'Redes'
+    'name'               => 'Nombres',
+    'singular_name'      => 'Nombre',
+		'all_items'          => 'Todos',
+		'add_new'            => 'Agregar Nuevo',
+		'add_new_item'       => 'Agregar Nuevo',
+		'edit_item'          => 'Editar',
+		'new_item'           => 'Nuevo',
+		'view_item'          => 'Ver',
+		'search_items'       => 'Buscar',
+		'not_found'          => 'No existe',
+    'not_found_in_trash' => 'No existe',
+    'parent_item_colon'  => ' ',
+    'menu_name'          => 'Nombres'// o apunta a name
   );
   $args = array(
     'labels'        => $labels,
-    'description'   => 'Redes',
+    'description'   => 'Nombres',
     'public'        => true,
     'menu_position' => 4,
-    'supports'      => array(  'title' , 'page-attributes'  ),
+		'menu_icon'     => 'dashicons-cart',
+    'supports'      => array(  'nombre' , 'page-attributes'  ),
     'has_archive'   => true
   );
-  register_post_type( 'red', $args );
+  register_post_type( 'nombre', $args );
 }
-add_action( 'init', 'red_post_type' );*/
+add_action( 'init', 'nombre_post_type' );*/
 
-function preguntas_y_consejos_post_type() {
-  $labels = array(
-    'name'               => 'Preguntas y Consejos',
-    'singular_name'      => 'Pregunta o Consejo',
-  );
-  $args = array(
-    'labels'        => $labels,
-    'public'        => true,
-    'menu_position' => 3,
-    'has_archive'   => true
-  );
-  register_post_type( 'preguntas_y_consejos', $args );
-}
-add_action( 'init', 'preguntas_y_consejos_post_type' );
 
-function catalogo_post_type() {
+function producto_post_type() {
   $labels = array(
     'name'               => 'Catálogo',
     'singular_name'      => 'Producto',
+		'all_items'          => 'Todos',
+		'add_new'            => 'Agregar Nuevo',
+		'add_new_item'       => 'Agregar Nuevo',
+		'edit_item'          => 'Editar',
+		'new_item'           => 'Nuevo',
+		'view_item'          => 'Ver',
+		'search_items'       => 'Buscar',
   );
   $args = array(
     'labels'        => $labels,
     'public'        => true,
     'menu_position' => 2,
+		'menu_icon'   	=> 'dashicons-screenoptions',
+		'supports'      => array( 'page-attributes' ),
     'has_archive'   => true
   );
-  register_post_type( 'catalogo', $args );
+  register_post_type( 'producto', $args );
 }
-add_action( 'init', 'catalogo_post_type' );
+add_action( 'init', 'producto_post_type' );
+
+function categoria_producto_taxonomy() {
+    $labels = array(
+          'name' => 'Categoría',
+          'add_new_item' => 'Agregar Categoría',
+          'new_item_name' => "Nueva Categoría"
+    );
+    $args = array(
+            'labels'            => $labels,
+            //'rewrite'           => array( 'slug' => 'categoria' ),
+            'show_admin_column' => 1
+    );
+    register_taxonomy( 'categoria', 'producto', $args );
+    register_taxonomy_for_object_type( 'categoria', 'producto' );
+}
+add_action( 'init', 'categoria_producto_taxonomy', 0 );
+
+function pregunta_post_type() {
+  $labels = array(
+    'name'               => 'Preguntas',
+    'singular_name'      => 'Pregunta',
+		'all_items'          => 'Todas',
+		'add_new'            => 'Agregar Nueva',
+		'add_new_item'       => 'Agregar Nueva',
+		'edit_item'          => 'Editar',
+		'new_item'           => 'Nueva',
+		'view_item'          => 'Ver',
+		'search_items'       => 'Buscar',
+		'not_found'          => 'No existe',
+    'not_found_in_trash' => 'No existe',
+    'parent_item_colon'  => ' ',
+  );
+  $args = array(
+    'labels'        => $labels,
+    'public'        => true,
+    'menu_position' => 3,
+		'menu_icon'   => 'dashicons-format-status',
+		'supports'      => array( 'page-attributes' ),
+    'has_archive'   => true
+  );
+  register_post_type( 'pregunta', $args );
+}
+add_action( 'init', 'pregunta_post_type' );
+
+function consejo_post_type() {
+  $labels = array(
+    'name'               => 'Consejos',
+    'singular_name'      => 'Consejo',
+		'all_items'          => 'Todos',
+		'add_new'            => 'Agregar Nuevo',
+		'add_new_item'       => 'Agregar Nuevo',
+		'edit_item'          => 'Editar',
+		'new_item'           => 'Nuevo',
+		'view_item'          => 'Ver',
+		'search_items'       => 'Buscar',
+		'not_found'          => 'No existe',
+    'not_found_in_trash' => 'No existe',
+    'parent_item_colon'  => ' ',
+  );
+  $args = array(
+    'labels'        => $labels,
+    'public'        => true,
+    'menu_position' => 4,
+		'menu_icon'   	=> 'dashicons-testimonial',
+		'supports'      => array( 'page-attributes' ),
+    'has_archive'   => true
+  );
+  register_post_type( 'consejo', $args );
+}
+add_action( 'init', 'consejo_post_type' );
+
+/* ==== REMOVING =====
+
+function wpse28782_remove_plugin_admin_menu() {
+    if( !current_user_can( 'administrator' ) ):
+        remove_menu_page('cart66_admin');
+    endif;
+}
+add_action( 'admin_menu', 'wpse28782_remove_plugin_admin_menu', 9999 );
+
+function wpse28782_remove_menu_items() {
+    if( !current_user_can( 'administrator' ) ):
+        remove_menu_page( 'edit.php?post_type=your_post_type' );
+    endif;
+}
+add_action( 'admin_menu', 'wpse28782_remove_menu_items' );
+
+
+remove_menu_page('edit.php'); // Posts
+remove_menu_page('upload.php'); // Media
+remove_menu_page('link-manager.php'); // Links
+remove_menu_page('edit-comments.php'); // Comments
+remove_menu_page('edit.php?post_type=page'); // Pages
+remove_menu_page('plugins.php'); // Plugins
+remove_menu_page('themes.php'); // Appearance
+remove_menu_page('users.php'); // Users
+remove_menu_page('tools.php'); // Tools
+remove_menu_page('options-general.php'); // Settings
+*/
+
+// ==== REMOVES =====
+
+function wpse28782_remove_menu_items() {
+	remove_menu_page('edit.php'); // Posts
+	remove_menu_page('edit-comments.php'); // Comments
+	remove_menu_page('themes.php'); // Appearance
+	remove_menu_page('tools.php'); // Tools
+
+}
+add_action( 'admin_menu', 'wpse28782_remove_menu_items' );

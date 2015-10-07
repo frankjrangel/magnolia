@@ -19,7 +19,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="shortcut">
-        <a href="que-ofrecemos" class="sh"><p>¿Cómo comprar?</p></a>
+        <a href="como_comprar" class="sh"><p>¿Cómo comprar?</p></a>
       </div>
       <div class="shortcut">
         <a href="catalogo" class="sh"><p>Ver Catálogo</p></a>

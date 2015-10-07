@@ -6,17 +6,17 @@
 	<div id="footer">
 		<div class="container">
       <div class="redes">
-        <a href="#"
-        style="background-image:url(wp-content/themes/magnolia/assets/img/redes/twitter_logo_blanco.svg );">
+        <a href="<?php the_field('twitter', 30 );?>" target="_blank"
+        style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/twitter_logo_blanco.svg );">
         </a>
-        <a href="#"
-        style="background-image:url(wp-content/themes/magnolia/assets/img/redes/facebook_logo_blanco.svg );">
+        <a href="<?php the_field('facebook', 30 );?>" target="_blank"
+        style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/facebook_logo_blanco.svg );">
         </a>
-        <a href="#"
-        style="background-image:url(wp-content/themes/magnolia/assets/img/redes/instagram_logo_blanco.svg );">
+        <a href="<?php the_field('instagram', 30 );?>" target="_blank"
+        style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/instagram_logo_blanco.svg );">
         </a>
-        <a href="#"
-        style="background-image:url(wp-content/themes/magnolia/assets/img/redes/pinterest_logo_blanco.svg );">
+        <a href="<?php the_field('pinterest', 30 );?>" target="_blank"
+        style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/pinterest_logo_blanco.svg );">
         </a>
       </div>
 		</div>
