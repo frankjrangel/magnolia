@@ -56,13 +56,13 @@ $amarillo: #fff9e9;//fondo
 
 // ===== Escalas =====
 
-$baseFontsize: 12;
+$baseFontsize: 12;  //  <------------
 html {
   font-size: $baseFontsize + px;
 }
 $baseFontsize: $baseFontsize / 10;
 
-$baseLineheight: $baseFontsize * 1.3;
+$baseLineheight: $baseFontsize * 1.3; //  <------------
 @mixin font-size($sizeValue){
   font-size: ($sizeValue * $baseFontsize) + px;
   font-size: ($sizeValue) + rem;

@@ -83,12 +83,12 @@ function producto_post_type() {
 		'search_items'       => 'Buscar',
   );
   $args = array(
-    'labels'        => $labels,
-    'public'        => true,
-    'menu_position' => 2,
-		'menu_icon'   	=> 'dashicons-screenoptions',
-		'supports'      => array( 'page-attributes' ),
-    'has_archive'   => true
+    'labels'        	=> $labels,
+    'public'        	=> true,
+    'menu_position' 	=> 2,
+		'menu_icon'   		=> 'dashicons-screenoptions',
+		'supports'      	=> array( 'title' , 'page-attributes' ),
+    'has_archive'   	=> true
   );
   register_post_type( 'producto', $args );
 }
@@ -96,14 +96,14 @@ add_action( 'init', 'producto_post_type' );
 
 function categoria_producto_taxonomy() {
     $labels = array(
-          'name' => 'Categoría',
-          'add_new_item' => 'Agregar Categoría',
-          'new_item_name' => "Nueva Categoría"
+          'name' 						=> 'Categoría',
+          'add_new_item' 		=> 'Agregar Categoría',
+          'new_item_name' 	=> "Nueva Categoría"
     );
     $args = array(
             'labels'            => $labels,
             //'rewrite'           => array( 'slug' => 'categoria' ),
-            'show_admin_column' => 1
+            'show_admin_column' => 1,
     );
     register_taxonomy( 'categoria', 'producto', $args );
     register_taxonomy_for_object_type( 'categoria', 'producto' );
@@ -130,7 +130,7 @@ function pregunta_post_type() {
     'public'        => true,
     'menu_position' => 3,
 		'menu_icon'   => 'dashicons-format-status',
-		'supports'      => array( 'page-attributes' ),
+		'supports'      => array( 'title' , 'page-attributes' ),
     'has_archive'   => true
   );
   register_post_type( 'pregunta', $args );
@@ -157,7 +157,7 @@ function consejo_post_type() {
     'public'        => true,
     'menu_position' => 4,
 		'menu_icon'   	=> 'dashicons-testimonial',
-		'supports'      => array( 'page-attributes' ),
+		'supports'      => array( 'title' , 'page-attributes' ),
     'has_archive'   => true
   );
   register_post_type( 'consejo', $args );
@@ -203,3 +203,12 @@ function wpse28782_remove_menu_items() {
 
 }
 add_action( 'admin_menu', 'wpse28782_remove_menu_items' );
+
+
+function exclude_this_page( $query ) {
+	global $pagenow;
+	if( 'edit.php' == $pagenow && ( get_query_var('post_type') && 'page' == get_query_var('post_type') ) )
+		$query->set( 'post__not_in', array(50) ); //Pages: 50=CATALOGO
+	return $query;
+}
+add_action( 'pre_get_posts' ,'exclude_this_page' );

@@ -37,7 +37,7 @@
             <div class="collapse navbar-collapse" id="collapse-menu">
               <ul class="nav navbar-nav">
                 <li><a href="<?php echo esc_url( home_url('/')) ?>">¿QUÉ OFRECEMOS?</a></li>
-                <li><a href="<?php echo get_post_type_archive_link('catalogo') ?>">CATÁLOGO</a></li>
+                <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
                 <li><a href="<?php echo get_page_link(10); ?>">¿CÓMO COMPRAR?</a></li>
                 <li><a href="<?php echo get_post_type_archive_link('preguntas_y_consejos') ?>">PREGUNTAS Y CONSEJOS</a></li>
                 <li><a href="<?php echo get_page_link(14); ?>">CONTACTO</a></li>

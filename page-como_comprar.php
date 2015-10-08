@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="titulo que_ofrecemos">
-        <p>¿QUÉ OFRECEMOS?</p>
+        <p>¿CÓMO COMPRAR?</p>
       </div>
     </div>
   </div>
