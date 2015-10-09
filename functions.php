@@ -14,8 +14,6 @@ function wpbootstrap_scripts_with_jquery(){
 	}
 
 	$scripts = array(
-		//'script2' => '/js/jquery-2.1.4.min.js',
-		//'script3' => '/js/jquery.matchHeight-min.js',
 		'scriptA' => '/js/init.js',
 		'scriptB' => '/js/menuFixed.js',
 		'scriptC' => '/js/bumper.js'
@@ -102,7 +100,7 @@ function categoria_producto_taxonomy() {
     );
     $args = array(
             'labels'            => $labels,
-            //'rewrite'           => array( 'slug' => 'categoria' ),
+            //'rewrite'           => array( 'slug' => '' ),
             'show_admin_column' => 1,
     );
     register_taxonomy( 'categoria', 'producto', $args );
