@@ -45,10 +45,11 @@ h1 {
   font-size: 4rem;
   color: #ccc0af; }
 
-a {
+a, a:active, a:visited, a:hover, a:link, a:focus {
   text-decoration: none;
   font-size: 1.2px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  color: #000; }
 
 p {
   color: #ccc0af;
@@ -196,6 +197,13 @@ body {
     background-color: #66c5bd; }
   .heading .catalogo {
     background-color: #bcdad6; }
+  .heading .categoria {
+    background-color: #fff;
+    padding: 12px 15px;
+    margin-top: 15px; }
+    .heading .categoria p {
+      color: #000;
+      text-align: center; }
 
 #footer {
   position: static;
@@ -253,6 +261,44 @@ body {
 
 .productos-mes {
   margin: 15px 0; }
+
+.categorias {
+  padding: 7.5px; }
+  .categorias .col-xs-6, .categorias .col-xs-12 {
+    padding: 0 7.5px; }
+    .categorias .col-xs-6 .categoria, .categorias .col-xs-12 .categoria {
+      margin: 7.5px 0; }
+      .categorias .col-xs-6 .categoria a, .categorias .col-xs-12 .categoria a {
+        display: block; }
+
+.productos {
+  padding: 7.5px; }
+  .productos .col-xs-6 {
+    padding: 0 7.5px; }
+    .productos .col-xs-6 .producto {
+      margin: 7.5px 0;
+      background-color: #fff; }
+    .productos .col-xs-6 .info {
+      padding: 5px 10px; }
+      .productos .col-xs-6 .info h5, .productos .col-xs-6 .info p {
+        margin: 0; }
+
+.producto {
+  padding: 15px 0; }
+  .producto .fotos {
+    margin: -7.5px 0; }
+    .producto .fotos .foto {
+      padding: 7.5px 0; }
+  .producto .info {
+    background-color: #fff;
+    padding: 5px 10px; }
+    .producto .info h5 {
+      margin-top: 0; }
+    .producto .info p {
+      margin: 0;
+      color: #000; }
+      .producto .info p span {
+        color: gray; }
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
