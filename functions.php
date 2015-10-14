@@ -72,10 +72,10 @@ function producto_post_type() {
   $labels = array(
     'name'               => 'Catálogo',
     'singular_name'      => 'Producto',
-		'all_items'          => 'Todos',
+		'all_items'          => 'Productos',
 		'add_new'            => 'Agregar Nuevo',
 		'add_new_item'       => 'Agregar Nuevo',
-		'edit_item'          => 'Editar',
+		'edit_item'          => 'Editar ',
 		'new_item'           => 'Nuevo',
 		'view_item'          => 'Ver',
 		'search_items'       => 'Buscar',
@@ -94,13 +94,14 @@ add_action( 'init', 'producto_post_type' );
 
 function categoria_producto_taxonomy() {
     $labels = array(
-          'name' 						=> 'Categoría',
-          'add_new_item' 		=> 'Agregar Categoría',
-          'new_item_name' 	=> "Nueva Categoría"
+          'name' 						=> 'Categorías',
+					'singular_name'		=> 'Categoría',
+          'add_new_item' 		=> 'Agregar categoría',
+          'new_item_name' 	=> "Nueva categoría"
     );
     $args = array(
             'labels'            => $labels,
-            //'rewrite'           => array( 'slug' => '' ),
+            'rewrite'           => array( 'slug' => 'categoria' ),
             'show_admin_column' => 1,
     );
     register_taxonomy( 'categoria', 'producto', $args );
