@@ -11,7 +11,7 @@
 <div class="intro">
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
-      <p>Regala un momento Magnolia, con un detalle único, personalizado y en una presentación inolvidable.</p>
+      <p><?php echo get_field('que_ofrecemos'); ?></p>
     </div>
   </div>
 </div>
@@ -28,12 +28,20 @@
   </div>
 </div>
 
-
+<?php $taxonomy = 'categoria';
+      $term_id  = '14';
+      $term = get_term_by( 'id' , $term_id , $taxonomy );
+      $link = esc_attr(get_term_link($term)). '?t='.$term_id;
+      $foto = get_field('foto', $term);
+?>
 <div class="row">
 
   <div class="col-xs-12">
     <div class="productos-mes">
-      <img class="img-responsive" src="/magnolia/wp-content/themes/magnolia/assets/img/productos/kit_bano.png" alt="Productos del mes" />
+      <a href="<?php echo $link; ?>">
+        <img class="img-responsive"
+            src="<?php echo $foto; ?>"  alt="Productos del mes">
+      </a>
     </div>
   </div>
 

@@ -49,7 +49,7 @@ a, a:active, a:visited, a:hover, a:link, a:focus {
   text-decoration: none;
   font-size: 1.2px;
   font-size: 1rem;
-  color: #000; }
+  color: #474747; }
 
 p {
   color: #ccc0af;
@@ -202,7 +202,7 @@ body {
     padding: 12px 15px;
     margin-top: 15px; }
     .heading .categoria p {
-      color: #000;
+      color: #474747;
       text-align: center; }
 
 #footer {
@@ -256,7 +256,7 @@ body {
     text-align: center; }
   .shortcuts p {
     margin: 0;
-    color: #ffffff;
+    color: #fff;
     font-weight: bold; }
 
 .productos-mes {
@@ -284,21 +284,30 @@ body {
         margin: 0; }
 
 .producto {
-  padding: 15px 0; }
-  .producto .fotos {
-    margin: -7.5px 0; }
-    .producto .fotos .foto {
-      padding: 7.5px 0; }
-  .producto .info {
-    background-color: #fff;
-    padding: 5px 10px; }
-    .producto .info h5 {
-      margin-top: 0; }
-    .producto .info p {
-      margin: 0;
-      color: #000; }
-      .producto .info p span {
-        color: gray; }
+  padding: 7.5px 0; }
+  .producto .fotos .foto {
+    padding: 7.5px 0; }
+  .producto .info .data {
+    padding: 7.5px 0; }
+    .producto .info .data div {
+      background-color: #fff;
+      padding: 5px 10px; }
+      .producto .info .data div h5 {
+        margin-top: 0; }
+      .producto .info .data div p {
+        margin: 0;
+        color: #474747; }
+        .producto .info .data div p span {
+          color: #a8a8a8; }
+  .producto .info .pedido {
+    padding: 7.5px 0; }
+    .producto .info .pedido .boton a {
+      display: block;
+      background-color: #66c5bd;
+      color: #fff;
+      text-align: center;
+      height: 44px;
+      padding: 12px 0; }
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
@@ -357,14 +366,14 @@ body {
     background-color: #66c5bd;
     margin: 0; }
     .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus, .navbar-default .navbar-nav > li:nth-child(even) a, .navbar-default .navbar-nav > li:nth-child(even) a:active, .navbar-default .navbar-nav > li:nth-child(even) a:visited, .navbar-default .navbar-nav > li:nth-child(even) a:hover, .navbar-default .navbar-nav > li:nth-child(even) a:link, .navbar-default .navbar-nav > li:nth-child(even) a:focus {
-      padding: 12px 28px; }
+      padding: 12px 15px; }
 
   .heading {
     display: none; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus {
-    padding: 12px 57px; } }
+    padding: 12px 50px; } }
 /* Large devices (large desktops, 1200px and up) */
 
 /*# sourceMappingURL=style.css.map */

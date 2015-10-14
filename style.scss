@@ -49,10 +49,13 @@ Version: 1.0
 $turquesa-pastel: #bcdad6;//menu-item
 $turquesa-claro: #66c5bd;//menu-item
 $turquesa-sombra: #48968f;
-$marron: #ccc0af;//texto-oscuro, menu-item active, fondo banda
-$texto-claro: #fff;
 $icon-bar: $turquesa-pastel;
+$marron: #ccc0af;//texto-oscuro, menu-item active, fondo banda
+$blanco: #fff;
 $amarillo: #fff9e9;//fondo
+$negro:#474747;
+$gris: #a8a8a8;
+$blanco: #fff;
 
 // ===== Escalas ==========================================
 
@@ -82,7 +85,7 @@ h1 {
 a,a:active,a:visited,a:hover,a:link,a:focus{
   text-decoration: none;
   @include font-size(1);
-  color: #000;
+  color: $negro;
 }
 p{
   color: $marron;
@@ -204,7 +207,7 @@ body {
     text-align: center;
     a,a:active,a:visited,a:hover,a:link,a:focus{
       padding: 12px 0;
-      color: $texto-claro;
+      color: $blanco;
       font-family: 'yanone_regular';
     }
   }
@@ -240,7 +243,7 @@ body {
   .titulo{
     padding: 12px 0;
     p{
-      color: $texto-claro;
+      color: $blanco;
       text-align: center;
       font-family: 'yanone_regular';
     }
@@ -252,12 +255,12 @@ body {
     background-color: $turquesa-pastel;
   }
   .categoria {
-    background-color: #fff;
+    background-color: $blanco;
     padding: 12px 15px;
     margin-top: 15px;
 
     p{
-      color: #000;
+      color: $negro;
       text-align: center;
     }
   }
@@ -328,7 +331,7 @@ body {
   }
   p {
     margin: 0;
-    color: #ffffff;
+    color: $blanco;
     font-weight: bold;
   }
 }
@@ -357,7 +360,7 @@ body {
     padding: 0 7.5px;
     .producto {
       margin: 7.5px 0;
-      background-color: #fff;
+      background-color: $blanco;
     }
     .info{
       padding: 5px 10px;
@@ -370,24 +373,43 @@ body {
 
 // ===== Producto ========================================
 .producto {
-  padding: 15px 0;
+  padding: 7.5px 0;
+  .row{
+  }
   .fotos{
-    margin: -7.5px 0;
     .foto {
       padding: 7.5px 0;
     }
   }
   .info{
-    background-color: #fff;
-    padding: 5px 10px;
-    h5{
-      margin-top: 0
+    .data {
+      padding: 7.5px 0;
+      div{
+        background-color: $blanco;
+        padding: 5px 10px;
+        h5{
+          margin-top: 0
+        }
+        p {
+          margin: 0;
+          color: $negro;
+          span{
+            color: $gris;
+          }
+        }
+      }
     }
-    p {
-      margin: 0;
-      color: #000;
-      span{
-        color: gray;
+    .pedido{
+      padding: 7.5px 0;
+      .boton{
+        a{
+          display: block;
+          background-color: $turquesa-claro;
+          color: $blanco;
+          text-align: center;
+          height: $xy-menu-button;
+          padding: 12px 0;
+        }
       }
     }
   }
@@ -476,7 +498,7 @@ body {
     background-color: $turquesa-claro;
     margin: 0;
     a,a:active,a:visited,a:hover,a:link,a:focus{
-      padding: 12px 28px;
+      padding: 12px 15px;
     }
   }
 }
@@ -488,7 +510,7 @@ body {
 @media (min-width: 992px) {
   .navbar-default .navbar-nav > li {
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding: 12px 57px;
+        padding: 12px 50px;
       }
     }
 }

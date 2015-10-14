@@ -30,7 +30,7 @@
     ) );?>
 
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1">
         <div class="productos">
           <div class="row">
 
@@ -42,9 +42,9 @@
     ?>
 
 
-<div class="col-xs-6">
+<div class="col-xs-6 col-sm-4 col-md-3">
   <a href="<?php echo $link; ?>">
-   <div class="producto">
+   <div class="producto sh">
      <img class="img-responsive"
          src="<?php echo $foto; ?>">
      <div class="info">

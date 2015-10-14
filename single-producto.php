@@ -11,6 +11,7 @@
 
 
 <?php
+  $postid = get_the_ID();
   $foto_1 = get_field('foto_1');
   $foto_2 = get_field('foto_2');
   $foto_3 = get_field('foto_3');
@@ -21,55 +22,80 @@
 ?>
 
 <div class="row">
-  <div class="col-xs-12">
+  <div class="col-xs-12 col-md-10 col-md-offset-1">
     <div class="producto">
 
-      <div class="fotos">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="foto">
-              <img class="img-responsive"
-                  src="<?php echo $foto_1; ?>">
-            </div>
-          </div>
-            <?php
-            if ($foto_2 != null){
-              echo '
-              <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-12 col-lg-8">
+          <div class="fotos">
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 ">
                 <div class="foto">
                   <img class="img-responsive"
-                    src="'. $foto_2.'">
+                      src="<?php echo $foto_1; ?>">
                 </div>
-              </div>';
-
-              if ($foto_3 != null){
-                echo '
-                <div class="col-xs-12">
-                  <div class="foto">
-                    <img class="img-responsive"
-                      src="'. $foto_3.'">
-                  </div>
-                </div>';
-                if ($foto_4 != null){
+              </div>
+                <?php
+                if ($foto_2 != null){
                   echo '
-                  <div class="col-xs-12">
+                  <div class="col-xs-12 col-sm-6">
                     <div class="foto">
                       <img class="img-responsive"
-                        src="'. $foto_4.'">
+                        src="'. $foto_2.'">
                     </div>
                   </div>';
+
+                  if ($foto_3 != null){
+                    echo '
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="foto">
+                        <img class="img-responsive"
+                          src="'. $foto_3.'">
+                      </div>
+                    </div>';
+                    if ($foto_4 != null){
+                      echo '
+                      <div class="col-xs-12 col-sm-6">
+                        <div class="foto">
+                          <img class="img-responsive"
+                            src="'. $foto_4.'">
+                        </div>
+                      </div>';
+                    }
+                  }
                 }
-              }
-            }
-            ?>
+                ?>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-lg-4">
+          <div class="info">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="data">
+                  <div>
+                    <h5><?php echo $nombre; ?></h5>
+                    <h5>Bs. <?php echo $precio; ?></h5>
+                    <p>Detalles del producto: <span><?php echo $detalles; ?></span></p>
+                  </div>
+                </div>
+
+                <div class="pedido">
+                  <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1">
+                      <div class="boton">
+                        <a href="<?php echo get_page_link(113).'?c='.$postid; ?>">Hacer Pedido</a>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="info">
-        <h5><?php echo $nombre; ?></h5>
-        <h5>Bs. <?php echo $precio; ?></h5>
-        <p>Detalles del producto: <span><?php echo $detalles; ?></span></p>
-      </div>
 
     </div>
   </div>
