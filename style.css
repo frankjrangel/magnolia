@@ -73,7 +73,8 @@ body {
   background-color: #fff9e9; }
 
 #content {
-  padding-top: 195px; }
+  padding-top: 195px;
+  padding-bottom: 0; }
 
 #collapse-menu {
   position: absolute;
@@ -84,6 +85,9 @@ body {
   right: 0;
   padding: 0 44px 10px;
   margin: 0; }
+
+.seccion {
+  margin: 15px 0; }
 
 .background-banda-logo {
   position: absolute;
@@ -105,17 +109,16 @@ body {
 .brand {
   max-width: 100%;
   padding: 0; }
-
-.brand div {
-  position: absolute;
-  top: -42px;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 218px 188px;
-  width: 218px;
-  height: 188px; }
+  .brand div {
+    position: absolute;
+    top: -42px;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 218px 188px;
+    width: 218px;
+    height: 188px; }
 
 .navbar,
 .navbar-default,
@@ -211,25 +214,38 @@ body {
   bottom: 0;
   left: 0;
   height: 44px; }
+  #footer .container {
+    position: relative; }
+  #footer .marrones {
+    display: none; }
+  #footer .blancos {
+    display: block; }
+  #footer .redes {
+    position: absolute;
+    width: 144px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto; }
+  #footer .redes a {
+    display: block;
+    float: left;
+    height: 44px;
+    width: 36px;
+    background-repeat: no-repeat;
+    background-position: center; }
 
-#footer .container {
-  position: relative; }
+.intro,
+.shortcuts,
+.banner-productos {
+  display: block; }
 
-.redes {
-  position: absolute;
-  width: 144px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto; }
-
-.redes a {
-  display: block;
-  float: left;
-  height: 44px;
-  width: 36px;
-  background-repeat: no-repeat;
-  background-position: center; }
+.banner-comprar,
+.banner-redes,
+.prod_1,
+.prod_2,
+.prod_3 {
+  display: none; }
 
 .intro h1 {
   text-align: center;
@@ -259,61 +275,78 @@ body {
     color: #fff;
     font-weight: bold; }
 
-.productos-mes {
-  margin: 15px 0; }
+.otros_productos {
+  margin-left: -15px;
+  padding: 0 7.5px; }
+  .otros_productos .prod_1, .otros_productos .prod_2, .otros_productos .prod_3 {
+    padding: 0 7.5px; }
 
 .categorias {
-  padding: 7.5px; }
-  .categorias .col-xs-6, .categorias .col-xs-12 {
-    padding: 0 7.5px; }
-    .categorias .col-xs-6 .categoria, .categorias .col-xs-12 .categoria {
-      margin: 7.5px 0; }
-      .categorias .col-xs-6 .categoria a, .categorias .col-xs-12 .categoria a {
+  padding: 7.5px;
+  margin: -15px 0; }
+  .categorias .cols {
+    padding: 0; }
+    .categorias .cols .categoria {
+      margin: 7.5px; }
+      .categorias .cols .categoria a {
         display: block; }
 
 .productos {
-  padding: 7.5px; }
-  .productos .col-xs-6 {
-    padding: 0 7.5px; }
-    .productos .col-xs-6 .producto {
-      margin: 7.5px 0;
-      background-color: #fff; }
-    .productos .col-xs-6 .info {
-      padding: 5px 10px; }
-      .productos .col-xs-6 .info h5, .productos .col-xs-6 .info p {
-        margin: 0; }
+  padding: 7.5px;
+  margin: -15px 0; }
+  .productos .cols {
+    padding: 0; }
+    .productos .cols .producto {
+      margin: 0 7.5px; }
+      .productos .cols .producto .data_producto {
+        background-color: #fff; }
+      .productos .cols .producto .info {
+        padding: 5px 10px; }
+        .productos .cols .producto .info h5, .productos .cols .producto .info p {
+          margin: 0; }
 
 .producto {
-  padding: 7.5px 0; }
-  .producto .fotos .foto {
-    padding: 7.5px 0; }
-  .producto .info .data {
-    padding: 7.5px 0; }
-    .producto .info .data div {
-      background-color: #fff;
-      padding: 5px 10px; }
-      .producto .info .data div h5 {
-        margin-top: 0; }
-      .producto .info .data div p {
-        margin: 0;
-        color: #474747; }
-        .producto .info .data div p span {
-          color: #a8a8a8; }
-  .producto .info .pedido {
-    padding: 7.5px 0; }
-    .producto .info .pedido .boton a {
-      display: block;
-      background-color: #66c5bd;
-      color: #fff;
-      text-align: center;
-      height: 44px;
-      padding: 12px 0; }
+  padding: 7.5px;
+  margin: -15px 0; }
+  .producto .cols {
+    padding: 0; }
+    .producto .cols .fotos {
+      margin: 0 15px; }
+      .producto .cols .fotos .foto {
+        margin: 0 7.5px;
+        padding: 7.5px 0; }
+    .producto .cols .info {
+      margin: 0 7.5px; }
+      .producto .cols .info .data {
+        padding: 7.5px 0; }
+        .producto .cols .info .data div {
+          background-color: #fff;
+          padding: 5px 10px; }
+          .producto .cols .info .data div h5 {
+            margin-top: 0; }
+          .producto .cols .info .data div p {
+            margin: 0;
+            color: #474747; }
+            .producto .cols .info .data div p span {
+              color: #a8a8a8; }
+      .producto .cols .info .pedido {
+        padding: 7.5px 0; }
+        .producto .cols .info .pedido .boton a {
+          display: block;
+          background-color: #66c5bd;
+          color: #fff;
+          text-align: center;
+          height: 44px;
+          padding: 12px 0; }
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
 @media (min-width: 480px) {
   html {
     font-size: 14px; }
+
+  .container {
+    width: 450px; }
 
   h1 {
     font-family: 'jenna_sue',sans-serif;
@@ -333,6 +366,9 @@ body {
     font-size: 1rem; } }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .container {
+    width: 738px; }
+
   body {
     padding: 5px 0 0 0; }
 
@@ -360,7 +396,11 @@ body {
     background-color: #fff9e9; }
 
   #content {
-    padding-top: 44px; }
+    padding-top: 59px;
+    padding-bottom: 29px; }
+
+  .seccion {
+    margin: 30px 0; }
 
   .navbar-default .navbar-nav > li, .navbar-default .navbar-nav > li:nth-child(even) {
     background-color: #66c5bd;
@@ -369,11 +409,45 @@ body {
       padding: 12px 15px; }
 
   .heading {
-    display: none; } }
+    display: none; }
+
+  #footer {
+    height: 29px; }
+    #footer .marrones {
+      display: block; }
+    #footer .blancos {
+      display: none; }
+    #footer .redes {
+      position: absolute;
+      width: 144px;
+      top: -51px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto; }
+
+  .intro,
+  .shortcuts {
+    display: none; }
+
+  .banner-comprar,
+  .banner-redes,
+  .prod_1,
+  .prod_2 {
+    display: block; } }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .container {
+    width: 962px; }
+
   .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus {
-    padding: 12px 50px; } }
+    padding: 12px 50px; }
+
+  .prod_3 {
+    display: block; } }
 /* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px; } }
 
 /*# sourceMappingURL=style.css.map */
