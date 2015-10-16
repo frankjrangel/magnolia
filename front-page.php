@@ -3,7 +3,9 @@
       $term_id  = '14';
       $term = get_term_by( 'id' , $term_id , $taxonomy );
       $link = esc_attr(get_term_link($term)). '?t='.$term_id;
-      $comprar = get_field('banner-comprar');
+      $foto_1200 = get_field('banner_1200', 10 );
+      $foto_992 = get_field('banner_992', 10 );
+      $foto_768 = get_field('banner_768', 10 );
       $redes = get_field('banner-redes');
       $foto = get_field('banner-productos');
       $p_1 = get_field('otro_producto_1');
@@ -37,7 +39,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="shortcut">
-        <a href="<?php echo get_page_link(10); ?>" class="sh"><p>¿Cómo comprar?</p></a>
+        <a href="<?php echo get_page_link(10); ?>" class="sh"><p>¿Cómo pedir?</p></a>
       </div>
       <div class="shortcut">
         <a href="<?php echo get_page_link(50); ?>" class="sh"><p>Ver Catálogo</p></a>
@@ -45,16 +47,25 @@
     </div>
   </div>
 </div>
-<div class="seccion banner-comprar">
-  <div class="row">
-    <div class="col-xs-12">
-      <a href="<?php echo get_page_link(10); ?>">
-        <img class="img-responsive"
-            src="<?php echo $comprar ?>"  alt="¿Cómo comprar?">
-      </a></p>
-    </div>
-  </div>
+<div class="seccion banner-pedir_768">
+  <a href="<?php echo get_page_link(10); ?>">
+      <img class="img-responsive"
+          src="<?php echo $foto_768; ?>"  alt="¿Comó pedir?">
+        </a>
 </div>
+<div class="seccion banner-pedir_992">
+  <a href="<?php echo get_page_link(10); ?>">
+      <img class="img-responsive"
+          src="<?php echo $foto_992; ?>"  alt="¿Comó pedir?">
+        </a>
+</div>
+<div class="seccion banner-pedir_1200">
+  <a href="<?php echo get_page_link(10); ?>">
+      <img class="img-responsive"
+          src="<?php echo $foto_1200; ?>"  alt="¿Comó pedir?">
+        </a>
+</div>
+
 <div class="seccion banner-productos">
   <div class="row">
     <div class="col-xs-12 col-sm-5 col-md-4">

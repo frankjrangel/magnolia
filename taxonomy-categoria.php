@@ -51,7 +51,7 @@
                      src="<?php echo $foto; ?>">
                  <div class="info">
                    <h5><?php echo $nombre; ?></h5>
-                   <p>Bs. <?php echo $precio; ?></p>
+                   <?php //<p>Bs. echo $precio; </p> ?>
                  </div>
                </div>
              </div>

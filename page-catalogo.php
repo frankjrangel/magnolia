@@ -30,8 +30,7 @@
       <?php $link = esc_attr(get_term_link($categoria)). '?t='.$categoria->term_id;
             $foto = get_field('foto', $categoria);
       ?>
-            <div class="cols col-xs-
-              <?php if ($categoria->term_id == 14 ){
+            <div class="cols col-xs-<?php if ($categoria->term_id == 14 ){
                   echo '12';
                 }
                 else{

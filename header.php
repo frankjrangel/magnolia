@@ -38,7 +38,7 @@
               <ul class="nav navbar-nav">
                 <li><a href="<?php echo esc_url( home_url('/')) ?>">¿QUÉ OFRECEMOS?</a></li>
                 <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
-                <li><a href="<?php echo get_page_link(10); ?>">¿CÓMO COMPRAR?</a></li>
+                <li><a href="<?php echo get_page_link(10); ?>">¿CÓMO PEDIR?</a></li>
                 <li><a href="<?php echo get_page_link(113); ?>">HACER PEDIDO</a></li>
                 <li><a href="<?php echo get_post_type_archive_link('preguntas_y_consejos') ?>">PREGUNTAS Y CONSEJOS</a></li>
                 <li><a href="<?php echo get_page_link(14); ?>">CONTACTO</a></li>
@@ -72,3 +72,5 @@
     <div class="row">
       <div id="content-background" class="wrapper col-xs-12 col-sm-offset-1 col-sm-10">
           <div id="content">
+            <div class="row">
+              <div class="col-xs-12 col-sm-offset-1 col-sm-10">

@@ -309,7 +309,6 @@ body {
 .banner-productos{
   display: block;
 }
-.banner-comprar,
 .banner-redes,
 .prod_1,
 .prod_2,
@@ -329,7 +328,7 @@ body {
     margin: 15px 0;
   }
 }
-.shortcuts {
+.shortcuts, .shortcuts_pedir {
   margin-right: -7.5px;
   margin-left: -7.5px;
   .shortcut{
@@ -444,6 +443,15 @@ body {
   }
 }
 
+// ===== Como pedir ========================================
+.banner-pedir_vertical{
+  display: block;
+}
+.banner-pedir_768,
+.banner-pedir_992,
+.banner-pedir_1200{
+  display: none;
+}
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
@@ -571,10 +579,16 @@ body {
 .shortcuts{
   display: none;
 }
-.banner-comprar,
 .banner-redes,
 .prod_1,
 .prod_2{
+  display: block;
+}
+// ===== Como pedir ========================================
+.banner-pedir_vertical{
+  display: none;
+}
+.banner-pedir_768{
   display: block;
 }
 
@@ -598,6 +612,14 @@ body {
 .prod_3{
   display: block;
 }
+.banner-pedir_768{
+  display: none;
+}
+.banner-pedir_992{
+  display: block;
+}
+
+// ===== Catalogo ========================================
 
 }
 /* Large devices (large desktops, 1200px and up) */
@@ -609,7 +631,14 @@ body {
   }
 
 // ===== Que Ofrecemos =====================================
+.banner-pedir_992{
+  display: none;
+}
+.banner-pedir_1200{
+  display: block;
+}
 
+// ===== Catalogo ========================================
 
 
 }
