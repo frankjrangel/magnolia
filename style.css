@@ -188,17 +188,25 @@ body {
 
 .heading {
   padding: 0 44px;
-  margin: 0 -15px;
-  display: block; }
+  margin: -1px -15px 0; }
+  .heading .titulo {
+    visibility: hidden;
+    height: 44px; }
+  .heading .collapsed .titulo {
+    position: relative;
+    visibility: visible;
+    z-index: 1032;
+    cursor: pointer;
+    height: 44px; }
   .heading .titulo {
     padding: 12px 0; }
     .heading .titulo p {
       color: #fff;
       text-align: center;
       font-family: 'yanone_regular'; }
-  .heading .que_ofrecemos, .heading .preguntas_consejos {
+  .heading .que_ofrecemos, .heading .como_pedir, .heading .preguntas_consejos {
     background-color: #66c5bd; }
-  .heading .catalogo {
+  .heading .catalogo, .heading .hacer_pedido, .heading .contacto {
     background-color: #bcdad6; }
   .heading .categoria {
     background-color: #fff;
@@ -213,7 +221,8 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  height: 44px; }
+  height: 44px;
+  z-index: 1031; }
   #footer .container {
     position: relative; }
   #footer .marrones {
@@ -350,19 +359,16 @@ body {
   margin: -15px 0; }
   .preguntas .pregunta {
     position: relative;
-    min-height: 44px;
-    margin: 15px 0; }
+    margin: 15px 0;
+    cursor: pointer; }
     .preguntas .pregunta p {
       font-weight: bold; }
-    .preguntas .pregunta div {
+    .preguntas .pregunta span {
       position: absolute;
       right: -44px;
-      top: 0;
-      bottom: 0;
       padding: 2px 16px;
       height: 44px;
       width: 44px;
-      cursor: pointer;
       color: #ccc0af;
       font-size: 1rem; }
     .preguntas .pregunta .collapsed .glyphicon-triangle-right {
@@ -375,6 +381,20 @@ body {
       display: block; }
   .preguntas .respuesta {
     margin-top: -15px; }
+
+.consejos {
+  margin: -15px 0; }
+  .consejos .consejo {
+    position: relative;
+    margin: 15px 0;
+    cursor: pointer; }
+
+.sub-titulo {
+  position: relative; }
+  .sub-titulo div {
+    position: relative;
+    left: 0;
+    right: 0; }
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */

@@ -38,34 +38,35 @@ add_filter('upload_mimes','cc_mime_types');
 /*
 	EJEMPLO FULL DATA
 
-function nombre_post_type() {
-  $labels = array(
-    'name'               => 'Nombres',
-    'singular_name'      => 'Nombre',
-		'all_items'          => 'Todos',
-		'add_new'            => 'Agregar Nuevo',
-		'add_new_item'       => 'Agregar Nuevo',
-		'edit_item'          => 'Editar',
-		'new_item'           => 'Nuevo',
-		'view_item'          => 'Ver',
-		'search_items'       => 'Buscar',
-		'not_found'          => 'No existe',
-    'not_found_in_trash' => 'No existe',
-    'parent_item_colon'  => ' ',
-    'menu_name'          => 'Nombres'// o apunta a name
-  );
-  $args = array(
-    'labels'        => $labels,
-    'description'   => 'Nombres',
-    'public'        => true,
-    'menu_position' => 4,
-		'menu_icon'     => 'dashicons-cart',
-    'supports'      => array(  'nombre' , 'page-attributes'  ),
-    'has_archive'   => true
-  );
-  register_post_type( 'nombre', $args );
-}
-add_action( 'init', 'nombre_post_type' );*/
+	function nombre_post_type() {
+	  $labels = array(
+	    'name'               => 'Nombres',
+	    'singular_name'      => 'Nombre',
+			'all_items'          => 'Todos',
+			'add_new'            => 'Agregar Nuevo',
+			'add_new_item'       => 'Agregar Nuevo',
+			'edit_item'          => 'Editar',
+			'new_item'           => 'Nuevo',
+			'view_item'          => 'Ver',
+			'search_items'       => 'Buscar',
+			'not_found'          => 'No existe',
+	    'not_found_in_trash' => 'No existe',
+	    'parent_item_colon'  => ' ',
+	    'menu_name'          => 'Nombres'// o apunta a name
+	  );
+	  $args = array(
+	    'labels'        => $labels,
+	    'description'   => 'Nombres',
+	    'public'        => true,
+	    'menu_position' => 4,
+			'menu_icon'     => 'dashicons-cart',
+	    'supports'      => array(  'nombre' , 'page-attributes'  ),
+	    'has_archive'   => true
+	  );
+	  register_post_type( 'nombre', $args );
+	}
+	add_action( 'init', 'nombre_post_type' );
+*/
 
 
 function producto_post_type() {

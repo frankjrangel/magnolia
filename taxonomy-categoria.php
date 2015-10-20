@@ -12,9 +12,6 @@
   </div>
 </div>
 
-
-
-
   <?php $loop = new WP_Query( array(
       'post_type' => 'producto',
       'orderby' => 'title',

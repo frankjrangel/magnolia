@@ -29,7 +29,7 @@
   </div>
 
   <div class="wrapper container">
-    <nav class="navbar navbar-default">
+    <nav id="navbar" class="navbar navbar-default">
       <div class="row">
         <div class="col-xs-12 col-sm-offset-1 col-sm-10">
           <div class="wrapper">

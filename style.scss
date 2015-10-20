@@ -241,8 +241,20 @@ body {
 }
 .heading{
   padding: 0 44px;
-  margin: 0 -15px;
-  display: block;
+  margin: -1px -15px 0;
+  .titulo{
+    visibility: hidden;
+    height: $xy-menu-button;
+}
+  .collapsed{
+    .titulo{
+      position: relative;
+      visibility: visible;
+      z-index: 1032;
+      cursor: pointer;
+      height: $xy-menu-button;
+    }
+  }
   .titulo{
     padding: 12px 0;
     p{
@@ -251,10 +263,10 @@ body {
       font-family: 'yanone_regular';
     }
   }
-  .que_ofrecemos, .preguntas_consejos {
+  .que_ofrecemos, .como_pedir, .preguntas_consejos {
     background-color: $turquesa-claro;
   }
-  .catalogo {
+  .catalogo, .hacer_pedido, .contacto {
     background-color: $turquesa-pastel;
   }
   .categoria {
@@ -277,6 +289,7 @@ body {
   bottom: 0;
   left: 0;
   height: 44px;
+  z-index: 1031;
   .container {
     position: relative;
   }
@@ -457,21 +470,17 @@ body {
   margin: -15px 0;
   .pregunta{
     position: relative;
-    min-height: $xy-menu-button;
     margin: 15px 0;
-
+    cursor: pointer;
     p{
       font-weight: bold;
     }
-    div{
+    span{
       position: absolute;
       right: -($xy-menu-button);
-      top: 0;
-      bottom: 0;
       padding: 2px 16px;
       height: $xy-menu-button;
       width: $xy-menu-button;
-      cursor: pointer;
       color: $marron;
       font-size: 1rem;
     }
@@ -494,7 +503,23 @@ body {
     margin-top: -15px;
   }
 }
+.consejos{
+  margin: -15px 0;
+  .consejo{
+    position: relative;
+    margin: 15px 0;
+    cursor: pointer;
+  }
+}
+.sub-titulo{
+  position: relative;
+  div{
+    position: relative;
+    left: 0;
+    right: 0;
+  }
 
+}
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */

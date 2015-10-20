@@ -3,18 +3,18 @@ function bumpIt() {
 	$('.sh').matchHeight();
 	//$('.sh2').matchHeight();
 
-/*	 var winHeight = $(window).innerHeight();
+	 /*var winHeight = $(window).innerHeight();
 	 var HeaderFooterHeight = $('#footer').outerHeight() + $('#navbar').outerHeight();
-	 var contentHeight = $('#wrapper').outerHeight() + HeaderFooterHeight;
+	 var contentHeight = $('#content').outerHeight() + HeaderFooterHeight;
 
 
 	 if(winHeight > contentHeight){
-		 $('#footer').css('position','absolute');
+		 $('#footer').css('position','fixed');
 		 $('#background').css('height', winHeight - HeaderFooterHeight );
 	 }
 	 else {
 		 $('#footer').css('position','relative');
-		 $('#background').css('height', $('#wrapper').outerHeight() );
+		 $('#background').css('height', $('#content').outerHeight() );
 	 }*/
  }
  var didResize = false;

@@ -1,13 +1,16 @@
 <?php get_header(); ?>
 <div class="heading">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="titulo que_ofrecemos">
-        <p>CONTACTO</p>
+  <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="titulo contacto">
+          <p>CONTACTO</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 <div class="intro">
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">

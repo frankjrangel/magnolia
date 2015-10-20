@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 <div class="heading">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="titulo que_ofrecemos">
-        <p>¿CÓMO PEDIR?</p>
+  <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="titulo como_pedir">
+          <p>¿CÓMO PEDIR?</p>
+        </div>
       </div>
     </div>
   </div>
