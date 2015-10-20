@@ -2,7 +2,7 @@
 Theme Name: Magnolia
 Theme URI: http://www.movatic.com/
 Author: Movatic
-Author URI: http://movatic.com/
+Author URI: http://www.movatic.com/
 Description: Tema personalizado de wordpress con catalogo de compra para Magnolia Gift
 Version: 1.0
 */
@@ -251,7 +251,7 @@ body {
       font-family: 'yanone_regular';
     }
   }
-  .que_ofrecemos {
+  .que_ofrecemos, .preguntas_consejos {
     background-color: $turquesa-claro;
   }
   .catalogo {
@@ -452,6 +452,49 @@ body {
 .banner-pedir_1200{
   display: none;
 }
+// ===== Preguntas y Consejos ========================================
+.preguntas{
+  margin: -15px 0;
+  .pregunta{
+    position: relative;
+    min-height: $xy-menu-button;
+    margin: 15px 0;
+
+    p{
+      font-weight: bold;
+    }
+    div{
+      position: absolute;
+      right: -($xy-menu-button);
+      top: 0;
+      bottom: 0;
+      padding: 2px 16px;
+      height: $xy-menu-button;
+      width: $xy-menu-button;
+      cursor: pointer;
+      color: $marron;
+      font-size: 1rem;
+    }
+    .collapsed{
+      .glyphicon-triangle-right{
+        display: block;
+      }
+      .glyphicon-triangle-bottom{
+        display: none;
+      }
+    }
+    .glyphicon-triangle-right{
+      display: none;
+    }
+    .glyphicon-triangle-bottom{
+      display: block;
+    }
+  }
+  .respuesta{
+    margin-top: -15px;
+  }
+}
+
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
