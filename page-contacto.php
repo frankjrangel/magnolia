@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="heading">
+<div class="seccion heading">
   <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
     <div class="row">
       <div class="col-xs-12">

@@ -73,8 +73,8 @@ body {
   background-color: #fff9e9; }
 
 #content {
-  padding-top: 195px;
-  padding-bottom: 0; }
+  padding-top: 194px;
+  padding-bottom: 30px; }
 
 #collapse-menu {
   position: absolute;
@@ -86,8 +86,44 @@ body {
   padding: 0 44px 10px;
   margin: 0; }
 
+#secciones {
+  margin: -30px 0; }
+
 .seccion {
-  margin: 15px 0; }
+  margin: 30px 0; }
+
+.shortcuts-que_ofrecemos,
+.shortcuts-como_pedir,
+.shortcuts-preguntas_consejos {
+  margin-right: -7.5px;
+  margin-left: -7.5px; }
+  .shortcuts-que_ofrecemos .shortcut-1,
+  .shortcuts-como_pedir .shortcut-1,
+  .shortcuts-preguntas_consejos .shortcut-1 {
+    margin-left: 25%;
+    width: 50%;
+    float: left;
+    padding: 0 7.5px; }
+  .shortcuts-que_ofrecemos .shortcut-2,
+  .shortcuts-como_pedir .shortcut-2,
+  .shortcuts-preguntas_consejos .shortcut-2 {
+    width: 50%;
+    float: left;
+    padding: 0 7.5px; }
+  .shortcuts-que_ofrecemos a,
+  .shortcuts-como_pedir a,
+  .shortcuts-preguntas_consejos a {
+    background-color: #ccc0af;
+    display: block;
+    padding: 12px 15px;
+    min-height: 44px;
+    text-align: center; }
+  .shortcuts-que_ofrecemos p,
+  .shortcuts-como_pedir p,
+  .shortcuts-preguntas_consejos p {
+    margin: 0;
+    color: #fff;
+    font-weight: bold; }
 
 .background-banda-logo {
   position: absolute;
@@ -135,7 +171,8 @@ body {
   top: 195px;
   right: 0;
   left: 0;
-  border: 0; }
+  border: 0;
+  margin-bottom: -1px; }
 
 .navbar.fixed {
   position: fixed;
@@ -188,7 +225,8 @@ body {
 
 .heading {
   padding: 0 44px;
-  margin: -1px -15px 0; }
+  margin-left: -15px;
+  margin-right: -15px; }
   .heading .titulo {
     visibility: hidden;
     height: 44px; }
@@ -262,90 +300,57 @@ body {
 .intro p {
   text-align: center;
   font-weight: bold;
-  line-height: 15px;
-  margin: 15px 0; }
+  line-height: 15px; }
 
-.shortcuts, .shortcuts_pedir {
-  margin-right: -7.5px;
-  margin-left: -7.5px; }
-  .shortcuts .shortcut, .shortcuts_pedir .shortcut {
-    width: 50%;
-    float: left;
-    padding: 0 7.5px; }
-  .shortcuts a, .shortcuts_pedir a {
-    background-color: #ccc0af;
-    display: block;
-    padding: 12px 15px;
-    min-height: 44px;
-    text-align: center; }
-  .shortcuts p, .shortcuts_pedir p {
-    margin: 0;
-    color: #fff;
-    font-weight: bold; }
+.prod_0 {
+  margin: 0; }
 
-.otros_productos {
-  margin-left: -15px;
-  padding: 0 7.5px; }
-  .otros_productos .prod_1, .otros_productos .prod_2, .otros_productos .prod_3 {
-    padding: 0 7.5px; }
+.prod_1, .prod_2 {
+  margin-top: 13.81px; }
 
 .categorias {
-  padding: 7.5px;
   margin: -15px 0; }
-  .categorias .cols {
-    padding: 0; }
-    .categorias .cols .categoria {
-      margin: 7.5px; }
-      .categorias .cols .categoria a {
-        display: block; }
+  .categorias .categoria {
+    margin: 15px 0; }
+    .categorias .categoria a {
+      display: block; }
 
 .productos {
-  padding: 7.5px;
   margin: -15px 0; }
-  .productos .cols {
-    padding: 0; }
-    .productos .cols .producto {
-      margin: 0 7.5px; }
-      .productos .cols .producto .data_producto {
-        background-color: #fff; }
-      .productos .cols .producto .info {
-        padding: 5px 10px; }
-        .productos .cols .producto .info h5, .productos .cols .producto .info p {
-          margin: 0; }
+  .productos .producto-tarjeta {
+    margin: 15px 0; }
+    .productos .producto-tarjeta .producto-data {
+      background-color: #fff; }
+    .productos .producto-tarjeta .producto-info {
+      padding: 5px 10px; }
+      .productos .producto-tarjeta .producto-info h5, .productos .producto-tarjeta .producto-info p {
+        margin: 0; }
 
 .producto {
-  padding: 7.5px;
   margin: -15px 0; }
-  .producto .cols {
-    padding: 0; }
-    .producto .cols .fotos {
-      margin: 0 15px; }
-      .producto .cols .fotos .foto {
-        margin: 0 7.5px;
-        padding: 7.5px 0; }
-    .producto .cols .info {
-      margin: 0 7.5px; }
-      .producto .cols .info .data {
-        padding: 7.5px 0; }
-        .producto .cols .info .data div {
-          background-color: #fff;
-          padding: 5px 10px; }
-          .producto .cols .info .data div h5 {
-            margin-top: 0; }
-          .producto .cols .info .data div p {
-            margin: 0;
-            color: #474747; }
-            .producto .cols .info .data div p span {
-              color: #a8a8a8; }
-      .producto .cols .info .pedido {
-        padding: 7.5px 0; }
-        .producto .cols .info .pedido .boton a {
-          display: block;
-          background-color: #66c5bd;
-          color: #fff;
-          text-align: center;
-          height: 44px;
-          padding: 12px 0; }
+  .producto .fotos {
+    margin: 15px 0; }
+  .producto .info .data {
+    margin: 15px 0; }
+    .producto .info .data div {
+      background-color: #fff;
+      padding: 5px 10px; }
+      .producto .info .data div h5 {
+        margin-top: 0; }
+      .producto .info .data div p {
+        margin: 0;
+        color: #474747; }
+        .producto .info .data div p span {
+          color: #a8a8a8; }
+  .producto .info .pedido {
+    margin: 15px 0; }
+    .producto .info .pedido .boton a {
+      display: block;
+      background-color: #66c5bd;
+      color: #fff;
+      text-align: center;
+      height: 44px;
+      padding: 12px 0; }
 
 .banner-pedir_vertical {
   display: block; }
@@ -355,39 +360,12 @@ body {
 .banner-pedir_1200 {
   display: none; }
 
-.preguntas {
-  margin: -15px 0; }
-  .preguntas .pregunta {
-    position: relative;
-    margin: 15px 0;
-    cursor: pointer; }
-    .preguntas .pregunta p {
-      font-weight: bold; }
-    .preguntas .pregunta span {
-      position: absolute;
-      right: -44px;
-      padding: 2px 16px;
-      height: 44px;
-      width: 44px;
-      color: #ccc0af;
-      font-size: 1rem; }
-    .preguntas .pregunta .collapsed .glyphicon-triangle-right {
-      display: block; }
-    .preguntas .pregunta .collapsed .glyphicon-triangle-bottom {
-      display: none; }
-    .preguntas .pregunta .glyphicon-triangle-right {
-      display: none; }
-    .preguntas .pregunta .glyphicon-triangle-bottom {
-      display: block; }
-  .preguntas .respuesta {
-    margin-top: -15px; }
-
-.consejos {
-  margin: -15px 0; }
-  .consejos .consejo {
-    position: relative;
-    margin: 15px 0;
-    cursor: pointer; }
+.sub-titulo div {
+  height: 44px;
+  margin: 15px 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .sub-titulo {
   position: relative; }
@@ -395,6 +373,36 @@ body {
     position: relative;
     left: 0;
     right: 0; }
+
+.preguntas .pregunta {
+  position: relative;
+  margin: 15px 44px 15px 0;
+  cursor: pointer; }
+  .preguntas .pregunta p {
+    font-weight: bold; }
+  .preguntas .pregunta span {
+    position: absolute;
+    right: -44px;
+    padding: 2px 16px;
+    height: 44px;
+    width: 44px;
+    color: #ccc0af;
+    font-size: 1rem; }
+  .preguntas .pregunta .collapsed .glyphicon-triangle-right {
+    display: block; }
+  .preguntas .pregunta .collapsed .glyphicon-triangle-bottom {
+    display: none; }
+  .preguntas .pregunta .glyphicon-triangle-right {
+    display: none; }
+  .preguntas .pregunta .glyphicon-triangle-bottom {
+    display: block; }
+.preguntas .respuesta {
+  margin-top: -15px; }
+
+.consejos .consejo {
+  position: relative;
+  margin: 15px 0;
+  cursor: pointer; }
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
@@ -453,11 +461,11 @@ body {
     background-color: #fff9e9; }
 
   #content {
-    padding-top: 59px;
-    padding-bottom: 29px; }
+    padding-top: 74px;
+    padding-bottom: 44px; }
 
-  .seccion {
-    margin: 30px 0; }
+  #secciones {
+    margin: -30px 0; }
 
   .navbar-default .navbar-nav > li, .navbar-default .navbar-nav > li:nth-child(even) {
     background-color: #66c5bd;
@@ -477,14 +485,14 @@ body {
     #footer .redes {
       position: absolute;
       width: 144px;
-      top: -51px;
+      top: -44px;
       left: 0;
       right: 0;
       margin-left: auto;
       margin-right: auto; }
 
   .intro,
-  .shortcuts {
+  .shortcuts-que_ofrecemos {
     display: none; }
 
   .banner-redes,
@@ -505,6 +513,9 @@ body {
   .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus {
     padding: 12px 50px; }
 
+  .prod_1, .prod_2, .prod_3 {
+    margin-top: 23.57px; }
+
   .prod_3 {
     display: block; }
 
@@ -517,6 +528,9 @@ body {
 @media (min-width: 1200px) {
   .container {
     width: 1170px; }
+
+  .prod_1, .prod_2, .prod_3 {
+    margin-top: 26.20px; }
 
   .banner-pedir_992 {
     display: none; }

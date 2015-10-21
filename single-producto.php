@@ -1,14 +1,15 @@
 <?php get_header(); ?>
-<div class="heading">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="titulo catalogo">
-        <p>CATÁLOGO</p>
+<div class="seccion heading">
+  <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="titulo catalogo">
+          <p>CATÁLOGO</p>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <?php
   $postid = get_the_ID();
@@ -81,7 +82,7 @@
 
                   <div class="pedido">
                     <div class="row">
-                      <div class="col-xs-10 col-xs-offset-1">
+                      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-12 col-lg-offset-0">
                         <div class="boton">
                           <a href="<?php echo get_page_link(113).'?c='.$postid; ?>">Hacer Pedido</a>
                         </div>

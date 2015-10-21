@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="heading">
+<div class="seccion heading">
   <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
     <div class="row">
       <div class="col-xs-12">
@@ -40,13 +40,13 @@
           src="<?php echo $foto_1200; ?>"  alt="¿Comó pedir?">
         </a>
 </div>
-<div class="seccion shortcuts_pedir">
+<div class="seccion shortcuts-como_pedir">
   <div class="row">
     <div class="col-xs-12">
-      <div class="shortcut">
+      <div class="shortcut-2">
         <a href="<?php echo get_page_link(50); ?>" class="sh"><p>Ver Catálogo</p></a>
       </div>
-      <div class="shortcut">
+      <div class="shortcut-2">
         <a href="<?php echo get_page_link(113); ?>" class="sh"><p>¿Cómo pedir?</p></a>
       </div>
     </div>

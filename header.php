@@ -22,7 +22,7 @@
   <div class="background-banda-logo">
     <div class="logo-magnolia">
       <a class="navbar-brand brand" href="<?php echo esc_url( home_url('/')) ?>">
-        <div class="img-responsive" style="background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/magnolia/logo_magnolia_gift.svg );">
+        <div style="background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/magnolia/logo_magnolia_gift.svg );">
         </div>
       </a>
     </div>
@@ -74,3 +74,4 @@
           <div id="content">
             <div class="row">
               <div class="col-xs-12 col-sm-offset-1 col-sm-10">
+                <div id="secciones">
