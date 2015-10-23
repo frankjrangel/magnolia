@@ -1,22 +1,15 @@
 <?php get_header(); ?>
-<div class="heading">
-  <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="titulo preguntas_consejos">
-          <p>PREGUNTAS Y CONSEJOS</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<script type="text/javascript">
+  $( ".titulo" ).addClass("preguntas_consejos");
+  $( ".titulo p" ).html("PREGUNTAS Y CONSEJOS");
+</script>
 
 <div class="seccion">
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
         <div class="preguntas">
           <div class="sub-titulo">
-            <div  style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/magnolia/logo_magnolia_gift.svg));">
+            <div style="background-image:     url(/magnolia/wp-content/themes/magnolia/assets/img/preguntas_consejos/preguntas.svg);">
 
             </div>
           </div>
@@ -51,10 +44,10 @@
       </div>
     </div>
 
-  <div class="col-xs-10 col-xs-offset-1">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
       <div class="consejos">
         <div class="sub-titulo">
-          <div  style="background-image:url());">
+          <div style="background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/preguntas_consejos/consejos.svg);">
 
           </div>
         </div>
@@ -78,6 +71,15 @@
 
     <?php endwhile; wp_reset_postdata(); ?>
 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="seccion shortcuts-preguntas_consejos">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="shortcut-1">
+        <a href="<?php echo get_page_link(14); ?>"><p>Contacto</p></a>
       </div>
     </div>
   </div>

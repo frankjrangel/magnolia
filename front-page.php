@@ -1,4 +1,8 @@
 <?php get_header(); ?>
+<script type="text/javascript">
+  $( ".titulo" ).addClass("que_ofrecemos");
+  $( ".titulo p" ).html("¿QUÉ OFRECEMOS?");
+</script>
 <?php $taxonomy = 'categoria';
       $term_id  = '14';
       $term = get_term_by( 'id' , $term_id , $taxonomy );
@@ -19,83 +23,81 @@
       $foto_3 = get_field('foto_1', $p_3->ID);
 ?>
 
-<div class="heading">
-  <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="titulo que_ofrecemos">
-          <p>¿QUÉ OFRECEMOS?</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="seccion intro">
   <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <img class="img-responsive"
+          src="/magnolia/wp-content/themes/magnolia/assets/img/que_ofrecemos/que_ofrecemos.svg"  alt="¿Qué ofrecemos?">
+    </div>
     <div class="col-xs-10 col-xs-offset-1">
       <p><?php echo get_field('que_ofrecemos'); ?></p>
     </div>
   </div>
 </div>
-<div class="seccion shortcuts">
+<div class="seccion shortcuts-que_ofrecemos">
   <div class="row">
     <div class="col-xs-12">
-      <div class="shortcut">
+      <div class="shortcut-2">
         <a href="<?php echo get_page_link(10); ?>" class="sh"><p>¿Cómo pedir?</p></a>
       </div>
-      <div class="shortcut">
+      <div class="shortcut-2">
         <a href="<?php echo get_page_link(50); ?>" class="sh"><p>Ver Catálogo</p></a>
       </div>
     </div>
   </div>
 </div>
 <div class="seccion banner-pedir_768">
-  <a href="<?php echo get_page_link(10); ?>">
-      <img class="img-responsive"
-          src="<?php echo $foto_768; ?>"  alt="¿Comó pedir?">
-        </a>
+  <div class="banner">
+    <a href="<?php echo get_page_link(10); ?>">
+        <img class="img-responsive"
+            src="<?php echo $foto_768; ?>"  alt="¿Comó pedir?">
+    </a>
+  </div>
 </div>
 <div class="seccion banner-pedir_992">
-  <a href="<?php echo get_page_link(10); ?>">
+  <div class="banner">
+    <a href="<?php echo get_page_link(10); ?>">
       <img class="img-responsive"
           src="<?php echo $foto_992; ?>"  alt="¿Comó pedir?">
-        </a>
+    </a>
+  </div>
 </div>
 <div class="seccion banner-pedir_1200">
-  <a href="<?php echo get_page_link(10); ?>">
+  <div class="banner">
+    <a href="<?php echo get_page_link(10); ?>">
       <img class="img-responsive"
           src="<?php echo $foto_1200; ?>"  alt="¿Comó pedir?">
-        </a>
+    </a>
+  </div>
 </div>
-
 <div class="seccion banner-productos">
-  <div class="row">
-    <div class="col-xs-12 col-sm-5 col-md-4">
-      <a href="<?php echo $link; ?>">
-        <img class="img-responsive"
-            src="<?php echo $foto; ?>"  alt="Productos del mes">
-      </a>
-    </div>
-    <div class="col-sm-7 col-md-8">
-      <div class="otros_productos">
-        <div class="row">
-          <div class="prod_1 col-sm-6 col-md-4">
-            <a href="<?php echo $link_1; ?>">
-              <img class="img-responsive"
-                  src="<?php echo $foto_1; ?>"  alt="producto_1">
-            </a>
-          </div>
-          <div class="prod_2 col-sm-6 col-md-4">
-            <a href="<?php echo $link_2; ?>">
-              <img class="img-responsive"
-                  src="<?php echo $foto_2; ?>"  alt="producto_2">
-            </a>
-          </div>
-          <div class="prod_3 col-md-4">
-            <a href="<?php echo $link_3; ?>">
-              <img class="img-responsive"
-                  src="<?php echo $foto_3; ?>"  alt="producto_3">
-            </a>
+    <div class="row">
+      <div class="prod_0 col-xs-12 col-sm-5 col-md-4">
+        <a href="<?php echo $link; ?>">
+          <img class="img-responsive"
+              src="<?php echo $foto; ?>"  alt="Productos del mes">
+        </a>
+      </div>
+      <div class="col-sm-7 col-md-8">
+        <div class="otros_productos">
+          <div class="row">
+            <div class="prod_1 col-sm-6 col-md-4">
+              <a href="<?php echo $link_1; ?>">
+                <img class="img-responsive"
+                    src="<?php echo $foto_1; ?>"  alt="producto_1">
+              </a>
+            </div>
+            <div class="prod_2 col-sm-6 col-md-4">
+              <a href="<?php echo $link_2; ?>">
+                <img class="img-responsive"
+                    src="<?php echo $foto_2; ?>"  alt="producto_2">
+              </a>
+            </div>
+            <div class="prod_3 col-md-4">
+              <a href="<?php echo $link_3; ?>">
+                <img class="img-responsive"
+                    src="<?php echo $foto_3; ?>"  alt="producto_3">
+              </a>
           </div>
         </div>
       </div>
@@ -105,10 +107,12 @@
 <div class="seccion banner-redes">
   <div class="row">
     <div class="col-xs-12">
-      <a href="<?php echo get_page_link(10); ?>">
-        <img class="img-responsive"
-            src="<?php echo $redes ?>"  alt="Redes">
-      </a></p>
+      <div class="banner">
+        <a href="#">
+          <img class="img-responsive"
+              src="<?php echo $redes ?>"  alt="Redes">
+        </a>
+      </div>
     </div>
   </div>
 </div>

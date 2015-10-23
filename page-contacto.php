@@ -1,44 +1,7 @@
 <?php get_header(); ?>
-<div class="heading">
-  <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="titulo contacto">
-          <p>CONTACTO</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<script type="text/javascript">
+  $( ".titulo" ).addClass("contacto");
+  $( ".titulo p" ).html("CONTACTO");
+</script>
 
-<div class="intro">
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <p>Regala un momento Magnolia, con un detalle único, personalizado y en una presentación inolvidable.</p>
-    </div>
-  </div>
-</div>
-<div class="shortcuts">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="shortcut">
-        <a href="que-ofrecemos" class="sh"><p>¿Cómo comprar?</p></a>
-      </div>
-      <div class="shortcut">
-        <a href="catalogo" class="sh"><p>Ver Catálogo</p></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="row">
-
-  <div class="col-xs-12">
-    <div class="productos-mes">
-      <img class="img-responsive" src="wp-content/themes/magnolia/assets/img/productos/kit_bano.png" alt="Productos del mes" />
-    </div>
-  </div>
-
-</div>
 <?php get_footer(); ?>

@@ -1,31 +1,37 @@
 <?php get_header(); ?>
-<div class="heading">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="titulo catalogo">
-        <p>CATÁLOGO</p>
-      </div>
-      <div class="categoria">
-        <p><?php echo substr(get_term_by( 'id', $_GET["t"].'' , 'categoria')->name, 4); ?></p>
-      </div>
-    </div>
-  </div>
+<script type="text/javascript">
+  $( ".titulo" ).addClass("catalogo");
+  $( ".titulo p" ).html("CATÁLOGO");
+</script>
+
+<?php $loop = new WP_Query( array(
+    'post_type' => 'producto',
+    'orderby' => 'title',
+    'order' => 'ASC',
+
+  	'tax_query' => array(
+    		array(
+    			'taxonomy' => 'categoria',
+    			'field'    => 'id',
+          'terms'    => $_GET["t"].''
+    		),
+    	),
+  ) );
+?>
+
+<?php
+  $term = get_term_by( 'id', $_GET["t"].'' , 'categoria');
+  $term_link = $term->link;
+  $term_name = substr($term->name, 4);
+?>
+
+<div class="seccion">
+  <ol class="breadcrumb">
+    <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
+    <li><a href="<?php echo $term_link; ?>"><?php echo $term_name; ?></a></li>
+  </ol>
 </div>
 
-  <?php $loop = new WP_Query( array(
-      'post_type' => 'producto',
-      'orderby' => 'title',
-      'order' => 'ASC',
-
-    	'tax_query' => array(
-      		array(
-      			'taxonomy' => 'categoria',
-      			'field'    => 'id',
-            'terms'    => $_GET["t"].''
-      		),
-      	),
-    ) );
-  ?>
 <div class="seccion">
   <div class="row">
     <div class="col-xs-12 col-lg-10 col-lg-offset-1">
@@ -42,11 +48,11 @@
 
           <div class="cols col-xs-6 col-sm-4 col-md-3">
             <a href="<?php echo $link; ?>">
-             <div class="producto">
-               <div class="data_producto sh">
+             <div class="producto-tarjeta">
+               <div class="producto-data sh">
                  <img class="img-responsive"
                      src="<?php echo $foto; ?>">
-                 <div class="info">
+                 <div class="producto-info">
                    <h5><?php echo $nombre; ?></h5>
                    <?php //<p>Bs. echo $precio; </p> ?>
                  </div>
