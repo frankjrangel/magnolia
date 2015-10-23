@@ -1,4 +1,8 @@
 <?php get_header(); ?>
+<script type="text/javascript">
+  $( ".titulo" ).addClass("que_ofrecemos");
+  $( ".titulo p" ).html("¿QUÉ OFRECEMOS?");
+</script>
 <?php $taxonomy = 'categoria';
       $term_id  = '14';
       $term = get_term_by( 'id' , $term_id , $taxonomy );
@@ -19,17 +23,6 @@
       $foto_3 = get_field('foto_1', $p_3->ID);
 ?>
 
-<div class="seccion heading">
-  <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="titulo que_ofrecemos">
-          <p>¿QUÉ OFRECEMOS?</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="seccion intro">
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3">

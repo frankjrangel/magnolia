@@ -1,15 +1,8 @@
 <?php get_header(); ?>
-<div class="seccion heading">
-  <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="titulo preguntas_consejos">
-          <p>PREGUNTAS Y CONSEJOS</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<script type="text/javascript">
+  $( ".titulo" ).addClass("preguntas_consejos");
+  $( ".titulo p" ).html("PREGUNTAS Y CONSEJOS");
+</script>
 
 <div class="seccion">
   <div class="row">

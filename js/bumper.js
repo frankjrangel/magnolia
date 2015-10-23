@@ -3,7 +3,7 @@ function bumpIt() {
 	$('.sh').matchHeight();
 	//$('.sh2').matchHeight();
 
-	 var winHeight = $(window).innerHeight();
+	 /*var winHeight = $(window).innerHeight();
 	 var HeaderFooterHeight = $('#footer').outerHeight() + $('#navbar').outerHeight();
 	 var contentHeight = $('#content').outerHeight() + HeaderFooterHeight;
 
@@ -15,7 +15,7 @@ function bumpIt() {
 	 else {
 		 $('#footer').css('position','relative');
 		 $('#background').css('height', $('#content').outerHeight() );
-	 }
+	 }*/
  }
  var didResize = false;
 

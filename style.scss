@@ -94,7 +94,7 @@ p{
 
 // ===== Objetos ===========================================
 $alto-banda-magnolia: 105px;
-$caja-banda-magnolia: 45px;
+$caja-banda-magnolia: 50px;
 $xy-menu-button: 44px;
 $padding-top-content: ($caja-banda-magnolia * 2) + $alto-banda-magnolia;
 
@@ -103,23 +103,42 @@ body {
   background-size: 36px 54px;
   background-color: $turquesa-sombra;
   background-position: center top;
-  padding: 5px $gutter 0;
+  padding-top: 5px;
 }
 .wrapper {
   position: relative;
 }
-#content-background {
-  background-image: url("assets/img/fondos/fondo_amarillo.png");
-  background-position: center top;
-  background-color: $amarillo;
+.container-ext{
+  position: relative;
+  left: 0;
+  right: 0;
+  padding-left: $gutter;
+  padding-right: $gutter;
 }
-#content {
-  padding-top: ($padding-top-content - 1px);
-  padding-bottom: ($gutter * 2);
+#navbar {
+  position: absolute;
+  padding-top: $padding-top-content;
+  left: 0;
+  right: 0;
+  border: 0;
+  z-index: 1031;
+  .navbar {
+    min-height: $xy-menu-button;
+  }
+}
+#navbar.fixed {
+  position: fixed;
+  padding-top: 0;
+  top: 0;
+  .heading{
+    background-color: $amarillo;
+  }
+  .navbar button {
+    //background-color: $amarillo;
+  }
 }
 #collapse-menu{
   position: absolute;
-  background-image: url("assets/img/fondos/fondo_amarillo.png");
   background-position: center  (-$padding-top-content);
   background-color: $amarillo;
   left: 0;
@@ -127,17 +146,26 @@ body {
   padding: 0 $xy-menu-button 10px;
   margin: 0;
 }
+#content-background {
+  background-image: url("assets/img/fondos/fondo_amarillo.png");
+  background-position: center top;
+  background-color: $amarillo;
+  padding-top: ($padding-top-content - 1px);//ajuste col min-height 1px
+  padding-bottom: ($gutter * 2);
+}
+#content {
+  padding-top: $xy-menu-button + ($gutter * 2);
+}
 #secciones {
   margin: -($gutter * 2) 0;
 }
 .seccion{
   margin: ($gutter * 2) 0;
 }
-.banner{
-  //margin: -15px 0;
-
+.breadcrumb{
+  background: none;
+  font-family: 'yanone_regular';
 }
-
 .shortcuts-que_ofrecemos,
 .shortcuts-como_pedir,
 .shortcuts-preguntas_consejos {
@@ -210,38 +238,19 @@ body {
 .navbar button {
   background: none;
   border: none;
-  z-index: 1031;
+  border-radius: 0;
+  margin: 0 (-($gutter));
 }
-.navbar {
-  position: absolute;
-  top: $padding-top-content;
-  right: 0;
-  left: 0;
-  border: 0;
-  margin-bottom: -1px;
-}
-.navbar.fixed {
-  position: fixed;
-  top: 0;
-  left: 15px;
-  right: 15px;
-}
-.navbar-collapse {
-  padding: 0;
-}
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar a {
-  display: block;
-  text-decoration: none;
-}
-.navbar-default {
-  border: 0;
-}
-.navbar-default .navbar-nav > {
+#navbar {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+  }
   li {
     background-color: $turquesa-claro;
     margin-bottom: 7px;
@@ -258,68 +267,71 @@ body {
   li.current_page_item {
     background-color: $marron;
   }
-}
-.navbar button {
-  position: absolute;
-  right: 0;
-  height: $xy-menu-button;
-  width: $xy-menu-button;
-  margin: 0;
-  padding: 9px 12px;
-}
-.navbar-default .navbar-toggle {
-  .icon-bar {
-    background-color: $icon-bar;
-    height: 4px;
-    width: 20px;
-  }
-  .icon-bar+.icon-bar {
-    margin-top: 3px;
-  }
-}
-.heading{
-  padding: 0 44px;
-  margin-left: -($gutter);
-  margin-right: -($gutter);
-  .titulo{
-    visibility: hidden;
+  button {
+    position: absolute;
+    right: 0;
     height: $xy-menu-button;
+    width: $xy-menu-button;
+    margin: 0;
+    padding: 9px 12px;
+    z-index: 1031;
+    .icon-bar {
+      background-color: $icon-bar;
+      height: 4px;
+      width: 20px;
+    }
+    .icon-bar+.icon-bar {
+      margin-top: 3px;
+    }
   }
-  .collapsed{
+  .heading{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -1px;
+    padding: 0 $xy-menu-button;
     .titulo{
-      position: relative;
-      visibility: visible;
-      z-index: 1032;
-      cursor: pointer;
+      display: none;
       height: $xy-menu-button;
     }
-  }
-  .titulo{
-    padding: 12px 0;
-    p{
-      color: $blanco;
-      text-align: center;
-      font-family: 'yanone_regular';
-    }
-  }
-  .que_ofrecemos, .como_pedir, .preguntas_consejos {
-    background-color: $turquesa-claro;
-  }
-  .catalogo, .hacer_pedido, .contacto {
-    background-color: $turquesa-pastel;
-  }
-  .categoria {
-    background-color: $blanco;
-    padding: 12px 15px;
-    margin-top: 15px;
+    .collapsed{
+      .titulo{
+        position: relative;
+        display: block;
+        z-index: 1032;
+        cursor: pointer;
+        height: $xy-menu-button;
+      }
 
-    p{
-      color: $negro;
-      text-align: center;
+    }
+    .titulo{
+      padding: 12px 0;
+      p{
+        color: $blanco;
+        text-align: center;
+        font-family: 'yanone_regular';
+      }
+    }
+    .que_ofrecemos, .como_pedir, .preguntas_consejos {
+      background-color: $turquesa-claro;
+    }
+    .catalogo, .hacer_pedido, .contacto {
+      background-color: $turquesa-pastel;
+    }
+    .categoria {
+      background-color: $blanco;
+      padding: 12px 15px;
+      margin-top: $gutter;
+
+      p{
+        color: $negro;
+        text-align: center;
+      }
     }
   }
 
 }
+
 
 // ===== Footer ==========================================
 #footer{
@@ -388,9 +400,9 @@ body {
 
 // ===== Catalogo ========================================
 .categorias {
-  margin: -15px 0;
+  margin: (-($gutter)) 0;
   .categoria {
-    margin: 15px 0;
+    margin: $gutter 0;
     a {
       display: block;
     }
@@ -399,9 +411,9 @@ body {
 
 // ===== Categoria ========================================
 .productos {
-  margin: -15px 0;
+  margin: (-($gutter)) 0;
   .producto-tarjeta {
-    margin: 15px 0;
+    margin: $gutter 0;
     .producto-data {
       background-color: $blanco;
     }
@@ -416,15 +428,15 @@ body {
 
 // ===== Producto ========================================
 .producto {
-  margin: -15px 0;
+  margin: (-($gutter)) 0;
   .fotos{
-    margin: 15px 0;
     .foto {
+      margin: $gutter 0;
     }
   }
   .info{
     .data {
-      margin: 15px 0;
+      margin: $gutter 0;
       div{
         background-color: $blanco;
         padding: 5px 10px;
@@ -441,7 +453,7 @@ body {
       }
     }
     .pedido{
-      margin: 15px 0;
+      margin: $gutter 0;
       .boton{
         a{
           display: block;
@@ -466,26 +478,24 @@ body {
   display: none;
 }
 // ===== Preguntas y Consejos ========================================
-.sub-titulo div{
-  height: $xy-menu-button;
-  margin: 15px 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 .sub-titulo{
   position: relative;
   div{
     position: relative;
     left: 0;
     right: 0;
-  }
+    height: $xy-menu-button;
+    margin-bottom: $gutter;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
+  }
 }
 .preguntas{
   .pregunta{
     position: relative;
-    margin: 15px $xy-menu-button 15px 0;
+    margin: $gutter $xy-menu-button $gutter 0;
     cursor: pointer;
     p{
       font-weight: bold;
@@ -515,13 +525,14 @@ body {
     }
   }
   .respuesta{
-    margin-top: -15px;
+    margin-top: (-($gutter));
+    margin-bottom: $gutter;
   }
 }
 .consejos{
   .consejo{
     position: relative;
-    margin: 15px 0;
+    margin: $gutter 0;
     cursor: pointer;
   }
 }
@@ -580,41 +591,67 @@ body {
 body {
   padding: 5px 0 0 0;
 }
+#navbar {
+  border: 0;
+  z-index: 1031;
+  .navbar-default{
+    height: $xy-menu-button;
+  }
+}
 #collapse-menu {
   background-color: $turquesa-claro;
   background-image: none;
   padding: 0 30px;
   margin: 0 -30px;
 }
-#wings-menu-background {
-  position: absolute;
-  z-index: -10;
-  margin: $padding-top-content -27px 0;
-  background-image: url("assets/img/fondos/triangulito_izq.png"),
-                    url("assets/img/fondos/triangulito_der.png");
-  background-position: left 44px, right 44px;
-  background-repeat: no-repeat, no-repeat;
+#wings-navbar {
+  #wings-menu-background {
+    position: absolute;
+    z-index: -10;
+    margin: $padding-top-content (-($gutter * 2)) 0;
+    background-image: url("assets/img/fondos/triangulito_izq.png"),
+                      url("assets/img/fondos/triangulito_der.png");
+    background-position: left 44px, right 44px;
+    background-repeat: no-repeat, no-repeat;
+    left: 0;
+    right: 0;
+    height: 72px;
+  }
+}
+#wings-navbar.fixed {
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-  height: 72px;
+  #wings-menu-background {
+    z-index: -10;
+    margin: 0 (-($gutter * 2)) 0;
+    background-image: url("assets/img/fondos/triangulito_izq.png"),
+                      url("assets/img/fondos/triangulito_der.png");
+    background-position: left 44px, right 44px;
+    background-repeat: no-repeat, no-repeat;
+    left: 0;
+    right: 0;
+    height: 72px;
+  }
 }
 #content-background {
   background-image: url("assets/img/fondos/fondo_amarillo.png");
   background-position: center (-$padding-top-content);
+  padding-top: 0;
   margin-top: $padding-top-content;
   background-color: $amarillo;
+  padding-bottom: $xy-menu-button;
 }
 #content {
   padding-top: ($gutter * 2) + $xy-menu-button;
-  padding-bottom: $xy-menu-button;
 }
 #secciones {
   margin: -($gutter * 2) 0;
 }
 
 // ===== Header ======
-
-.navbar-default .navbar-nav > {
+#navbar{
   li,li:nth-child(even) {
     background-color: $turquesa-claro;
     margin: 0;
@@ -622,9 +659,9 @@ body {
       padding: 12px 15px;
     }
   }
-}
-.heading{
-  display: none;
+  .heading{
+    display: none;
+  }
 }
 
 // ===== Footer ==========================================
@@ -674,7 +711,7 @@ body {
     width: 962px;
   }
 
-.navbar-default .navbar-nav > li {
+  .navbar-default .navbar-nav > li {
     a,a:active,a:visited,a:hover,a:link,a:focus{
       padding: 12px 50px;
     }

@@ -1,15 +1,8 @@
 <?php get_header(); ?>
-<div class="seccion heading">
-  <div class="collapsed" data-toggle="collapse" data-target="#collapse-menu">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="titulo catalogo">
-          <p>CATÁLOGO</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<script type="text/javascript">
+  $( ".titulo" ).addClass("catalogo");
+  $( ".titulo p" ).html("CATÁLOGO");
+</script>
 
 <?php
   $postid = get_the_ID();
