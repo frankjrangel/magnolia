@@ -4,4 +4,22 @@
   $( ".titulo p" ).html("CONTACTO");
 </script>
 
+<div id="fondo_contacto" class="seccion form">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-content">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+      <?php
+        if( function_exists( 'ninja_forms_display_form' ) ){
+          ninja_forms_display_form( 8 );
+        }
+      ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <?php get_footer(); ?>

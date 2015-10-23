@@ -195,7 +195,32 @@ body {
     font-weight: bold;
   }
 }
-
+.form {
+  color: $negro;
+  padding: ($gutter * 2) 0;
+  .form-content {
+    .field-wrap {
+      margin-bottom: $gutter;
+    }
+    .ninja-forms-field {
+      border: none;
+      min-height: $xy-menu-button;
+      padding: 12px 16px;
+    }
+    textarea{
+      height: $xy-menu-button * 2;
+      min-width: 100%;
+      max-width: 100%;
+    }
+    #ninja_forms_field_16, #ninja_forms_field_7{
+      background-color: $turquesa-claro;
+      color: $blanco;
+      font-family: 'yanone_regular';
+      width: 50%;
+      margin-left: 25%;
+    }
+  }
+}
 // ===== Header =================================================
 
 .background-banda-logo {
@@ -477,7 +502,11 @@ body {
 .banner-pedir_1200{
   display: none;
 }
-// ===== Preguntas y Consejos ========================================
+
+// ===== Hacer Pedido ========================================
+
+
+// ===== Preguntas y Consejos =================================
 .sub-titulo{
   position: relative;
   div{
@@ -649,7 +678,17 @@ body {
 #secciones {
   margin: -($gutter * 2) 0;
 }
-
+#fondo_pedido{
+    background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/hacer_pedido/fondo_bicicleta.png );
+}
+#fondo_contacto{
+    background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/contacto/fondo_tazas.png );
+}
+.form {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 // ===== Header ======
 #navbar{
   li,li:nth-child(even) {
