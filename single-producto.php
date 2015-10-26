@@ -73,7 +73,7 @@
                     </div>
                   </div>
 
-                  <div class="pedido">
+                  <?php /* <div class="pedido">
                     <div class="row">
                       <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-12 col-lg-offset-0">
                         <div class="boton">
@@ -81,8 +81,8 @@
                         </div>
                       </div>
                     </div>
+                  </div> */ ?>
 
-                </div>
               </div>
             </div>
           </div>

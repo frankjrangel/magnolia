@@ -58,8 +58,8 @@
                           <li><a href="<?php echo esc_url( home_url('/')) ?>">¿QUÉ OFRECEMOS?</a></li>
                           <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
                           <li><a href="<?php echo get_page_link(10); ?>">¿CÓMO PEDIR?</a></li>
-                          <li><a href="<?php echo get_page_link(113); ?>">HACER PEDIDO</a></li>
-                          <li><a href="<?php echo get_page_link(151); ?>">PREGUNTAS Y CONSEJOS</a></li>
+                          <li><a href="<?php echo get_page_link(113); ?>">ARMAR GIFT</a></li>
+                          <li><a href="<?php echo get_page_link(151); ?>">PREGUNTAS Y TIPS</a></li>
                           <li><a href="<?php echo get_page_link(14); ?>">CONTACTO</a></li>
                         </ul>
                       </div><!-- Collapse -->

@@ -503,7 +503,7 @@ body {
   display: none;
 }
 
-// ===== Hacer Pedido ========================================
+// ===== Armar Gift ========================================
 
 
 // ===== Preguntas y Consejos =================================
@@ -526,6 +526,9 @@ body {
     position: relative;
     margin: $gutter $xy-menu-button $gutter 0;
     cursor: pointer;
+    border-color: $marron;
+    border-width: 1px 0 1px 0;
+    border-style: dashed;
     p{
       font-weight: bold;
     }
@@ -563,6 +566,20 @@ body {
     position: relative;
     margin: $gutter 0;
     cursor: pointer;
+  }
+}
+.mensaje_cierre{
+  padding: $gutter 0;
+  p{
+    text-align: center;
+  }
+}
+// ===== Contactos =================================
+.datos_contacto {
+  margin-top: -30px;
+  p {
+    font-weight: bold;
+    text-align: center;
   }
 }
 
@@ -684,6 +701,10 @@ body {
 #fondo_contacto{
     background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/contacto/fondo_tazas.png );
 }
+#fondo_preguntas_consejos{
+  padding: ($gutter * 2) 0;
+  background-color: $blanco;
+}
 .form {
   background-size: cover;
   background-position: center;
@@ -695,7 +716,7 @@ body {
     background-color: $turquesa-claro;
     margin: 0;
     a,a:active,a:visited,a:hover,a:link,a:focus{
-      padding: 12px 15px;
+      padding: 12px 20px;
     }
   }
   .heading{
@@ -733,12 +754,18 @@ body {
 .prod_2{
   display: block;
 }
+
 // ===== Como pedir ========================================
 .banner-pedir_vertical{
   display: none;
 }
 .banner-pedir_768{
   display: block;
+}
+
+// ===== Contactos =================================
+.datos_contacto {
+  margin-top: 0;
 }
 
 }
@@ -756,6 +783,19 @@ body {
     }
   }
 
+  // ===== Header ======
+  #navbar{
+    li,li:nth-child(even) {
+      background-color: $turquesa-claro;
+      margin: 0;
+      a,a:active,a:visited,a:hover,a:link,a:focus{
+        padding: 12px 36px;
+      }
+    }
+    .heading{
+      display: none;
+    }
+  }
 // ===== Que Ofrecemos =====================================
 
 .prod_1, .prod_2, .prod_3 {
@@ -781,19 +821,32 @@ body {
   .container{
     width: 1170px;
   }
+  // ===== Header ======
+  #navbar{
+    li,li:nth-child(even) {
+      background-color: $turquesa-claro;
+      margin: 0;
+      a,a:active,a:visited,a:hover,a:link,a:focus{
+        padding: 12px 50px;
+      }
+    }
+    .heading{
+      display: none;
+    }
+  }
 
-// ===== Que Ofrecemos =====================================
-.prod_1, .prod_2, .prod_3 {
-  margin-top: 26.20px;
-}
-.banner-pedir_992{
-  display: none;
-}
-.banner-pedir_1200{
-  display: block;
-}
+  // ===== Que Ofrecemos =====================================
+  .prod_1, .prod_2, .prod_3 {
+    margin-top: 26.20px;
+  }
+  .banner-pedir_992{
+    display: none;
+  }
+  .banner-pedir_1200{
+    display: block;
+  }
 
-// ===== Catalogo ========================================
+  // ===== Catalogo ========================================
 
 
 }

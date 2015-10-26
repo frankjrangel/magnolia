@@ -5,7 +5,7 @@ $nombre = $producto->nombre;
 ?>
 <script type="text/javascript">
   $( ".titulo" ).addClass("hacer_pedido");
-  $( ".titulo p" ).html("HACER PEDIDO");
+  $( ".titulo p" ).html("ARMAR GIFT");
 </script>
 
 <div id="fondo_pedido" class="seccion form">
