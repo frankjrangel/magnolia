@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <script type="text/javascript">
+  $( "#como_pedir" ).addClass("current_page");
   $( ".titulo" ).addClass("como_pedir");
   $( ".titulo p" ).html("¿CÓMO PEDIR?");
 </script>

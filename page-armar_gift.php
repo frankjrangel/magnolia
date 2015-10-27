@@ -4,6 +4,7 @@ $producto = get_post( $_GET["c"] );
 $nombre = $producto->nombre;
 ?>
 <script type="text/javascript">
+  $( "#hacer_pedido" ).addClass("current_page");
   $( ".titulo" ).addClass("hacer_pedido");
   $( ".titulo p" ).html("ARMAR GIFT");
 </script>

@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <script type="text/javascript">
+  $( "#que_ofrecemos" ).addClass("current_page");
   $( ".titulo" ).addClass("que_ofrecemos");
   $( ".titulo p" ).html("¿QUÉ OFRECEMOS?");
 </script>
@@ -79,24 +80,26 @@
         </a>
       </div>
       <div class="col-sm-7 col-md-8">
+        <div class="otros_productos-titulo">
+          <div style="background-image:     url(/magnolia/wp-content/themes/magnolia/assets/img/que_ofrecemos/otros_productos.svg);">
+
+          </div>
+        </div>
         <div class="otros_productos">
           <div class="row">
             <div class="prod_1 col-sm-6 col-md-4">
-              <a href="<?php echo $link_1; ?>">
-                <img class="img-responsive"
-                    src="<?php echo $foto_1; ?>"  alt="producto_1">
+              <a href="<?php echo $link_1; ?>" style="background-image:
+                   url(<?php echo $foto_1; ?>);">
               </a>
             </div>
             <div class="prod_2 col-sm-6 col-md-4">
-              <a href="<?php echo $link_2; ?>">
-                <img class="img-responsive"
-                    src="<?php echo $foto_2; ?>"  alt="producto_2">
+              <a href="<?php echo $link_2; ?>" style="background-image:
+                   url(<?php echo $foto_2; ?>);">
               </a>
             </div>
             <div class="prod_3 col-md-4">
-              <a href="<?php echo $link_3; ?>">
-                <img class="img-responsive"
-                    src="<?php echo $foto_3; ?>"  alt="producto_3">
+              <a href="<?php echo $link_3; ?>" style="background-image:
+                   url(<?php echo $foto_3; ?>);">
               </a>
           </div>
         </div>

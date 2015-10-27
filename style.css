@@ -119,6 +119,11 @@ body {
 .breadcrumb {
   background: none;
   font-family: 'yanone_regular'; }
+  .breadcrumb a {
+    color: #a8a8a8;
+    letter-spacing: 1px; }
+  .breadcrumb #activa a {
+    color: #474747; }
 
 .shortcuts-que_ofrecemos,
 .shortcuts-como_pedir,
@@ -232,8 +237,6 @@ body {
     font-family: 'yanone_regular'; }
 #navbar li:nth-child(even) {
   background-color: #bcdad6; }
-#navbar li.current_page_item {
-  background-color: #ccc0af; }
 #navbar button {
   position: absolute;
   right: 0;
@@ -329,11 +332,8 @@ body {
   font-weight: bold;
   line-height: 15px; }
 
-.prod_0 {
-  margin: 0; }
-
-.prod_1, .prod_2 {
-  margin-top: 13.81px; }
+.prod_1 a, .prod_2 a {
+  height: 122px; }
 
 .categorias {
   margin: -15px 0; }
@@ -549,6 +549,21 @@ body {
     margin: 0; }
     #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
       padding: 12px 20px; }
+  #navbar li.current_page {
+    background-color: #ccc0af;
+    background-clip: padding-box;
+    margin-top: -4px;
+    height: 52px;
+    margin-bottom: -4px;
+    border: 8px;
+    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_2.svg) 12% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_2.svg) 12% round;
+    /* Opera 11-12.1 */
+    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_2.svg) 12% round; }
+    #navbar li.current_page a, #navbar li.current_page a:active, #navbar li.current_page a:visited, #navbar li.current_page a:hover, #navbar li.current_page a:link, #navbar li.current_page a:focus {
+      padding-top: 8px;
+      padding-bottom: 8px; }
   #navbar .heading {
     display: none; }
 
@@ -571,6 +586,36 @@ body {
   .shortcuts-que_ofrecemos {
     display: none; }
 
+  .banner-productos {
+    padding-top: 22px; }
+    .banner-productos .otros_productos-titulo {
+      position: relative;
+      margin-bottom: 15px; }
+      .banner-productos .otros_productos-titulo div {
+        position: relative;
+        margin-top: -22px;
+        left: 0;
+        right: 0;
+        height: 44px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; }
+    .banner-productos .otros_productos .row {
+      margin-right: 0; }
+      .banner-productos .otros_productos .row div {
+        padding: 0; }
+        .banner-productos .otros_productos .row div a {
+          display: block;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center; }
+
+  .prod_0 {
+    padding-right: 0; }
+
+  .prod_1 a, .prod_2 a {
+    height: 135px; }
+
   .banner-redes,
   .prod_1,
   .prod_2 {
@@ -592,16 +637,14 @@ body {
   .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus {
     padding: 12px 50px; }
 
-  #navbar li, #navbar li:nth-child(even) {
-    background-color: #66c5bd;
-    margin: 0; }
-    #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-      padding: 12px 36px; }
+  #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
+    padding-left: 36px;
+    padding-right: 36px; }
   #navbar .heading {
     display: none; }
 
-  .prod_1, .prod_2, .prod_3 {
-    margin-top: 23.57px; }
+  .prod_1 a, .prod_2 a, .prod_3 a {
+    height: 144px; }
 
   .prod_3 {
     display: block; }
@@ -616,16 +659,14 @@ body {
   .container {
     width: 1170px; }
 
-  #navbar li, #navbar li:nth-child(even) {
-    background-color: #66c5bd;
-    margin: 0; }
-    #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-      padding: 12px 50px; }
+  #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
+    padding-left: 50px;
+    padding-right: 50px; }
   #navbar .heading {
     display: none; }
 
-  .prod_1, .prod_2, .prod_3 {
-    margin-top: 26.20px; }
+  .prod_1 a, .prod_2 a, .prod_3 a {
+    height: 185px; }
 
   .banner-pedir_992 {
     display: none; }

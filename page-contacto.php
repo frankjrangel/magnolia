@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <script type="text/javascript">
+  $( "#contacto" ).addClass("current_page");
   $( ".titulo" ).addClass("contacto");
   $( ".titulo p" ).html("CONTACTO");
 </script>

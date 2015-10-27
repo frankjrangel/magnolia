@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <script type="text/javascript">
+  $( "#catalogo" ).addClass("current_page");
   $( ".titulo" ).addClass("catalogo");
   $( ".titulo p" ).html("CATÁLOGO");
 </script>
@@ -20,15 +21,16 @@
 ?>
 
 <?php
-  $term = get_term_by( 'id', $_GET["t"].'' , 'categoria');
-  $term_link = $term->link;
+  $term_id = $_GET["t"] ;
+  $term = get_term_by( 'id', $term_id , 'categoria');
+  $term_link = get_term_link($term);
   $term_name = substr($term->name, 4);
 ?>
 
 <div class="seccion">
   <ol class="breadcrumb">
     <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
-    <li><a href="<?php echo $term_link; ?>"><?php echo $term_name; ?></a></li>
+    <li id="activa"><a href="<?php echo $term_link.'?t='.$term_id; ?>"><?php echo $term_name; ?></a></li>
   </ol>
 </div>
 
@@ -47,7 +49,7 @@
 
 
           <div class="cols col-xs-6 col-sm-4 col-md-3">
-            <a href="<?php echo $link; ?>">
+            <a href="<?php echo $link.'?t='.$term_id; ?>">
              <div class="producto-tarjeta">
                <div class="producto-data sh">
                  <img class="img-responsive"

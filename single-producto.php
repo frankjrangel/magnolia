@@ -1,9 +1,15 @@
 <?php get_header(); ?>
 <script type="text/javascript">
+  $( "#catalogo" ).addClass("current_page");
   $( ".titulo" ).addClass("catalogo");
   $( ".titulo p" ).html("CATÁLOGO");
 </script>
-
+<?php
+  $term_id = $_GET["t"] ;
+  $term = get_term_by( 'id', $term_id , 'categoria');
+  $term_link = get_term_link($term);
+  $term_name = substr($term->name, 4);
+?>
 <?php
   $postid = get_the_ID();
   $foto_1 = get_field('foto_1');
@@ -14,6 +20,14 @@
   //$precio = get_field('precio');
   $detalles = get_field('detalles');
 ?>
+<div class="seccion">
+  <ol class="breadcrumb">
+    <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
+    <li><a href="<?php echo $term_link.'?t='.$term_id; ?>"><?php echo $term_name; ?></a></li>
+    <li id='activa'><a href=""><?php echo $nombre; ?></a></li>
+  </ol>
+</div>
+
 <div class="seccion">
   <div class="row">
     <div class="col-xs-12 col-md-10 col-md-offset-1">

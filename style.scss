@@ -165,6 +165,14 @@ body {
 .breadcrumb{
   background: none;
   font-family: 'yanone_regular';
+  a{
+    color: $gris;
+    letter-spacing: 1px;
+  }
+  #activa a {
+    color: $negro;
+  }
+
 }
 .shortcuts-que_ofrecemos,
 .shortcuts-como_pedir,
@@ -288,9 +296,6 @@ body {
   }
   li:nth-child(even) {
       background-color: $turquesa-pastel;
-  }
-  li.current_page_item {
-    background-color: $marron;
   }
   button {
     position: absolute;
@@ -416,11 +421,10 @@ body {
     line-height: 15px;
   }
 }
-.prod_0 {
-  margin: 0;
-}
 .prod_1, .prod_2 {
-  margin-top: 13.81px;
+  a{
+    height: 122px;
+  }
 }
 
 // ===== Catalogo ========================================
@@ -719,6 +723,22 @@ body {
       padding: 12px 20px;
     }
   }
+  li.current_page {
+    background-color: $marron;
+    background-clip: padding-box;
+    margin-top: -4px;
+    height: 52px;
+    margin-bottom: -4px;
+    border: 8px;
+    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_2.svg) 12% round; /* Safari 3.1-5 */
+    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_2.svg) 12% round; /* Opera 11-12.1 */
+    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_2.svg) 12% round;
+
+    a,a:active,a:visited,a:hover,a:link,a:focus{
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
   .heading{
     display: none;
   }
@@ -748,6 +768,45 @@ body {
 .intro,
 .shortcuts-que_ofrecemos{
   display: none;
+}
+.banner-productos{
+  padding-top: ($xy-menu-button / 2);
+  .otros_productos-titulo{
+    position: relative;
+    margin-bottom: $gutter;
+    div{
+      position: relative;
+      margin-top: -($xy-menu-button / 2);
+      left: 0;
+      right: 0;
+      height: $xy-menu-button;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .otros_productos{
+    .row{
+      margin-right: 0;
+      div{
+        padding: 0;
+        a{
+          display: block;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+}
+.prod_0 {
+  padding-right: 0;
+}
+.prod_1, .prod_2 {
+  a{
+    height: 135px;
+  }
 }
 .banner-redes,
 .prod_1,
@@ -786,10 +845,9 @@ body {
   // ===== Header ======
   #navbar{
     li,li:nth-child(even) {
-      background-color: $turquesa-claro;
-      margin: 0;
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding: 12px 36px;
+        padding-left: 36px;
+        padding-right: 36px;
       }
     }
     .heading{
@@ -799,7 +857,9 @@ body {
 // ===== Que Ofrecemos =====================================
 
 .prod_1, .prod_2, .prod_3 {
-  margin-top: 23.57px;
+  a{
+    height: 144px;
+  }
 }
 .prod_3{
   display: block;
@@ -824,10 +884,9 @@ body {
   // ===== Header ======
   #navbar{
     li,li:nth-child(even) {
-      background-color: $turquesa-claro;
-      margin: 0;
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding: 12px 50px;
+        padding-left: 50px;
+        padding-right: 50px;
       }
     }
     .heading{
@@ -837,7 +896,9 @@ body {
 
   // ===== Que Ofrecemos =====================================
   .prod_1, .prod_2, .prod_3 {
-    margin-top: 26.20px;
+    a{
+      height: 185px;
+    }
   }
   .banner-pedir_992{
     display: none;
