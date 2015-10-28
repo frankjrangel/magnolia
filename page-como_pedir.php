@@ -41,7 +41,7 @@
         <a href="<?php echo get_page_link(50); ?>" class="sh"><p>Ver Catálogo</p></a>
       </div>
       <div class="shortcut-2">
-        <a href="<?php echo get_page_link(113); ?>" class="sh"><p>¿Cómo pedir?</p></a>
+        <a href="<?php echo get_page_link(113); ?>" class="sh"><p>Armar Gift</p></a>
       </div>
     </div>
   </div>

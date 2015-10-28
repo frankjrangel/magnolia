@@ -6,7 +6,7 @@ function init() {
 		window.attachEvent("onscroll", menuFixed);
 	}
 
-	//supportsSVG();
+	supportsSVG();
 }
 
 if (window.addEventListener) {                // For all major browsers, gte IE 9 versions
@@ -14,3 +14,6 @@ if (window.addEventListener) {                // For all major browsers, gte IE 
 } else if (window.attachEvent) {              // For lt IE 9 versions
 	window.attachEvent("onload", init);
 }
+$( document ).ready(function() {
+	init();
+});

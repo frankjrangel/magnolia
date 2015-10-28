@@ -36,7 +36,8 @@
         <a href="<?php the_field('pinterest', 30 );?>" target="_blank"
         style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/pinterest_logo_blanco.svg );">
         </a>
-      </div>		</div>
+      </div>
+    </div>
 	</div>
 
 

@@ -19,9 +19,15 @@
       $link_1 = esc_url( get_permalink($p_1->ID) );
       $link_2 = esc_url( get_permalink($p_2->ID) );
       $link_3 = esc_url( get_permalink($p_3->ID) );
-      $foto_1 = get_field('foto_1', $p_1->ID);
-      $foto_2 = get_field('foto_1', $p_2->ID);
-      $foto_3 = get_field('foto_1', $p_3->ID);
+      $foto_1_1 = get_field('foto_1', $p_1->ID);
+      $foto_2_1 = get_field('foto_1', $p_2->ID);
+      $foto_3_1 = get_field('foto_1', $p_3->ID);
+      $foto_1_2 = get_field('foto_2', $p_1->ID);
+      $foto_2_2 = get_field('foto_2', $p_2->ID);
+      $foto_3_2 = get_field('foto_2', $p_3->ID);
+      $nombre_1 = get_field('nombre', $p_1->ID);
+      $nombre_2 = get_field('nombre', $p_2->ID);
+      $nombre_3 = get_field('nombre', $p_3->ID);
 ?>
 
 <div class="seccion intro">
@@ -88,18 +94,39 @@
         <div class="otros_productos">
           <div class="row">
             <div class="prod_1 col-sm-6 col-md-4">
-              <a href="<?php echo $link_1; ?>" style="background-image:
-                   url(<?php echo $foto_1; ?>);">
+              <a href="<?php echo $link_1; ?>"
+                 title="<?php echo $nombre_1; ?>"
+                 style="background-image:
+                   url(<?php echo $foto_1_1; ?>);">
+              </a>
+              <a href="<?php echo $link_1; ?>"
+                 title="<?php echo $nombre_1; ?>"
+                 style="background-image:
+                   url(<?php echo $foto_1_2; ?>);">
               </a>
             </div>
             <div class="prod_2 col-sm-6 col-md-4">
-              <a href="<?php echo $link_2; ?>" style="background-image:
-                   url(<?php echo $foto_2; ?>);">
+              <a href="<?php echo $link_2; ?>"
+                 title="<?php echo $nombre_2; ?>"
+                 style="background-image:
+                   url(<?php echo $foto_2_1; ?>);">
+              </a>
+              <a href="<?php echo $link_2; ?>"
+                 title="<?php echo $nombre_2; ?>"
+                 style="background-image:
+                   url(<?php echo $foto_2_2; ?>);">
               </a>
             </div>
             <div class="prod_3 col-md-4">
-              <a href="<?php echo $link_3; ?>" style="background-image:
-                   url(<?php echo $foto_3; ?>);">
+              <a href="<?php echo $link_3; ?>"
+                 title="<?php echo $nombre_3; ?>"
+                 style="background-image:
+                   url(<?php echo $foto_3_1; ?>);">
+              </a>
+              <a href="<?php echo $link_3; ?>"
+                 title="<?php echo $nombre_3; ?>"
+                 style="background-image:
+                   url(<?php echo $foto_3_2; ?>);">
               </a>
           </div>
         </div>

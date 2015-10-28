@@ -12,38 +12,38 @@ Version: 1.0
   font-family: 'jenna_sue';
   src: url("assets/fonts/JennaSue/jennasue-webfont.eot");
   src: url("assets/fonts/JennaSue/jennasue-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/JennaSue/jennasue-webfont.woff2") format('woff2'), url("assets/fonts/JennaSue/jennasue-webfont.woff") format('woff'), url("assets/fonts/JennaSue/jennasue-webfont.ttf") format('truetype'), url("assets/fonts/JennaSue/jennasue-webfont.svg#jenna_sueregular") format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: 'yanone_bold';
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot");
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold") format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: 'yanone_light';
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot");
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: 'yanone_regular';
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot");
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular") format('svg');
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: 'yanone_thin';
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot");
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format('svg');
+}
+@mixin font-jenna_sue{
+  font-family: 'jenna_sue';
   font-weight: normal;
   font-style: normal;
 }
-
+@mixin font-yanone_regular{
+  font-family: 'yanone_regular';
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 1px;
+}
 
 // ===== Paleta ===========================================
 $turquesa-pastel: #bcdad6;//menu-item
@@ -164,10 +164,9 @@ body {
 }
 .breadcrumb{
   background: none;
-  font-family: 'yanone_regular';
+  @include font-yanone_regular;
   a{
     color: $gris;
-    letter-spacing: 1px;
   }
   #activa a {
     color: $negro;
@@ -204,11 +203,13 @@ body {
   }
 }
 .form {
-  color: $negro;
-  padding: ($gutter * 2) 0;
+  color: $gris;
   .form-content {
     .field-wrap {
-      margin-bottom: $gutter;
+      margin-bottom: $gutter / 3;
+    }
+    .textarea-wrap {
+      margin-bottom: 0;
     }
     .ninja-forms-field {
       border: none;
@@ -223,7 +224,7 @@ body {
     #ninja_forms_field_16, #ninja_forms_field_7{
       background-color: $turquesa-claro;
       color: $blanco;
-      font-family: 'yanone_regular';
+      @include font-yanone_regular;
       width: 50%;
       margin-left: 25%;
     }
@@ -291,7 +292,8 @@ body {
     a,a:active,a:visited,a:hover,a:link,a:focus{
       padding: 12px 0;
       color: $blanco;
-      font-family: 'yanone_regular';
+      @include font-yanone_regular;
+      letter-spacing: 1px;
     }
   }
   li:nth-child(even) {
@@ -339,7 +341,7 @@ body {
       p{
         color: $blanco;
         text-align: center;
-        font-family: 'yanone_regular';
+        @include font-yanone_regular;
       }
     }
     .que_ofrecemos, .como_pedir, .preguntas_consejos {
@@ -358,6 +360,9 @@ body {
         text-align: center;
       }
     }
+  }
+  .redes_blancos_fixed {
+    display: none;
   }
 
 }
@@ -387,14 +392,14 @@ body {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-  }
-  .redes a {
-    display: block;
-    float: left;
-    height: 44px;
-    width: 36px;
-    background-repeat: no-repeat;
-    background-position: center;
+    a {
+      display: block;
+      float: left;
+      height: 44px;
+      width: 36px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 }
 // ===== Que Ofrecemos =====================================
@@ -445,11 +450,28 @@ body {
     margin: $gutter 0;
     .producto-data {
       background-color: $blanco;
-    }
-    .producto-info{
-      padding: 5px 10px;
-      h5, p {
-        margin: 0;
+      .producto-img{
+        position: relative;
+        a{
+          position: relative;
+          display: block;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 100%;
+          padding-top: 130%;
+        }
+        a+a{
+          position: absolute;
+          top: 0;
+          opacity: 0;
+        }
+      }
+      .producto-info{
+        padding: 16px 12px;
+        h5, p {
+          margin: 0;
+        }
       }
     }
   }
@@ -461,6 +483,14 @@ body {
   .fotos{
     .foto {
       margin: $gutter 0;
+      div {
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        padding-top: 130%;
+      }
     }
   }
   .info{
@@ -468,7 +498,7 @@ body {
       margin: $gutter 0;
       div{
         background-color: $blanco;
-        padding: 5px 10px;
+        padding: 16px 12px;
         h5{
           margin-top: 0
         }
@@ -561,8 +591,9 @@ body {
     }
   }
   .respuesta{
-    margin-top: (-($gutter));
-    margin-bottom: $gutter;
+    p{
+      font-weight: normal;
+    }
   }
 }
 .consejos{
@@ -578,9 +609,9 @@ body {
     text-align: center;
   }
 }
-// ===== Contactos =================================
+// ===== Contacto =================================
 .datos_contacto {
-  margin-top: -30px;
+  //margin-top: -30px;
   p {
     font-weight: bold;
     text-align: center;
@@ -713,6 +744,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: ($gutter * 6) 0;
 }
 // ===== Header ======
 #navbar{
@@ -720,7 +752,7 @@ body {
     background-color: $turquesa-claro;
     margin: 0;
     a,a:active,a:visited,a:hover,a:link,a:focus{
-      padding: 12px 20px;
+      padding: 12px 15px;
     }
   }
   li.current_page {
@@ -742,17 +774,28 @@ body {
   .heading{
     display: none;
   }
+  .redes_blancos_fixed {
+    display: block;
+    position: absolute;
+    height: 36px * 4;
+    width: 36px;
+    top: ($gutter * 2);
+    margin-left: $gutter;
+    background-color: $marron;
+    a {
+      display: block;
+      float: left;
+      height: 36px;
+      width: 36px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 // ===== Footer ==========================================
 #footer{
   height: 29px;
-  .marrones{
-    display: block;
-  }
-  .blancos{
-    display: none;
-  }
   .redes {
     position: absolute;
     width: 36px * 4;
@@ -762,6 +805,20 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  .marrones{
+    display: block;
+
+  }
+  .fixed{
+    position: fixed;
+    top: $padding-top-content + ($gutter * 2);
+    height: $xy-menu-button * 4;
+    width: $xy-menu-button;
+  }
+  .blancos{
+    display: none;
+  }
+
 }
 
 // ===== Que Ofrecemos =====================================
@@ -774,6 +831,7 @@ body {
   .otros_productos-titulo{
     position: relative;
     margin-bottom: $gutter;
+    margin-left: -($gutter);
     div{
       position: relative;
       margin-top: -($xy-menu-button / 2);
@@ -790,11 +848,19 @@ body {
       margin-right: 0;
       div{
         padding: 0;
+        position: relative;
         a{
+          position: relative;
           display: block;
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
+          width: 100%;
+        }
+        a+a{
+          position: absolute;
+          top: 0;
+          opacity: 0;
         }
       }
     }
@@ -846,8 +912,8 @@ body {
   #navbar{
     li,li:nth-child(even) {
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding-left: 36px;
-        padding-right: 36px;
+        padding-left: 30px;
+        padding-right: 30px;
       }
     }
     .heading{
@@ -885,8 +951,8 @@ body {
   #navbar{
     li,li:nth-child(even) {
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 46px;
+        padding-right: 46px;
       }
     }
     .heading{

@@ -39,16 +39,18 @@
               <div class="row">
                 <div class="cols col-xs-12 col-sm-6 ">
                   <div class="foto">
-                    <img class="img-responsive"
-                        src="<?php echo $foto_1; ?>">
+                    <div style="background-image:
+                         url(<?php echo $foto_1; ?>);">
+                    </div>
                   </div>
                 </div>
                   <?php if ($foto_2 != null){
                       echo '
                       <div class="cols col-xs-12 col-sm-6">
                         <div class="foto">
-                          <img class="img-responsive"
-                            src="'. $foto_2.'">
+                          <div style="background-image:
+                               url('. $foto_2.');">
+                          </div>
                         </div>
                       </div>';
 
@@ -56,16 +58,18 @@
                         echo '
                         <div class="cols col-xs-12 col-sm-6">
                           <div class="foto">
-                            <img class="img-responsive"
-                              src="'. $foto_3.'">
+                            <div style="background-image:
+                                 url('. $foto_3.');">
+                            </div>
                           </div>
                         </div>';
                         if ($foto_4 != null){
                           echo '
                           <div class="cols col-xs-12 col-sm-6">
                             <div class="foto">
-                              <img class="img-responsive"
-                                src="'. $foto_4.'">
+                              <div style="background-image:
+                                   url('. $foto_4.');">
+                              </div>
                             </div>
                           </div>';
                         }

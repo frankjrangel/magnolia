@@ -94,6 +94,24 @@
             </div>
 
           </div>
+          <div class="col-xs-1 col-xs-offset-11">
+
+            <div class="redes_blancos_fixed">
+              <a href="<?php the_field('twitter', 30 );?>" target="_blank"
+              style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/twitter_logo_blanco.svg );">
+              </a>
+              <a href="<?php the_field('facebook', 30 );?>" target="_blank"
+              style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/facebook_logo_blanco.svg );">
+              </a>
+              <a href="<?php the_field('instagram', 30 );?>" target="_blank"
+              style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/instagram_logo_blanco.svg );">
+              </a>
+              <a href="<?php the_field('pinterest', 30 );?>" target="_blank"
+              style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/pinterest_logo_blanco.svg );">
+              </a>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
