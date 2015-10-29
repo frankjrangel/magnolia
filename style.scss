@@ -162,16 +162,22 @@ body {
 .seccion{
   margin: ($gutter * 2) 0;
 }
-.breadcrumb{
-  background: none;
+.nav_categoria{
   @include font-yanone_regular;
-  a{
-    color: $gris;
+  .breadcrumb{
+    background: none;
+    padding: 0;
+    margin-bottom: -($gutter);
+    a{
+      color: $gris;
+    }
+    #activa a {
+      color: $negro;
+    }
   }
-  #activa a {
-    color: $negro;
+  .pags{
+    text-align: right;
   }
-
 }
 .shortcuts-que_ofrecemos,
 .shortcuts-como_pedir,
@@ -762,9 +768,9 @@ body {
     height: 52px;
     margin-bottom: -4px;
     border: 8px;
-    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_2.svg) 12% round; /* Safari 3.1-5 */
-    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_2.svg) 12% round; /* Opera 11-12.1 */
-    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_2.svg) 12% round;
+    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_menu_active.svg) 12% round; /* Safari 3.1-5 */
+    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_menu_active.svg) 12% round; /* Opera 11-12.1 */
+    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_menu_active.svg) 12% round;
 
     a,a:active,a:visited,a:hover,a:link,a:focus{
       padding-top: 8px;
@@ -777,16 +783,22 @@ body {
   .redes_blancos_fixed {
     display: block;
     position: absolute;
-    height: 36px * 4;
+    height: 127px;
     width: 36px;
     top: ($gutter * 2);
     margin-left: $gutter;
     background-color: $marron;
+    background-clip: padding-box;
+    border: 3px;
+    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_marron.svg) 4% round; /* Safari 3.1-5 */
+    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_marron.svg) 4% round; /* Opera 11-12.1 */
+    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_marron.svg) 4% round;
+
     a {
       display: block;
       float: left;
-      height: 36px;
-      width: 36px;
+      height: 30px;
+      width: 30px;
       background-repeat: no-repeat;
       background-position: center;
     }
