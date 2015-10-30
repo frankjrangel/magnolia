@@ -12,7 +12,7 @@
         <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
           <div class="preguntas">
             <div class="sub-titulo">
-              <div style="background-image:     url(/magnolia/wp-content/themes/magnolia/assets/img/preguntas_consejos/preguntas.svg);">
+              <div style="background-image:     url(<?php echo get_template_directory_uri(); ?>/assets/img/preguntas_consejos/preguntas.svg);">
 
               </div>
             </div>
@@ -50,7 +50,7 @@
         <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
           <div class="consejos">
             <div class="sub-titulo">
-              <div style="background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/preguntas_consejos/consejos.svg);">
+              <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/preguntas_consejos/consejos.svg);">
 
               </div>
             </div>
