@@ -165,6 +165,33 @@ function consejo_post_type() {
 }
 add_action( 'init', 'consejo_post_type' );
 
+function paso_post_type() {
+  $labels = array(
+    'name'               => 'Pasos',
+    'singular_name'      => 'Paso',
+		'all_items'          => 'Todos',
+		'add_new'            => 'Agregar Nuevo',
+		'add_new_item'       => 'Agregar Nuevo',
+		'edit_item'          => 'Editar',
+		'new_item'           => 'Nuevo',
+		'view_item'          => 'Ver',
+		'search_items'       => 'Buscar',
+		'not_found'          => 'No existe',
+    'not_found_in_trash' => 'No existe',
+    'parent_item_colon'  => ' ',
+  );
+  $args = array(
+    'labels'        => $labels,
+    'public'        => true,
+    'menu_position' => 5,
+		'menu_icon'   	=> 'dashicons-editor-ol',
+		'supports'      => array( 'title' , 'page-attributes' ),
+    'has_archive'   => true
+  );
+  register_post_type( 'paso', $args );
+}
+add_action( 'init', 'paso_post_type' );
+
 /* ==== REMOVING =====
 
 function wpse28782_remove_plugin_admin_menu() {
@@ -211,7 +238,8 @@ function exclude_this_page( $query ) {
 	if( 'edit.php' == $pagenow && ( get_query_var('post_type') && 'page' == get_query_var('post_type') ) )
 		$query->set( 'post__not_in', array(
 			50, //CATALOGO
-			151 //PREGUNTAS Y CONSEJOS
+			151, //PREGUNTAS Y TIPS
+			113 //PREPARAR GIFT
 		) );
 
 

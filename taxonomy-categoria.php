@@ -9,7 +9,7 @@
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
   $loop = new WP_Query( array(
     'post_type' => 'producto',
-    'posts_per_page'=> '-1',
+    'posts_per_page'=> '1',
     'paged' => $paged,
     'orderby' => 'title',
     'order' => 'ASC',
@@ -44,11 +44,11 @@
       <div class="col-xs-3">
         <?php if ($total_pages > 1): ?>
 
-            <div class="pags">
-              <?php previous_posts_link( '<' , $total_pages); ?>
-              <span><?php echo  $paged . '&#47;' . $total_pages; ?></span>
-              <?php next_posts_link( '>' , $total_pages ); ?>
-            </div>
+          <div class="pags">
+            <?php previous_posts_link( '<' , $total_pages); ?>
+            <span><?php echo  $paged . '&#47;' . $total_pages; ?></span>
+            <?php next_posts_link( '>' , $total_pages ); ?>
+          </div>
 
         <?php endif; ?>
       </div>
@@ -62,8 +62,7 @@
       <div class="productos">
         <div class="row">
 
-          <?php while ( $loop->have_posts() ) : $loop->the_post();
-          previous_posts_link();
+          <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post();
             $link = get_permalink();
             $foto_1 = get_field('foto_1');
             $foto_2 = get_field('foto_2');
@@ -99,7 +98,16 @@
              </div>
           </div>
 
-          <?php endwhile; wp_reset_query(); ?>
+          <?php endwhile; wp_reset_query();else: ?>
+            <div class="seccion">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <h1>No hay...</h1>
+                  <p><b><?php _e('Pero pronto habrá mas productos.'); ?></b></p>
+                </div>
+              </div>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
