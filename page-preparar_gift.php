@@ -2,6 +2,8 @@
 <?php
 $producto = get_post( $_GET["c"] );
 $nombre = $producto->nombre;
+$mensaje = get_field('mensaje');
+
 ?>
 <script type="text/javascript">
   $( "#hacer_pedido" ).addClass("current_page");
@@ -24,6 +26,14 @@ $nombre = $producto->nombre;
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="seccion mensaje_preparar">
+  <div class="row">
+    <div class="col-xs-12">
+      <p><?php echo $mensaje; ?></p>
     </div>
   </div>
 </div>
