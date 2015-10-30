@@ -5,8 +5,12 @@
   $( ".titulo p" ).html("CATÁLOGO");
 </script>
 
-<?php $loop = new WP_Query( array(
+<?php
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $loop = new WP_Query( array(
     'post_type' => 'producto',
+    'posts_per_page'=> '1',
+    'paged' => $paged,
     'orderby' => 'title',
     'order' => 'ASC',
 
@@ -18,29 +22,47 @@
     		),
     	),
   ) );
+  $total_pages = $loop->max_num_pages;
 ?>
 
 <?php
   $term_id = $_GET["t"] ;
   $term = get_term_by( 'id', $term_id , 'categoria');
   $term_link = get_term_link($term);
-  $term_name = substr($term->name, 4);
+  $term_name = $term->name;
 ?>
 
 <div class="seccion">
-  <ol class="breadcrumb">
-    <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
-    <li id="activa"><a href="<?php echo $term_link.'?t='.$term_id; ?>"><?php echo $term_name; ?></a></li>
-  </ol>
+  <div class="nav_categoria">
+    <div class="row">
+      <div class="col-xs-9">
+        <ol class="breadcrumb">
+          <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
+          <li id="activa"><a href="<?php echo $term_link.'?t='.$term_id; ?>"><?php echo $term_name; ?></a></li>
+        </ol>
+      </div>
+      <div class="col-xs-3">
+        <?php if ($total_pages > 1): ?>
+
+          <div class="pags">
+            <?php previous_posts_link( '<' , $total_pages); ?>
+            <span><?php echo  $paged . '&#47;' . $total_pages; ?></span>
+            <?php next_posts_link( '>' , $total_pages ); ?>
+          </div>
+
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="seccion">
   <div class="row">
-    <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+    <div class="col-xs-12">
       <div class="productos">
         <div class="row">
 
-          <?php while ( $loop->have_posts() ) : $loop->the_post();
+          <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post();
             $link = get_permalink();
             $foto_1 = get_field('foto_1');
             $foto_2 = get_field('foto_2');
@@ -76,7 +98,16 @@
              </div>
           </div>
 
-          <?php endwhile; wp_reset_query(); ?>
+          <?php endwhile; wp_reset_query();else: ?>
+            <div class="seccion">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <h1>No hay...</h1>
+                  <p><b><?php _e('Pero pronto habrá mas productos.'); ?></b></p>
+                </div>
+              </div>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>

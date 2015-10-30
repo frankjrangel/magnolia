@@ -13,46 +13,56 @@
 
     <?php $taxonomy = 'categoria';
           $categorias = get_terms( $taxonomy , array(
-              'hide_empty'        => 0,
-              'orderby'           => 'name',
-              'order'             => 'ASC',
+              'hide_empty'        => 0
           ) );
+
+          function ordenar( $a , $b )
+          {
+            $x = get_field( 'orden' , $a );
+            $y = get_field( 'orden' , $b );
+            return $x > $y;
+          }
+          usort($categorias, "ordenar");
+
     ?>
 
 
 
     <?php foreach ( $categorias as $categoria ) :?>
-
-      <?php $link = esc_attr(get_term_link($categoria)). '?t='.$categoria->term_id;
-            $foto = get_field('foto', $categoria);
-      ?>
-              <div class="cols col-xs-<?php if ($categoria->term_id == 14 ){
-                    echo '12';
-                  }
-                  else{
-                    echo '6';
-                  }?>
-                  col-sm-<?php if ($categoria->term_id == 14 ){
-                    echo '12';
-                  }
-                  else{
-                    echo '4';
-                  }?>
-                  col-md-<?php if ($categoria->term_id == 14 ){
-                    echo '10 col-md-offset-1';
-                  }
-                  else{
-                    echo '4';
-                  }
-                ?>
-                ">
-              <div class="categoria">
-                <a href="<?php echo $link; ?>">
-                  <img class="img-responsive"
-                      src="<?php echo $foto; ?>">
-                </a>
-              </div>
+      <?php $publicado = get_field('publicado', $categoria);
+            if ($publicado == 'Si'): ?>
+        <?php $link = esc_attr( get_term_link($categoria) ) . '?t=' . $categoria->term_id;
+              $foto = get_field('foto', $categoria);
+        ?>
+            <div class="cols col-xs-<?php if ($categoria->term_id == 14 ){
+                  echo '12';
+                }
+                else{
+                  echo '6';
+                }?>
+                col-sm-<?php if ($categoria->term_id == 14 ){
+                  echo '12';
+                }
+                else{
+                  echo '4';
+                }?>
+                col-md-<?php if ($categoria->term_id == 14 ){
+                  echo '10 col-md-offset-1';
+                }
+                else{
+                  echo '4';
+                }
+              ?>
+              ">
+            <div class="categoria">
+              <a href="<?php echo $link; ?>">
+                <img class="img-responsive"
+                    src="<?php echo $foto; ?>">
+              </a>
             </div>
+          </div>
+
+        <?php endif; ?>
       <?php endforeach;?>
 
 

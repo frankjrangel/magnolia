@@ -29,7 +29,7 @@
 <div class="seccion datos_contacto">
   <div class="row">
     <div class="col-xs-12">
-      <p>magnoliagift@gmail.com</p>
+      <p><?php echo get_field('email'); ?></p>
     </div>
   </div>
 </div>

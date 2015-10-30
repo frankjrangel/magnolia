@@ -22,7 +22,7 @@
   <div class="background-banda-logo">
     <div class="logo-magnolia">
       <a class="navbar-brand brand" href="<?php echo esc_url( home_url('/')) ?>">
-        <div style="background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/magnolia/logo_magnolia_gift.svg );">
+        <div style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/magnolia/logo_magnolia_gift.svg );">
         </div>
       </a>
     </div>
@@ -58,7 +58,7 @@
                           <li id="que_ofrecemos"><a href="<?php echo esc_url( home_url('/')) ?>">¿QUÉ OFRECEMOS?</a></li>
                           <li id="catalogo"><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
                           <li id="como_pedir"><a href="<?php echo get_page_link(10); ?>">¿CÓMO PEDIR?</a></li>
-                          <li id="hacer_pedido"><a href="<?php echo get_page_link(113); ?>">ARMAR GIFT</a></li>
+                          <li id="hacer_pedido"><a href="<?php echo get_page_link(113); ?>">PREPARAR GIFT</a></li>
                           <li id="preguntas_consejos"><a href="<?php echo get_page_link(151); ?>">PREGUNTAS Y TIPS</a></li>
                           <li id="contacto"><a href="<?php echo get_page_link(14); ?>">CONTACTO</a></li>
                         </ul>
@@ -98,16 +98,16 @@
 
             <div class="redes_blancos_fixed">
               <a href="<?php the_field('twitter', 30 );?>" target="_blank"
-              style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/twitter_logo_blanco.svg );">
+              style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/img/redes/twitter_logo_blanco.svg );">
               </a>
               <a href="<?php the_field('facebook', 30 );?>" target="_blank"
-              style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/facebook_logo_blanco.svg );">
+              style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/img/redes/facebook_logo_blanco.svg );">
               </a>
               <a href="<?php the_field('instagram', 30 );?>" target="_blank"
-              style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/instagram_logo_blanco.svg );">
+              style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/img/redes/instagram_logo_blanco.svg );">
               </a>
               <a href="<?php the_field('pinterest', 30 );?>" target="_blank"
-              style="background-image:url(/magnolia/wp-content/themes/magnolia/assets/img/redes/pinterest_logo_blanco.svg );">
+              style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/img/redes/pinterest_logo_blanco.svg );">
               </a>
             </div>
 

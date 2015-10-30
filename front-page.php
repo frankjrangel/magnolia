@@ -34,7 +34,7 @@
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
       <img class="img-responsive"
-          src="/magnolia/wp-content/themes/magnolia/assets/img/que_ofrecemos/que_ofrecemos.svg"  alt="¿Qué ofrecemos?">
+          src="<?php echo get_template_directory_uri(); ?>/assets/img/que_ofrecemos/que_ofrecemos.svg"  alt="¿Qué ofrecemos?">
     </div>
     <div class="col-xs-10 col-xs-offset-1">
       <p><?php echo get_field('que_ofrecemos'); ?></p>
@@ -87,7 +87,7 @@
       </div>
       <div class="col-sm-7 col-md-8">
         <div class="otros_productos-titulo">
-          <div style="background-image:     url(/magnolia/wp-content/themes/magnolia/assets/img/que_ofrecemos/otros_productos.svg);">
+          <div style="background-image:     url(<?php echo get_template_directory_uri(); ?>/assets/img/que_ofrecemos/otros_productos.svg);">
 
           </div>
         </div>
