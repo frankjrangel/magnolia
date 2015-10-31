@@ -9,7 +9,6 @@
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
   $loop = new WP_Query( array(
     'post_type' => 'producto',
-    //'posts_per_page'=> '1', Esto es lo que genera el error, la paginacion 'default' de wordpress solo funciona con el post_per_page global, que esta definido en settings/reading del backend.
     'paged' => $paged,
     'orderby' => 'title',
     'order' => 'ASC',
