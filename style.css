@@ -418,6 +418,13 @@ body {
 .banner-pedir_1200 {
   display: none; }
 
+.mensaje_preparar {
+  position: relative;
+  top: -15px; }
+  .mensaje_preparar p {
+    font-weight: bold;
+    text-align: center; }
+
 .sub-titulo {
   position: relative; }
   .sub-titulo div {
@@ -561,7 +568,14 @@ body {
     background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/hacer_pedido/fondo_bicicleta.png); }
 
   #fondo_contacto {
-    background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/contacto/fondo_tazas.png); }
+    background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/contacto/fondo_tazas.png);
+    border: 6px;
+    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+    /* Opera 11-12.1 */
+    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+    background-origin: border-box; }
 
   #fondo_preguntas_consejos {
     padding: 30px 0;
@@ -577,7 +591,7 @@ body {
     background-color: #66c5bd;
     margin: 0; }
     #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-      padding: 12px 15px; }
+      padding: 12px 12px; }
   #navbar li.current_page {
     background-color: #ccc0af;
     background-clip: padding-box;
@@ -668,7 +682,14 @@ body {
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
-          width: 100%; }
+          width: 100%;
+          border: 6px;
+          -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+          /* Safari 3.1-5 */
+          -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+          /* Opera 11-12.1 */
+          border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+          background-origin: border-box; }
         .banner-productos .otros_productos .row div a + a {
           position: absolute;
           top: 0;
@@ -702,8 +723,8 @@ body {
     padding: 12px 50px; }
 
   #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-    padding-left: 30px;
-    padding-right: 30px; }
+    padding-left: 27px;
+    padding-right: 27px; }
   #navbar .heading {
     display: none; }
 
@@ -724,8 +745,8 @@ body {
     width: 1170px; }
 
   #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-    padding-left: 46px;
-    padding-right: 46px; }
+    padding-left: 41px;
+    padding-right: 41px; }
   #navbar .heading {
     display: none; }
 

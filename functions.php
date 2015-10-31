@@ -238,8 +238,7 @@ function exclude_this_page( $query ) {
 	if( 'edit.php' == $pagenow && ( get_query_var('post_type') && 'page' == get_query_var('post_type') ) )
 		$query->set( 'post__not_in', array(
 			50, //CATALOGO
-			151, //PREGUNTAS Y TIPS
-			113 //PREPARAR GIFT
+			151 //PREGUNTAS Y TIPS
 		) );
 
 

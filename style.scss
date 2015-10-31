@@ -544,7 +544,14 @@ body {
 }
 
 // ===== Armar Gift ========================================
-
+.mensaje_preparar{
+  position: relative;
+  top: -15px;
+  p {
+    font-weight: bold;
+    text-align: center;
+  }
+}
 
 // ===== Preguntas y Consejos =================================
 .sub-titulo{
@@ -741,6 +748,11 @@ body {
 }
 #fondo_contacto{
     background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/contacto/fondo_tazas.png );
+    border: 6px;
+    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round; /* Safari 3.1-5 */
+    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round; /* Opera 11-12.1 */
+    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+    background-origin: border-box;
 }
 #fondo_preguntas_consejos{
   padding: ($gutter * 2) 0;
@@ -758,7 +770,7 @@ body {
     background-color: $turquesa-claro;
     margin: 0;
     a,a:active,a:visited,a:hover,a:link,a:focus{
-      padding: 12px 15px;
+      padding: 12px 12px;
     }
   }
   li.current_page {
@@ -868,6 +880,11 @@ body {
           background-repeat: no-repeat;
           background-position: center;
           width: 100%;
+          border: 6px;
+          -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round; /* Safari 3.1-5 */
+          -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round; /* Opera 11-12.1 */
+          border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+          background-origin: border-box;
         }
         a+a{
           position: absolute;
@@ -924,8 +941,8 @@ body {
   #navbar{
     li,li:nth-child(even) {
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 27px;
+        padding-right: 27px;
       }
     }
     .heading{
@@ -963,8 +980,8 @@ body {
   #navbar{
     li,li:nth-child(even) {
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding-left: 46px;
-        padding-right: 46px;
+        padding-left: 41px;
+        padding-right: 41px;
       }
     }
     .heading{
