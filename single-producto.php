@@ -8,7 +8,7 @@
   $term_id = $_GET["t"] ;
   $term = get_term_by( 'id', $term_id , 'categoria');
   $term_link = get_term_link($term);
-  $term_name = substr($term->name, 4);
+  $term_name = $term->name;
 ?>
 <?php
   $postid = get_the_ID();
@@ -21,11 +21,13 @@
   $detalles = get_field('detalles');
 ?>
 <div class="seccion">
-  <ol class="breadcrumb">
-    <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
-    <li><a href="<?php echo $term_link.'?t='.$term_id; ?>"><?php echo $term_name; ?></a></li>
-    <li id='activa'><a href=""><?php echo $nombre; ?></a></li>
-  </ol>
+  <div class="nav_categoria">
+    <ol class="breadcrumb">
+      <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
+      <li><a href="<?php echo $term_link.'?t='.$term_id; ?>"><?php echo $term_name; ?></a></li>
+      <li id='activa'><a href=""><?php echo $nombre; ?></a></li>
+    </ol>
+  </div>
 </div>
 
 <div class="seccion">

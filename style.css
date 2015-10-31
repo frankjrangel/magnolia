@@ -416,18 +416,33 @@ body {
       height: 44px;
       padding: 12px 0; }
 
-.pasos .foto_letrero_pasos_movil {
+.letrero_pasos .foto_letrero_pasos_movil {
   display: block; }
-.pasos .foto_letrero_pasos {
+.letrero_pasos .foto_letrero_pasos {
   display: none; }
-.pasos .paso .num_pasos {
-  font-family: 'amatic_bold';
-  font-weight: normal;
-  font-style: normal; }
-.pasos .paso .texto_pasos {
-  font-family: 'amatic_regular';
-  font-weight: normal;
-  font-style: normal; }
+
+.pasos .paso {
+  background-color: #ccc0af;
+  background-clip: padding-box;
+  border: 8px;
+  -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+  /* Safari 3.1-5 */
+  -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+  /* Opera 11-12.1 */
+  border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; }
+  .pasos .paso .num_pasos {
+    font-family: 'amatic_bold';
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+    font-size: 66px;
+    text-align: center; }
+  .pasos .paso .texto_pasos {
+    font-family: 'yanone_regular';
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: #fff; }
 
 .mensaje_preparar {
   position: relative;
@@ -717,10 +732,9 @@ body {
   .prod_2 {
     display: block; }
 
-  .foto_letrero_pasos_movil {
+  .letrero_pasos .foto_letrero_pasos_movil {
     display: none; }
-
-  .foto_letrero_pasos {
+  .letrero_pasos .foto_letrero_pasos {
     display: block; }
 
   .datos_contacto {

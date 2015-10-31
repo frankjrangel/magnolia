@@ -562,20 +562,32 @@ body {
 
 // ===== Como pedir ========================================
 
-.pasos{
+.letrero_pasos{
   .foto_letrero_pasos_movil{
     display: block;
   }
   .foto_letrero_pasos{
     display: none;
   }
+}
+.pasos{
   .paso{
+    background-color: $marron;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+
     .num_pasos{
       @include font-amatic_bold;
+      color: $blanco;
+      font-size: 66px;
+      text-align: center;
     }
     .texto_pasos{
-      @include font-amatic_regular;
-
+      @include font-yanone_regular;
+      color: $blanco;
     }
   }
 }
@@ -947,11 +959,13 @@ body {
 }
 
 // ===== Como pedir ========================================
-.foto_letrero_pasos_movil{
-  display: none;
-}
-.foto_letrero_pasos{
-  display: block;
+.letrero_pasos{
+  .foto_letrero_pasos_movil{
+    display: none;
+  }
+  .foto_letrero_pasos{
+    display: block;
+  }
 }
 
 

@@ -18,9 +18,9 @@
   $foto_letrero_pasos = get_field('foto_letrero_pasos');
 ?>
 
-<div class="seccion pasos">
+<div class="seccion letrero_pasos">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
       <div class="foto_letrero_pasos_movil">
         <img class="img-responsive"
             src="<?php echo $foto_letrero_pasos_movil; ?>">
@@ -31,8 +31,10 @@
       </div>
     </div>
   </div>
+</div>
+<div class="seccion pasos">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-md-offset-1">
       <div class="row">
 
         <?php
@@ -42,8 +44,8 @@
           $paso = get_field('paso');
         ?>
 
-        <div class="col-xs-2">
-          <div class="paso">
+        <div class="col-xs-12 col-sm-2">
+          <div class="paso sh">
               <p class="num_pasos"><?php echo $num; ?>.</p>
 
               <p class="texto_pasos"><?php echo $paso; ?></p>
