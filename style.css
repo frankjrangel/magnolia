@@ -36,7 +36,7 @@ html {
   font-size: 12px; }
 
 h1 {
-  font-family: 'jenna_sue',sans-serif;
+  font-family: 'amatic_regular';
   font-size: 4.8px;
   font-size: 4rem;
   color: #ccc0af; }
@@ -343,6 +343,9 @@ body {
 .prod_3 {
   display: none; }
 
+.banner_como_pedir {
+  display: none; }
+
 .intro h1 {
   text-align: center;
   line-height: 21px;
@@ -429,14 +432,14 @@ body {
   margin-top: -30px; }
   .pasos .paso {
     margin: 15px;
-    background-color: #ccc0af;
+    background-color: #66c5bd;
     background-clip: padding-box;
     border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
     /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
     /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; }
+    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; }
     .pasos .paso .num_pasos {
       font-family: 'amatic_bold';
       font-weight: normal;
@@ -455,27 +458,34 @@ body {
           font-style: normal;
           letter-spacing: 1px;
           color: #fff; }
-  .pasos .paso:nth-child(even) {
-    background-color: #ccc0af;
+  .pasos .paso.par {
+    background-color: #bcdad6;
     background-clip: padding-box;
     border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
     /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
     /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; }
-  .pasos .mensaje_como_pedir {
-    margin: 45px 0;
-    text-align: center; }
-    .pasos .mensaje_como_pedir .mensaje_caja {
-      background-color: #bcdad6;
-      padding: 15px; }
-      .pasos .mensaje_como_pedir .mensaje_caja p {
-        font-family: 'yanone_regular';
-        font-weight: normal;
-        font-style: normal;
-        letter-spacing: 1px;
-        color: #fff; }
+    border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; }
+  .pasos .fondo_hojas {
+    padding: 45px 0;
+    background-image: url(assets/img/fondos/hojas_pasos_movil.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: border-box; }
+    .pasos .fondo_hojas .mensaje_como_pedir {
+      margin: 0;
+      text-align: center; }
+      .pasos .fondo_hojas .mensaje_como_pedir .mensaje_caja {
+        background-color: #bcdad6;
+        padding: 15px; }
+        .pasos .fondo_hojas .mensaje_como_pedir .mensaje_caja p {
+          font-family: 'yanone_regular';
+          font-weight: normal;
+          font-style: normal;
+          letter-spacing: 1px;
+          color: #fff; }
 
 .mensaje_preparar {
   position: relative;
@@ -499,10 +509,7 @@ body {
 .preguntas .pregunta {
   position: relative;
   margin: 15px 44px 15px 0;
-  cursor: pointer;
-  border-color: #ccc0af;
-  border-width: 1px 0 1px 0;
-  border-style: dashed; }
+  cursor: pointer; }
   .preguntas .pregunta p {
     font-weight: bold; }
   .preguntas .pregunta span {
@@ -548,7 +555,7 @@ body {
     width: 450px; }
 
   h1 {
-    font-family: 'jenna_sue',sans-serif;
+    font-family: 'amatic_regular';
     font-size: 5.6px;
     font-size: 4rem;
     color: #ccc0af; }
@@ -722,6 +729,9 @@ body {
     #footer .blancos {
       display: none; }
 
+  .banner_como_pedir {
+    display: block; }
+
   .intro,
   .shortcuts-que_ofrecemos {
     display: none; }
@@ -803,11 +813,23 @@ body {
         text-align: center; }
       .pasos .paso .texto_pasos p {
         text-align: center; }
-    .pasos .mensaje_como_pedir {
-      margin: auto; }
-      .pasos .mensaje_como_pedir .mensaje_caja {
-        background: none;
-        padding: 15px 0; }
+    .pasos .paso.par {
+      background-color: #c6b6b8;
+      background-clip: padding-box;
+      border: 8px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round;
+      /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round;
+      /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round; }
+    .pasos .fondo_hojas {
+      background: none;
+      padding: 0; }
+      .pasos .fondo_hojas .mensaje_como_pedir {
+        margin: auto; }
+        .pasos .fondo_hojas .mensaje_como_pedir .mensaje_caja {
+          background: none;
+          padding: 15px 0; }
 
   .col-sm-2 {
     width: 20%; }
