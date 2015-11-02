@@ -1,7 +1,7 @@
 function bumpIt() {
 
 	$('.sh').matchHeight();
-	//$('.sh2').matchHeight();
+	$('.sh2').matchHeight();
 
 	 /*var winHeight = $(window).innerHeight();
 	 var HeaderFooterHeight = $('#footer').outerHeight() + $('#navbar').outerHeight();
