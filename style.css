@@ -7,6 +7,12 @@ Description: Tema personalizado de wordpress con catalogo de compra para Magnoli
 Version: 1.0
 */
 @font-face {
+  font-family: 'amatic_regular';
+  src: url("assets/fonts/Amatic/AmaticSC-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'amatic_bold';
+  src: url("assets/fonts/Amatic/Amatic-Bold.ttf") format("truetype"); }
+@font-face {
   font-family: 'jenna_sue';
   src: url("assets/fonts/JennaSue/jennasue-webfont.eot");
   src: url("assets/fonts/JennaSue/jennasue-webfont.eot?#iefix") format("embedded-opentype"), url("assets/fonts/JennaSue/jennasue-webfont.woff2") format("woff2"), url("assets/fonts/JennaSue/jennasue-webfont.woff") format("woff"), url("assets/fonts/JennaSue/jennasue-webfont.ttf") format("truetype"), url("assets/fonts/JennaSue/jennasue-webfont.svg#jenna_sueregular") format("svg"); }
@@ -66,7 +72,7 @@ body {
 
 #navbar {
   position: absolute;
-  padding-top: 205px;
+  margin-top: 205px;
   left: 0;
   right: 0;
   border: 0;
@@ -76,7 +82,7 @@ body {
 
 #navbar.fixed {
   position: fixed;
-  padding-top: 0;
+  margin-top: 0;
   top: 0; }
   #navbar.fixed .heading {
     background-color: #fff9e9; }
@@ -410,13 +416,33 @@ body {
       height: 44px;
       padding: 12px 0; }
 
-.banner-pedir_vertical {
+.letrero_pasos .foto_letrero_pasos_movil {
   display: block; }
-
-.banner-pedir_768,
-.banner-pedir_992,
-.banner-pedir_1200 {
+.letrero_pasos .foto_letrero_pasos {
   display: none; }
+
+.pasos .paso {
+  background-color: #ccc0af;
+  background-clip: padding-box;
+  border: 8px;
+  -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+  /* Safari 3.1-5 */
+  -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+  /* Opera 11-12.1 */
+  border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; }
+  .pasos .paso .num_pasos {
+    font-family: 'amatic_bold';
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+    font-size: 66px;
+    text-align: center; }
+  .pasos .paso .texto_pasos {
+    font-family: 'yanone_regular';
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: #fff; }
 
 .mensaje_preparar {
   position: relative;
@@ -565,16 +591,16 @@ body {
     margin: -30px 0; }
 
   #fondo_pedido {
-    background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/hacer_pedido/fondo_bicicleta.png); }
+    background-image: url(assets/img/hacer_pedido/fondo_bicicleta.png); }
 
   #fondo_contacto {
-    background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/contacto/fondo_tazas.png);
+    background-image: url(assets/img/contacto/fondo_tazas.png);
     border: 6px;
-    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+    -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% round;
     /* Safari 3.1-5 */
-    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+    -o-border-image: url(assets/img/bordes/rayado.svg) 11% round;
     /* Opera 11-12.1 */
-    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+    border-image: url(assets/img/bordes/rayado.svg) 11% round;
     background-origin: border-box; }
 
   #fondo_preguntas_consejos {
@@ -599,11 +625,11 @@ body {
     height: 52px;
     margin-bottom: -4px;
     border: 8px;
-    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_menu_active.svg) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round;
     /* Safari 3.1-5 */
-    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_menu_active.svg) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round;
     /* Opera 11-12.1 */
-    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_menu_active.svg) 12% round; }
+    border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round; }
     #navbar li.current_page a, #navbar li.current_page a:active, #navbar li.current_page a:visited, #navbar li.current_page a:hover, #navbar li.current_page a:link, #navbar li.current_page a:focus {
       padding-top: 8px;
       padding-bottom: 8px; }
@@ -619,11 +645,11 @@ body {
     background-color: #ccc0af;
     background-clip: padding-box;
     border: 3px;
-    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_marron.svg) 4% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round;
     /* Safari 3.1-5 */
-    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_marron.svg) 4% round;
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round;
     /* Opera 11-12.1 */
-    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_marron.svg) 4% round; }
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round; }
     #navbar .redes_blancos_fixed a {
       display: block;
       float: left;
@@ -684,11 +710,11 @@ body {
           background-position: center;
           width: 100%;
           border: 6px;
-          -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+          -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% round;
           /* Safari 3.1-5 */
-          -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+          -o-border-image: url(assets/img/bordes/rayado.svg) 11% round;
           /* Opera 11-12.1 */
-          border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+          border-image: url(assets/img/bordes/rayado.svg) 11% round;
           background-origin: border-box; }
         .banner-productos .otros_productos .row div a + a {
           position: absolute;
@@ -706,10 +732,9 @@ body {
   .prod_2 {
     display: block; }
 
-  .banner-pedir_vertical {
+  .letrero_pasos .foto_letrero_pasos_movil {
     display: none; }
-
-  .banner-pedir_768 {
+  .letrero_pasos .foto_letrero_pasos {
     display: block; }
 
   .datos_contacto {
@@ -732,12 +757,6 @@ body {
     height: 144px; }
 
   .prod_3 {
-    display: block; }
-
-  .banner-pedir_768 {
-    display: none; }
-
-  .banner-pedir_992 {
     display: block; } }
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -751,12 +770,6 @@ body {
     display: none; }
 
   .prod_1 a, .prod_2 a, .prod_3 a {
-    height: 185px; }
-
-  .banner-pedir_992 {
-    display: none; }
-
-  .banner-pedir_1200 {
-    display: block; } }
+    height: 185px; } }
 
 /*# sourceMappingURL=style.css.map */

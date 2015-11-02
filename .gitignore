@@ -1,3 +1,4 @@
 .gitignore
+*.map
 .sass-cache
 *.tmp$$

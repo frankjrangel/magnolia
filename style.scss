@@ -8,30 +8,57 @@ Version: 1.0
 */
 // ===== Tipografías ==========================================
 // Embeds
-@font-face {
-  font-family: 'jenna_sue';
-  src: url("assets/fonts/JennaSue/jennasue-webfont.eot");
-  src: url("assets/fonts/JennaSue/jennasue-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/JennaSue/jennasue-webfont.woff2") format('woff2'), url("assets/fonts/JennaSue/jennasue-webfont.woff") format('woff'), url("assets/fonts/JennaSue/jennasue-webfont.ttf") format('truetype'), url("assets/fonts/JennaSue/jennasue-webfont.svg#jenna_sueregular") format('svg');
+@font-face { font-family: 'amatic_regular';
+  //src: url("assets/fonts/Amatic/AmaticSC-Regular.eot");
+  src: //url("assets/fonts/Amatic/AmaticSC-Regular.eot?#iefix") format('embedded-opentype'),
+   //url("assets/fonts/Amatic/AmaticSC-Regular.woff2") format('woff2'),
+   //url("assets/fonts/Amatic/AmaticSC-Regular.woff") format('woff'),
+   url("assets/fonts/Amatic/AmaticSC-Regular.ttf") format('truetype'),
+   //url("assets/fonts/Amatic/AmaticSC-Regular.svg#Amatic-Regular") format('svg')
+   ;
 }
-@font-face {
-  font-family: 'yanone_bold';
+@font-face { font-family: 'amatic_bold';
+  //src: url("assets/fonts/Amatic/Amatic-Bold.eot");
+  src: //url("assets/fonts/Amatic/Amatic-Bold.eot?#iefix") format('embedded-opentype'),
+   //url("assets/fonts/Amatic/Amatic-Bold.woff2") format('woff2'),
+   //url("assets/fonts/Amatic/Amatic-Bold.woff") format('woff'),
+   url("assets/fonts/Amatic/Amatic-Bold.ttf") format('truetype'),
+   //url("assets/fonts/Amatic/Amatic-Bold.svg#Amatic-Bold") format('svg')
+   ;
+}
+@font-face { font-family: 'jenna_sue';
+  src: url("assets/fonts/JennaSue/jennasue-webfont.eot");
+  src: url("assets/fonts/JennaSue/jennasue-webfont.eot?#iefix") format('embedded-opentype'),
+  url("assets/fonts/JennaSue/jennasue-webfont.woff2") format('woff2'),
+  url("assets/fonts/JennaSue/jennasue-webfont.woff") format('woff'),
+  url("assets/fonts/JennaSue/jennasue-webfont.ttf") format('truetype'),
+  url("assets/fonts/JennaSue/jennasue-webfont.svg#jenna_sueregular") format('svg');
+}
+@font-face { font-family: 'yanone_bold';
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot");
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-bold-webfont.svg#yanone_kaffeesatzbold") format('svg');
 }
-@font-face {
-  font-family: 'yanone_light';
+@font-face { font-family: 'yanone_light';
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot");
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-light-webfont.svg#yanone_kaffeesatzlight") format('svg');
 }
-@font-face {
-  font-family: 'yanone_regular';
+@font-face { font-family: 'yanone_regular';
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot");
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-regular-webfont.svg#yanone_kaffeesatzregular") format('svg');
 }
-@font-face {
-  font-family: 'yanone_thin';
+@font-face { font-family: 'yanone_thin';
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot");
   src: url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.eot?#iefix") format('embedded-opentype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff2") format('woff2'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.woff") format('woff'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.ttf") format('truetype'), url("assets/fonts/YanoneKaffeeSatz/yanonekaffeesatz-thin-webfont.svg#yanone_kaffeesatzthin") format('svg');
+}
+@mixin font-amatic_regular{
+  font-family: 'amatic_regular';
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin font-amatic_bold{
+  font-family: 'amatic_bold';
+  font-weight: normal;
+  font-style: normal;
 }
 @mixin font-jenna_sue{
   font-family: 'jenna_sue';
@@ -117,7 +144,7 @@ body {
 }
 #navbar {
   position: absolute;
-  padding-top: $padding-top-content;
+  margin-top: $padding-top-content;
   left: 0;
   right: 0;
   border: 0;
@@ -128,7 +155,7 @@ body {
 }
 #navbar.fixed {
   position: fixed;
-  padding-top: 0;
+  margin-top: 0;
   top: 0;
   .heading{
     background-color: $amarillo;
@@ -534,13 +561,35 @@ body {
 }
 
 // ===== Como pedir ========================================
-.banner-pedir_vertical{
-  display: block;
+
+.letrero_pasos{
+  .foto_letrero_pasos_movil{
+    display: block;
+  }
+  .foto_letrero_pasos{
+    display: none;
+  }
 }
-.banner-pedir_768,
-.banner-pedir_992,
-.banner-pedir_1200{
-  display: none;
+.pasos{
+  .paso{
+    background-color: $marron;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+
+    .num_pasos{
+      @include font-amatic_bold;
+      color: $blanco;
+      font-size: 66px;
+      text-align: center;
+    }
+    .texto_pasos{
+      @include font-yanone_regular;
+      color: $blanco;
+    }
+  }
 }
 
 // ===== Armar Gift ========================================
@@ -744,14 +793,14 @@ body {
   margin: -($gutter * 2) 0;
 }
 #fondo_pedido{
-    background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/hacer_pedido/fondo_bicicleta.png );
+    background-image: url(assets/img/hacer_pedido/fondo_bicicleta.png );
 }
 #fondo_contacto{
-    background-image: url(/magnolia/wp-content/themes/magnolia/assets/img/contacto/fondo_tazas.png );
+    background-image: url(assets/img/contacto/fondo_tazas.png );
     border: 6px;
-    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round; /* Safari 3.1-5 */
-    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round; /* Opera 11-12.1 */
-    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+    -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rayado.svg) 11% round;
     background-origin: border-box;
 }
 #fondo_preguntas_consejos{
@@ -780,9 +829,9 @@ body {
     height: 52px;
     margin-bottom: -4px;
     border: 8px;
-    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_menu_active.svg) 12% round; /* Safari 3.1-5 */
-    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_menu_active.svg) 12% round; /* Opera 11-12.1 */
-    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_menu_active.svg) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round;
 
     a,a:active,a:visited,a:hover,a:link,a:focus{
       padding-top: 8px;
@@ -802,9 +851,9 @@ body {
     background-color: $marron;
     background-clip: padding-box;
     border: 3px;
-    -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_marron.svg) 4% round; /* Safari 3.1-5 */
-    -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_marron.svg) 4% round; /* Opera 11-12.1 */
-    border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rasgado_marron.svg) 4% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round;
 
     a {
       display: block;
@@ -881,9 +930,9 @@ body {
           background-position: center;
           width: 100%;
           border: 6px;
-          -webkit-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round; /* Safari 3.1-5 */
-          -o-border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round; /* Opera 11-12.1 */
-          border-image: url(/magnolia/wp-content/themes/magnolia/assets/img/bordes/rayado.svg) 11% round;
+          -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Safari 3.1-5 */
+          -o-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Opera 11-12.1 */
+          border-image: url(assets/img/bordes/rayado.svg) 11% round;
           background-origin: border-box;
         }
         a+a{
@@ -910,12 +959,15 @@ body {
 }
 
 // ===== Como pedir ========================================
-.banner-pedir_vertical{
-  display: none;
+.letrero_pasos{
+  .foto_letrero_pasos_movil{
+    display: none;
+  }
+  .foto_letrero_pasos{
+    display: block;
+  }
 }
-.banner-pedir_768{
-  display: block;
-}
+
 
 // ===== Contactos =================================
 .datos_contacto {
@@ -959,12 +1011,6 @@ body {
 .prod_3{
   display: block;
 }
-.banner-pedir_768{
-  display: none;
-}
-.banner-pedir_992{
-  display: block;
-}
 
 // ===== Catalogo ========================================
 
@@ -994,12 +1040,6 @@ body {
     a{
       height: 185px;
     }
-  }
-  .banner-pedir_992{
-    display: none;
-  }
-  .banner-pedir_1200{
-    display: block;
   }
 
   // ===== Catalogo ========================================
