@@ -42,13 +42,19 @@
 
             <?php
             $num = 0;
+            $par = '';
             while ( $loop->have_posts() ) : $loop->the_post();
               $num++;
+              if ($num % 2 == 0) {
+                $par = 'par';
+              }else {
+                $par = 'impar';
+              }
               $paso = get_field('paso');
             ?>
 
             <div class="col-xs-12 col-sm-2">
-              <div class="paso sh">
+              <div class="paso <?php echo $par; ?> sh">
                 <div class="row">
                   <div class="sh2 col-xs-3 col-sm-12">
                     <p class="num_pasos"><?php echo $num; ?>.</p>
@@ -63,12 +69,14 @@
           <?php endwhile; wp_reset_query(); ?>
 
           </div>
-          <div class="seccion mensaje_como_pedir">
-            <div class="row">
-              <div class="col-xs-10 col-xs-offset-1">
-                <div class="mensaje_caja">
-                  <p><?php echo $mensaje; ?></p>
-                  <p><?php echo $email; ?></p>
+          <div class="fondo_hojas">
+            <div class="seccion mensaje_como_pedir">
+              <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                  <div class="mensaje_caja">
+                    <p><?php echo $mensaje; ?></p>
+                    <p><?php echo $email; ?></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -87,7 +95,7 @@
         <a href="<?php echo get_page_link(50); ?>" class="sh"><p>Ver Catálogo</p></a>
       </div>
       <div class="shortcut-2">
-        <a href="<?php echo get_page_link(113); ?>" class="sh"><p>Armar Gift</p></a>
+        <a href="<?php echo get_page_link(113); ?>" class="sh"><p>Preparar Gift</p></a>
       </div>
     </div>
   </div>
