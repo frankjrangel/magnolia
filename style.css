@@ -517,7 +517,8 @@ body {
   border-width: 1px 0 1px 0;
   border-style: dashed; }
   .preguntas .pregunta p {
-    font-weight: bold; }
+    font-weight: bold;
+    padding: 7px; }
   .preguntas .pregunta span {
     position: absolute;
     right: -44px;
