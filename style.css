@@ -112,6 +112,10 @@ body {
 .seccion {
   margin: 30px 0; }
 
+#fondo_pasos_movil {
+  background-clip: padding-box;
+  background-image: url(assets/img/fondos/fondo_pasos_movil.svg); }
+
 .nav_categoria {
   font-family: 'yanone_regular';
   font-weight: normal;
@@ -421,28 +425,57 @@ body {
 .letrero_pasos .foto_letrero_pasos {
   display: none; }
 
-.pasos .paso {
-  background-color: #ccc0af;
-  background-clip: padding-box;
-  border: 8px;
-  -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
-  /* Safari 3.1-5 */
-  -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
-  /* Opera 11-12.1 */
-  border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; }
-  .pasos .paso .num_pasos {
-    font-family: 'amatic_bold';
-    font-weight: normal;
-    font-style: normal;
-    color: #fff;
-    font-size: 66px;
+.pasos {
+  margin-top: -30px; }
+  .pasos .paso {
+    margin: 15px;
+    background-color: #ccc0af;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; }
+    .pasos .paso .num_pasos {
+      font-family: 'amatic_bold';
+      font-weight: normal;
+      font-style: normal;
+      color: #fff;
+      font-size: 26px;
+      text-align: center; }
+    .pasos .paso .texto_pasos {
+      display: table; }
+      .pasos .paso .texto_pasos span {
+        display: table-cell;
+        vertical-align: middle; }
+        .pasos .paso .texto_pasos span p {
+          font-family: 'yanone_regular';
+          font-weight: normal;
+          font-style: normal;
+          letter-spacing: 1px;
+          color: #fff; }
+  .pasos .paso:nth-child(even) {
+    background-color: #ccc0af;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; }
+  .pasos .mensaje_como_pedir {
+    margin: 45px 0;
     text-align: center; }
-  .pasos .paso .texto_pasos {
-    font-family: 'yanone_regular';
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 1px;
-    color: #fff; }
+    .pasos .mensaje_como_pedir .mensaje_caja {
+      background-color: #bcdad6;
+      padding: 15px; }
+      .pasos .mensaje_como_pedir .mensaje_caja p {
+        font-family: 'yanone_regular';
+        font-weight: normal;
+        font-style: normal;
+        letter-spacing: 1px;
+        color: #fff; }
 
 .mensaje_preparar {
   position: relative;
@@ -590,22 +623,33 @@ body {
   #secciones {
     margin: -30px 0; }
 
+  #fondo_pasos_movil {
+    background: none; }
+
+  #fondo_pasos {
+    padding: 1px 15px;
+    background-clip: padding-box;
+    background-image: url(assets/img/fondos/fondo_hojas.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat; }
+
   #fondo_pedido {
     background-image: url(assets/img/hacer_pedido/fondo_bicicleta.png); }
-
-  #fondo_contacto {
-    background-image: url(assets/img/contacto/fondo_tazas.png);
-    border: 6px;
-    -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rayado.svg) 11% round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rayado.svg) 11% round;
-    background-origin: border-box; }
 
   #fondo_preguntas_consejos {
     padding: 30px 0;
     background-color: #fff; }
+
+  #fondo_contacto {
+    background-image: url(assets/img/contacto/fondo_tazas.png);
+    border: 7px;
+    -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+    /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+    background-origin: border-box; }
 
   .form {
     background-size: cover;
@@ -736,6 +780,37 @@ body {
     display: none; }
   .letrero_pasos .foto_letrero_pasos {
     display: block; }
+
+  .pasos {
+    margin: auto 7.5px; }
+    .pasos .paso {
+      margin: 0 -7.5px;
+      background-color: #ccc0af;
+      background-clip: padding-box;
+      border: 8px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+      /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+      /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; }
+      .pasos .paso .num_pasos {
+        font-family: 'amatic_bold';
+        font-weight: normal;
+        font-style: normal;
+        color: #fff;
+        font-size: 56px;
+        line-height: 60px;
+        text-align: center; }
+      .pasos .paso .texto_pasos p {
+        text-align: center; }
+    .pasos .mensaje_como_pedir {
+      margin: auto; }
+      .pasos .mensaje_como_pedir .mensaje_caja {
+        background: none;
+        padding: 15px 0; }
+
+  .col-sm-2 {
+    width: 20%; }
 
   .datos_contacto {
     margin-top: 0; } }

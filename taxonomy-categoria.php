@@ -101,8 +101,7 @@
             <div class="seccion">
               <div class="row">
                 <div class="col-xs-10 col-xs-offset-1">
-                  <h1>No hay...</h1>
-                  <p><b><?php _e('Pero pronto habrá mas productos.'); ?></b></p>
+                  <h1>Muy pronto vendrán en esta sección gift especiales para ti...</h1>
                 </div>
               </div>
             </div>
