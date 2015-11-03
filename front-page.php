@@ -199,7 +199,7 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="banner">
-        <a href="#">
+        <a href="https://instagram.com/magnolia_gift">
           <img class="img-responsive"
               src="<?php echo $redes ?>"  alt="Redes">
         </a>

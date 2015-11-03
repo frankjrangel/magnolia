@@ -2,51 +2,13 @@
 <script type="text/javascript">
   $( "#preguntas_consejos" ).addClass("current_page");
   $( ".titulo" ).addClass("preguntas_consejos");
-  $( ".titulo p" ).html("PREGUNTAS Y CONSEJOS");
+  $( ".titulo p" ).html("PREGUNTAS Y TIPS");
 </script>
 
 <div  id="fondo_preguntas_consejos" class="seccion">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <div class="row">
-        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
-          <div class="preguntas">
-            <div class="sub-titulo">
-              <div style="background-image:     url(<?php echo get_template_directory_uri(); ?>/assets/img/preguntas_consejos/preguntas.svg);">
-
-              </div>
-            </div>
-
-            <?php $loop1 = new WP_Query( array(
-                          'post_type' => 'pregunta',
-                          'posts_per_page' => -1,
-                          'orderby' => 'menu_order',
-                          'order' => 'ASC'
-                        ) );
-              while ( $loop1->have_posts() ) : $loop1->the_post();?>
-
-            <?php
-            $pregunta = get_field('pregunta');
-            $respuesta = get_field('respuesta');
-            ?>
-            <div class="pregunta">
-                <div class="collapsed" data-toggle="collapse"
-                              data-target="#collapse-<?php echo $post->ID; ?>" >
-                    <p><?php echo $pregunta; ?></p>
-                    <span class="glyphicon glyphicon-triangle-right"></span>
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </div>
-                <div class="respuesta collapse" id="collapse-<?php echo $post->ID; ?>">
-                  <p><?php echo $respuesta; ?></p>
-                </div>
-            </div>
-
-
-            <?php endwhile; wp_reset_postdata(); ?>
-
-          </div>
-        </div>
-
         <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
           <div class="consejos">
             <div class="sub-titulo">
@@ -73,6 +35,44 @@
 
 
             <?php endwhile; wp_reset_postdata(); ?>
+
+            </div>
+        </div>
+
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
+            <div class="preguntas">
+              <div class="sub-titulo">
+                <div style="background-image:     url(<?php echo get_template_directory_uri(); ?>/assets/img/preguntas_consejos/preguntas.svg);">
+
+                </div>
+              </div>
+
+              <?php $loop1 = new WP_Query( array(
+                            'post_type' => 'pregunta',
+                            'posts_per_page' => -1,
+                            'orderby' => 'menu_order',
+                            'order' => 'ASC'
+                          ) );
+                while ( $loop1->have_posts() ) : $loop1->the_post();?>
+
+              <?php
+              $pregunta = get_field('pregunta');
+              $respuesta = get_field('respuesta');
+              ?>
+              <div class="pregunta">
+                  <div class="collapsed" data-toggle="collapse"
+                                data-target="#collapse-<?php echo $post->ID; ?>" >
+                      <p><?php echo $pregunta; ?></p>
+                      <span class="glyphicon glyphicon-triangle-right"></span>
+                      <span class="glyphicon glyphicon-triangle-bottom"></span>
+                  </div>
+                  <div class="respuesta collapse" id="collapse-<?php echo $post->ID; ?>">
+                    <p><?php echo $respuesta; ?></p>
+                  </div>
+              </div>
+
+
+              <?php endwhile; wp_reset_postdata(); ?>
 
             </div>
           </div>
