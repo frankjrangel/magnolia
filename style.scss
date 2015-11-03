@@ -161,9 +161,6 @@ body {
   .heading{
     background-color: $amarillo;
   }
-  .navbar button {
-    //background-color: $amarillo;
-  }
 }
 #collapse-menu{
   position: absolute;
@@ -171,7 +168,7 @@ body {
   background-color: $amarillo;
   left: 0;
   right: 0;
-  padding: 0 $xy-menu-button 10px;
+  padding: 5px $xy-menu-button 10px;
   margin: 0;
 }
 #content-background {
@@ -261,7 +258,8 @@ body {
       margin-top:1px;
 
       &:last-child{
-        margin-top:-4px;
+        margin-top:-5px;
+        //margin-bottom: 0;
       }
     }
     textarea{
@@ -361,7 +359,7 @@ body {
     right: 0;
     height: $xy-menu-button;
     width: $xy-menu-button;
-    margin: 0;
+    margin: 5px 0 0;
     padding: 9px 12px;
     z-index: 1031;
     .icon-bar {
@@ -381,6 +379,7 @@ body {
     padding: 0 $xy-menu-button;
     .titulo{
       display: none;
+      margin: 5px 0;
       height: $xy-menu-button;
     }
     .collapsed{
@@ -532,6 +531,12 @@ body {
         h5, p {
           margin: 0;
         }
+        h5{
+          color: $negro;
+        }
+        p{
+          color: $gris;
+        }
       }
     }
   }
@@ -600,7 +605,7 @@ body {
 .pasos{
   margin-top: -30px;
   .paso{
-    margin: $gutter;
+    margin:  $gutter $gutter 0;
     background-color: $turquesa-claro;
     background-clip: padding-box;
     border: 8px;
@@ -637,7 +642,7 @@ body {
   .fondo_hojas{
     padding: ($gutter * 3) 0;
     background-image: url(assets/img/fondos/hojas_pasos_movil.png);    background-position: center;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-clip: border-box;
     .mensaje_como_pedir{

@@ -16,9 +16,9 @@
       $p_1 = get_field('otro_producto_1');
       $p_2 = get_field('otro_producto_2');
       $p_3 = get_field('otro_producto_3');
-      $link_1 = esc_url( get_permalink($p_1->ID) );
-      $link_2 = esc_url( get_permalink($p_2->ID) );
-      $link_3 = esc_url( get_permalink($p_3->ID) );
+      $link_1 = esc_url( get_permalink($p_1->ID) ). '?t='.$term_id;
+      $link_2 = esc_url( get_permalink($p_2->ID) ). '?t='.$term_id;
+      $link_3 = esc_url( get_permalink($p_3->ID) ). '?t='.$term_id;
       $foto_1_1 = get_field('foto_1', $p_1->ID);
       $foto_2_1 = get_field('foto_1', $p_2->ID);
       $foto_3_1 = get_field('foto_1', $p_3->ID);
