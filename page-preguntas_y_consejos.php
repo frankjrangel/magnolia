@@ -2,7 +2,7 @@
 <script type="text/javascript">
   $( "#preguntas_consejos" ).addClass("current_page");
   $( ".titulo" ).addClass("preguntas_consejos");
-  $( ".titulo p" ).html("PREGUNTAS Y CONSEJOS");
+  $( ".titulo p" ).html("PREGUNTAS Y TIPS");
 </script>
 
 <div  id="fondo_preguntas_consejos" class="seccion">
