@@ -41,32 +41,32 @@
           <div class="row">
 
             <?php
-            $num = 0;
-            $par = '';
-            while ( $loop->have_posts() ) : $loop->the_post();
-              $num++;
-              if ($num % 2 == 0) {
-                $par = 'par';
-              }else {
-                $par = 'impar';
-              }
-              $paso = get_field('paso');
-            ?>
+              $num = 0;
+              $par = '';
+              while ( $loop->have_posts() ) : $loop->the_post();
+                $num++;
+                if ($num % 2 == 0) {
+                  $par = 'par';
+                }else {
+                  $par = 'impar';
+                }
+                $paso = get_field('paso');
+              ?>
 
-            <div class="col-xs-12 col-sm-2">
-              <div class="paso <?php echo $par; ?> sh">
-                <div class="row">
-                  <div class="sh2 col-xs-3 col-sm-12">
-                    <p class="num_pasos"><?php echo $num; ?>.</p>
-                  </div>
-                  <div class="sh2 texto_pasos col-xs-9 col-xs-pull-1 col-sm-12 col-sm-pull-0">
-                    <span><p><?php echo $paso; ?></p></span>
+              <div class="col-xs-12 col-sm-2">
+                <div class="paso <?php echo $par; ?> sh">
+                  <div class="row">
+                    <div class="sh2 col-xs-3 col-sm-12">
+                      <p class="num_pasos"><?php echo $num; ?>.</p>
+                    </div>
+                    <div class="sh2 texto_pasos col-xs-9 col-xs-pull-1 col-sm-12 col-sm-pull-0">
+                      <span><p><?php echo $paso; ?></p></span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-          <?php endwhile; wp_reset_query(); ?>
+            <?php endwhile; wp_reset_query(); ?>
 
           </div>
           <div class="fondo_hojas">

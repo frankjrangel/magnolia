@@ -197,9 +197,11 @@ body {
     background: none;
     padding: 0;
     margin-bottom: -($gutter);
-    a{
-      color: $gris;
-      height: $xy-menu-button; //<<<<<<<<<<<<<<<<
+    li {
+      a{
+        color: $gris;
+        padding: 14px 0;
+      }
     }
     #activa a {
       color: $negro;
@@ -207,7 +209,15 @@ body {
   }
   .pags{
     text-align: right;
+    a {
+      padding: 10px;
+      line-height: 14px;
+      font-size: 1.4rem;
+    }
   }
+}
+.pags_movil {
+  display: block;
 }
 .shortcuts-que_ofrecemos,
 .shortcuts-como_pedir,
@@ -227,9 +237,13 @@ body {
   }
   a {
     background-color: $marron;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
     display: block;
-    padding: 12px 15px;
-    min-height: 44px;
+    padding: 4px 15px;
     text-align: center;
   }
   p {
@@ -251,6 +265,10 @@ body {
       margin-bottom: 5px;
       opacity: 0.95;
     }
+    .ninja-forms-success-msg {
+      background: $blanco;
+      padding: 20px;
+    }
     .ninja-forms-field-error{
       color: darken($marron, 15%);
       background: $amarillo;
@@ -260,24 +278,12 @@ body {
     }
     .text-wrap {
       margin-bottom: $gutter / 3;
-      .ninja-forms-field-error{
-        //margin-top:1px;
-        &:last-child{
-        //  margin-top:-5px;
-          //margin-bottom: 0;
-        }
-      }
-
     }
     .textarea-wrap {
       margin-bottom: 0;
       .ninja-forms-field-error{
         position: relative;
         top: -5px;
-        &:last-child{
-        //  margin-top:-5px;
-          //margin-bottom: 0;
-        }
       }
     }
     .ninja-forms-field {
@@ -292,23 +298,21 @@ body {
     }
     #ninja_forms_field_16, #ninja_forms_field_7{
       background-color: $turquesa-claro;
+      background-clip: padding-box;
+      border: 8px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
       color: $blanco;
       @include font-yanone_regular;
       width: 50%;
       margin-left: 25%;
+      padding: 4px 16px;
     }
   }
 }
-.ninja-forms-success-msg {
-  padding:20px;
-  background:$blanco;
 
-  p{
-    color:darken($marron, 10%);
-  }
-}
 // ===== Header =================================================
-
 .background-banda-logo {
   position: absolute;
   z-index: 1000;
@@ -364,10 +368,16 @@ body {
   }
   li {
     background-color: $turquesa-claro;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+
     margin-bottom: 7px;
     text-align: center;
     a,a:active,a:visited,a:hover,a:link,a:focus{
-      padding: 12px 0;
+      padding: 4px 0;
       color: $blanco;
       @include font-yanone_regular;
       letter-spacing: 1px;
@@ -375,6 +385,10 @@ body {
   }
   li:nth-child(even) {
       background-color: $turquesa-pastel;
+      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+
   }
   button {
     position: absolute;
@@ -415,7 +429,7 @@ body {
 
     }
     .titulo{
-      padding: 12px 0;
+      padding: 4px 0;
       p{
         color: $blanco;
         text-align: center;
@@ -424,9 +438,19 @@ body {
     }
     .que_ofrecemos, .como_pedir, .preguntas_consejos {
       background-color: $turquesa-claro;
+      background-clip: padding-box;
+      border: 8px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
     }
     .catalogo, .hacer_pedido, .contacto {
       background-color: $turquesa-pastel;
+      background-clip: padding-box;
+      border: 8px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
     }
     .categoria {
       background-color: $blanco;
@@ -444,7 +468,6 @@ body {
   }
 
 }
-
 
 // ===== Footer ==========================================
 #footer{
@@ -480,6 +503,7 @@ body {
     }
   }
 }
+
 // ===== Que Ofrecemos =====================================
 .intro,
 .shortcuts,
@@ -615,7 +639,6 @@ body {
 }
 
 // ===== Como pedir ========================================
-
 .letrero_pasos{
   .foto_letrero_pasos_movil{
     display: block;
@@ -634,7 +657,6 @@ body {
     -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Safari 3.1-5 */
     -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Opera 11-12.1 */
     border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
-
     .num_pasos{
       @include font-amatic_bold;
       color: $blanco;
@@ -672,6 +694,11 @@ body {
       text-align: center;
       .mensaje_caja{
         background-color: $turquesa-pastel;
+        background-clip: padding-box;
+        border: 8px;
+        -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Safari 3.1-5 */
+        -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Opera 11-12.1 */
+        border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
         padding: $gutter;
         p{
           @include font-yanone_regular;
@@ -821,326 +848,333 @@ body {
     width: 738px;
   }
 
-// ===== Objetos ======
-body {
-  padding: 5px 0 0 0;
-}
-#navbar {
-  border: 0;
-  z-index: 1031;
-  .navbar-default{
-    height: $xy-menu-button;
+  // ===== Objetos ======
+  body {
+    padding: 5px 0 0 0;
   }
-}
-#collapse-menu {
-  background-color: $turquesa-claro;
-  background-image: none;
-  padding: 0 30px;
-  margin: 0 -30px;
-}
-#wings-navbar {
-  #wings-menu-background {
-    position: absolute;
-    z-index: -10;
-    margin: $padding-top-content (-($gutter * 2)) 0;
-    background-image: url("assets/img/fondos/triangulito_izq.png"),
-                      url("assets/img/fondos/triangulito_der.png");
-    background-position: left 44px, right 44px;
-    background-repeat: no-repeat, no-repeat;
-    left: 0;
-    right: 0;
-    height: 72px;
+  #navbar {
+    border: 0;
+    z-index: 1031;
+    .navbar-default{
+      height: $xy-menu-button;
+    }
   }
-}
-#wings-navbar.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  #wings-menu-background {
-    z-index: -10;
-    margin: 0 (-($gutter * 2)) 0;
-    background-image: url("assets/img/fondos/triangulito_izq.png"),
-                      url("assets/img/fondos/triangulito_der.png");
-    background-position: left 44px, right 44px;
-    background-repeat: no-repeat, no-repeat;
-    left: 0;
-    right: 0;
-    height: 72px;
-  }
-}
-#content-background {
-  background-image: url("assets/img/fondos/fondo_amarillo.png");
-  background-position: center (-$padding-top-content);
-  padding-top: 0;
-  margin-top: $padding-top-content;
-  background-color: $amarillo;
-  padding-bottom: $xy-menu-button;
-}
-#content {
-  padding-top: ($gutter * 2) + $xy-menu-button;
-}
-#secciones {
-  margin: -($gutter * 2) 0;
-}
-#fondo_pasos_movil{
-  background: none;
-}
-#fondo_pasos{
-  padding: 1px $gutter;
-  background-clip: padding-box;
-  background-image: url( assets/img/fondos/fondo_hojas.png );
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-}
-#fondo_pedido{
-    background-image: url(assets/img/hacer_pedido/fondo_bicicleta.png );
-}
-#fondo_preguntas_consejos{
-  padding: ($gutter * 2) 0;
-  background-color: $blanco;
-}
-#fondo_contacto{
-    background-image: url(assets/img/contacto/fondo_tazas.png );
-    border: 7px;
-    -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% round; /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% round; /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
-    background-origin: border-box;
-}
-.form {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: ($gutter * 6) 0;
-}
-// ===== Header ======
-#navbar{
-  li,li:nth-child(even) {
+  #collapse-menu {
     background-color: $turquesa-claro;
-    margin: 0;
-    a,a:active,a:visited,a:hover,a:link,a:focus{
-      padding: 12px 12px;
-    }
+    background-image: none;
+    padding: 0 30px;
+    margin: 0 -30px;
   }
-  li.current_page {
-    background-color: $marron;
-    background-clip: padding-box;
-    margin-top: -4px;
-    height: 52px;
-    margin-bottom: -4px;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round; /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round; /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round;
-
-    a,a:active,a:visited,a:hover,a:link,a:focus{
-      padding-top: 8px;
-      padding-bottom: 8px;
-    }
-  }
-  .heading{
-    display: none;
-  }
-  .redes_blancos_fixed {
-    display: block;
-    position: absolute;
-    height: 127px;
-    width: 36px;
-    top: ($gutter * 2);
-    margin-left: $gutter;
-    background-color: $marron;
-    background-clip: padding-box;
-    border: 3px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round; /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round; /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round;
-
-    a {
-      display: block;
-      float: left;
-      height: 30px;
-      width: 30px;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-}
-
-// ===== Footer ==========================================
-#footer{
-  height: 29px;
-  .redes {
-    position: absolute;
-    width: 36px * 4;
-    top: -($xy-menu-button);
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .marrones{
-    display: block;
-
-  }
-  .fixed{
-    position: fixed;
-    top: $padding-top-content + ($gutter * 2);
-    height: $xy-menu-button * 4;
-    width: $xy-menu-button;
-  }
-  .blancos{
-    display: none;
-  }
-
-}
-
-// ===== Que Ofrecemos =====================================
-.banner_como_pedir{
-  display: block;
-}
-.intro,
-.shortcuts-que_ofrecemos{
-  display: none;
-}
-.banner-productos{
-  padding-top: ($xy-menu-button / 2);
-  .otros_productos-titulo{
-    position: relative;
-    margin-bottom: $gutter;
-    margin-left: -($gutter);
-    div{
-      position: relative;
-      margin-top: -($xy-menu-button / 2);
+  #wings-navbar {
+    #wings-menu-background {
+      position: absolute;
+      z-index: -10;
+      margin: $padding-top-content (-($gutter * 2)) 0;
+      background-image: url("assets/img/fondos/triangulito_izq.png"),
+                        url("assets/img/fondos/triangulito_der.png");
+      background-position: left 44px, right 44px;
+      background-repeat: no-repeat, no-repeat;
       left: 0;
       right: 0;
-      height: $xy-menu-button;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+      height: 72px;
     }
   }
-  .otros_productos{
-    .row{
-      margin-right: 0;
-      div{
-        padding: 0;
-        position: relative;
-        a{
-          position: relative;
-          display: block;
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          width: 100%;
-          border: 6px;
-          -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Safari 3.1-5 */
-          -o-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Opera 11-12.1 */
-          border-image: url(assets/img/bordes/rayado.svg) 11% round;
-          background-origin: border-box;
-        }
-        a+a{
-          position: absolute;
-          top: 0;
-          opacity: 0;
-        }
-      }
+  #wings-navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    #wings-menu-background {
+      z-index: -10;
+      margin: 0 (-($gutter * 2)) 0;
+      background-image: url("assets/img/fondos/triangulito_izq.png"),
+                        url("assets/img/fondos/triangulito_der.png");
+      background-position: left 44px, right 44px;
+      background-repeat: no-repeat, no-repeat;
+      left: 0;
+      right: 0;
+      height: 72px;
     }
   }
-}
-.prod_0 {
-  padding-right: 0;
-}
-.prod_1, .prod_2 {
-  a{
-    height: 135px;
+  #content-background {
+    background-image: url("assets/img/fondos/fondo_amarillo.png");
+    background-position: center (-$padding-top-content);
+    padding-top: 0;
+    margin-top: $padding-top-content;
+    background-color: $amarillo;
+    padding-bottom: $xy-menu-button;
   }
-}
-.banner-redes,
-.prod_1,
-.prod_2{
-  display: block;
-}
-
-// ===== Como pedir ========================================
-.letrero_pasos{
-  .foto_letrero_pasos_movil{
+  #content {
+    padding-top: ($gutter * 2) + $xy-menu-button;
+  }
+  #secciones {
+    margin: -($gutter * 2) 0;
+  }
+  #fondo_pasos_movil{
+    background: none;
+  }
+  #fondo_pasos{
+    padding: 1px $gutter;
+    background-clip: padding-box;
+    background-image: url( assets/img/fondos/fondo_hojas.png );
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  .pags_movil {
     display: none;
   }
-  .foto_letrero_pasos{
+  #fondo_pedido{
+      background-image: url(assets/img/hacer_pedido/fondo_bicicleta.png );
+  }
+  #fondo_preguntas_consejos{
+    padding: ($gutter * 2) 0;
+    background-color: $blanco;
+  }
+  #fondo_contacto{
+      background-image: url(assets/img/contacto/fondo_tazas.png );
+      border: 7px;
+      -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+      background-origin: border-box;
+  }
+  .form {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: ($gutter * 6) 0;
+  }
+  // ===== Header ======
+  #navbar{
+    li,li:nth-child(even) {
+      background-color: $turquesa-claro;
+      border: 0;
+      margin: 0;
+      a,a:active,a:visited,a:hover,a:link,a:focus{
+        padding: 12px 12px;
+      }
+    }
+    li.current_page {
+      background-color: $marron;
+      background-clip: padding-box;
+      height: 52px;
+      margin-top: -4px;
+      margin-bottom: -4px;
+      border: 2px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round;
+
+      a,a:active,a:visited,a:hover,a:link,a:focus{
+        padding-top: 7px;
+        padding-bottom: 7px;
+        background-origin: border-box;
+        border: 7px;
+        -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+        -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+        border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+      }
+    }
+    .heading{
+      display: none;
+    }
+    .redes_blancos_fixed {
+      display: block;
+      position: absolute;
+      height: 127px;
+      width: 36px;
+      top: ($gutter * 2);
+      margin-left: $gutter;
+      background-color: $marron;
+      background-clip: padding-box;
+      border: 3px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round;
+
+      a {
+        display: block;
+        float: left;
+        height: 30px;
+        width: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+
+  // ===== Footer ==========================================
+  #footer{
+    height: 29px;
+    .redes {
+      position: absolute;
+      width: 36px * 4;
+      top: -($xy-menu-button);
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .marrones{
+      display: block;
+
+    }
+    .fixed{
+      position: fixed;
+      top: $padding-top-content + ($gutter * 2);
+      height: $xy-menu-button * 4;
+      width: $xy-menu-button;
+    }
+    .blancos{
+      display: none;
+    }
+
+  }
+
+  // ===== Que Ofrecemos =====================================
+  .banner_como_pedir{
     display: block;
   }
-}
-.pasos{
-  margin: auto 7.5px;
-  .paso{
-    margin: 0 -7.5px;
-    background-color: $marron;
-    background-clip: padding-box;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
-
-    .num_pasos{
-      @include font-amatic_bold;
-      color: $blanco;
-      font-size: 56px;
-      line-height: 60px;
-      text-align: center;
+  .intro,
+  .shortcuts-que_ofrecemos{
+    display: none;
+  }
+  .banner-productos{
+    padding-top: ($xy-menu-button / 2);
+    .otros_productos-titulo{
+      position: relative;
+      margin-bottom: $gutter;
+      margin-left: -($gutter);
+      div{
+        position: relative;
+        margin-top: -($xy-menu-button / 2);
+        left: 0;
+        right: 0;
+        height: $xy-menu-button;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
-    .texto_pasos{
-      p{
+    .otros_productos{
+      .row{
+        margin-right: 0;
+        div{
+          padding: 0;
+          position: relative;
+          a{
+            position: relative;
+            display: block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            border: 6px;
+            -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Safari 3.1-5 */
+            -o-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Opera 11-12.1 */
+            border-image: url(assets/img/bordes/rayado.svg) 11% round;
+            background-origin: border-box;
+          }
+          a+a{
+            position: absolute;
+            top: 0;
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+  .prod_0 {
+    padding-right: 0;
+  }
+  .prod_1, .prod_2 {
+    a{
+      height: 135px;
+    }
+  }
+  .banner-redes,
+  .prod_1,
+  .prod_2{
+    display: block;
+  }
+
+  // ===== Como pedir ========================================
+  .letrero_pasos{
+    .foto_letrero_pasos_movil{
+      display: none;
+    }
+    .foto_letrero_pasos{
+      display: block;
+    }
+  }
+  .pasos{
+    margin: auto 7.5px;
+    .paso{
+      margin: 0 -7.5px;
+      background-color: $marron;
+      background-clip: padding-box;
+      border: 8px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+
+      .num_pasos{
+        @include font-amatic_bold;
+        color: $blanco;
+        font-size: 56px;
+        line-height: 60px;
         text-align: center;
       }
-    }
-  }
-  .paso.par {
-    background-color: $morado;
-    background-clip: padding-box;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round; /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round; /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round;
-  }
-  .fondo_hojas{
-    background: none;
-    padding: 0;
-    .mensaje_como_pedir{
-      margin: auto;
-      .mensaje_caja{
-        background: none;
-        padding: $gutter 0;
+      .texto_pasos{
+        p{
+          text-align: center;
+        }
       }
     }
+    .paso.par {
+      background-color: $morado;
+      background-clip: padding-box;
+      border: 8px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round;
+    }
+    .fondo_hojas{
+      background: none;
+      padding: 0;
+      .mensaje_como_pedir{
+        margin: auto;
+        .mensaje_caja{
+          background: none;
+          border: 0;
+          padding: $gutter 0;
+        }
+      }
+    }
+    .col-sm-2{
+      width: 20%;
+    }
   }
-  .col-sm-2{
-    width: 20%;
+
+  // ===== Contactos =================================
+  .datos_contacto {
+    margin-top: 0;
   }
-}
-
-
-// ===== Contactos =================================
-.datos_contacto {
-  margin-top: 0;
-}
-
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
   // ===== Elementos =====
+  // ===== Objetos =====
   .container{
     width: 962px;
   }
-
   .navbar-default .navbar-nav > li {
     a,a:active,a:visited,a:hover,a:link,a:focus{
       padding: 12px 50px;
     }
   }
-
   // ===== Header ======
   #navbar{
     li,li:nth-child(even) {
