@@ -122,20 +122,31 @@ body {
   font-style: normal;
   letter-spacing: 1px; }
   .nav_categoria .breadcrumb {
+    display: block;
     background: none;
     padding: 0;
-    margin-bottom: -15px; }
+    margin-bottom: 0; }
     .nav_categoria .breadcrumb li a {
       color: #a8a8a8;
       padding: 14px 0; }
     .nav_categoria .breadcrumb #activa a {
       color: #474747; }
   .nav_categoria .pags {
-    text-align: right; }
-    .nav_categoria .pags a {
+    text-align: center; }
+    .nav_categoria .pags .page-numbers {
       padding: 10px;
-      line-height: 14px;
+      line-height: 14px; }
+    .nav_categoria .pags .prev, .nav_categoria .pags .next {
       font-size: 1.4rem; }
+    .nav_categoria .pags .current {
+      font-weight: bold; }
+    .nav_categoria .pags .dots {
+      display: none;
+      padding: 0; }
+    .nav_categoria .pags .prev + .page-numbers {
+      display: none; }
+    .nav_categoria .pags .prev + .page-numbers + .current .page-numbers {
+      display: block; }
 
 .pags_movil {
   display: block; }
@@ -432,7 +443,13 @@ body {
   .categorias .categoria {
     margin: 15px 0; }
     .categorias .categoria a {
-      display: block; }
+      display: block;
+      padding-top: 82.63%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .categorias .producto_del_mes a {
+    padding-top: 34.5%; }
 
 .productos {
   margin: -15px 0; }
@@ -747,6 +764,9 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     padding: 90px 0; }
+
+  .nav_categoria .pags {
+    text-align: right; }
 
   #navbar li, #navbar li:nth-child(even) {
     background-color: #66c5bd;

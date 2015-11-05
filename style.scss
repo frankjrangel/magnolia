@@ -194,9 +194,10 @@ body {
 .nav_categoria{
   @include font-yanone_regular;
   .breadcrumb{
+    display: block;
     background: none;
     padding: 0;
-    margin-bottom: -($gutter);
+    margin-bottom: 0;
     li {
       a{
         color: $gris;
@@ -208,12 +209,30 @@ body {
     }
   }
   .pags{
-    text-align: right;
-    a {
+    text-align: center;
+    .page-numbers{
       padding: 10px;
       line-height: 14px;
+    }
+    .prev, .next{
       font-size: 1.4rem;
     }
+    .current{
+      font-weight: bold;
+    }
+    .dots{
+      display: none;
+      padding: 0;
+    }
+    .prev+.page-numbers{
+      display: none;
+    }
+    .prev+.page-numbers+.current{
+      .page-numbers{
+        display: block;
+      }
+    }
+
   }
 }
 .pags_movil {
@@ -544,7 +563,14 @@ body {
     margin: $gutter 0;
     a {
       display: block;
+      padding-top: 82.63%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
+  }
+  .producto_del_mes a{
+    padding-top: 34.5%;
   }
 }
 
@@ -945,7 +971,12 @@ body {
     background-repeat: no-repeat;
     padding: ($gutter * 6) 0;
   }
-  // ===== Header ======
+  .nav_categoria{
+    .pags{
+      text-align: right;
+    }
+  }
+// ===== Header ======
   #navbar{
     li,li:nth-child(even) {
       background-color: $turquesa-claro;

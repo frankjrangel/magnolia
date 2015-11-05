@@ -54,12 +54,11 @@
                 }
               ?>
               ">
-            <div class="categoria">
-              <a href="<?php echo $link; ?>">
-                <img class="img-responsive"
-                    src="<?php echo $foto; ?>">
-              </a>
-            </div>
+                <div class="categoria <?php if ($categoria->term_id == 14 ) echo "producto_del_mes"?>">
+                  <a href="<?php echo $link; ?>" style="background-image:
+                       url(<?php echo $foto; ?>);">
+                  </a>
+                </div>
           </div>
 
         <?php endif; ?>

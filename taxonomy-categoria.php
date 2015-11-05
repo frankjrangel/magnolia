@@ -34,20 +34,31 @@
 <div class="seccion">
   <div class="nav_categoria">
     <div class="row">
-      <div class="col-xs-8">
+      <div class="col-xs-12 col-sm-7">
         <ol class="breadcrumb">
           <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
           <li id="activa"><a href="<?php echo $term_link.'?t='.$term_id; ?>"><?php echo $term_name; ?></a></li>
         </ol>
       </div>
-      <div class="col-xs-4">
+      <div class="col-xs-12 col-sm-5">
         <?php if ($total_pages > 1): ?>
 
           <div class="pags">
-            <?php previous_posts_link( '<' , $total_pages); ?>
-            <span><?php echo  $paged . ' &#47; ' . $total_pages; ?></span>
-            <?php next_posts_link( '>' , $total_pages ); ?>
-          </div>
+
+            <?php
+              global $wp_query;
+              $big = 999999999; // need an unlikely integer
+              echo paginate_links( array(
+              	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+              	'format' => '?paged=%#%',
+              	'current' => max( 1, get_query_var('paged') ),
+              	'total' => $total_pages,
+                'prev_text' => '<',
+                'next_text' => '>',
+                'show_all' => ( $total_pages < 5)?  true : false ,
+                'mid_size'  => 1
+              ) );
+            ?>
 
         <?php endif; ?>
       </div>
@@ -115,13 +126,21 @@
 <div class="seccion pags_movil">
   <div class="nav_categoria">
     <div class="row">
-      <div class="col-xs-4 col-xs-offset-8">
+      <div class="col-xs-12">
         <?php if ($total_pages > 1): ?>
 
           <div class="pags">
-            <?php previous_posts_link( '<' , $total_pages); ?>
-            <span><?php echo  $paged . ' &#47; ' . $total_pages; ?></span>
-            <?php next_posts_link( '>' , $total_pages ); ?>
+            <?php
+              echo paginate_links( array(
+                'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                'format' => '?paged=%#%',
+                'current' => max( 1, get_query_var('paged') ),
+                'total' => $total_pages,
+                'prev_text' => '<',
+                'next_text' => '>'
+              ) );
+            ?>
+
           </div>
 
         <?php endif; ?>
