@@ -72,7 +72,7 @@ body {
 
 #navbar {
   position: absolute;
-  margin-top: 205px;
+  margin-top: 256px;
   left: 0;
   right: 0;
   border: 0;
@@ -89,7 +89,7 @@ body {
 
 #collapse-menu {
   position: absolute;
-  background-position: center -205px;
+  background-position: center -256px;
   background-color: #fff9e9;
   left: 0;
   right: 0;
@@ -100,7 +100,7 @@ body {
   background-image: url("assets/img/fondos/fondo_amarillo.png");
   background-position: center top;
   background-color: #fff9e9;
-  padding-top: 204px;
+  padding-top: 255px;
   padding-bottom: 30px; }
 
 #content {
@@ -125,7 +125,7 @@ body {
     display: block;
     background: none;
     padding: 0;
-    margin-bottom: 0; }
+    margin-bottom: 7.5px; }
     .nav_categoria .breadcrumb li a {
       color: #a8a8a8;
       padding: 14px 0;
@@ -252,14 +252,14 @@ body {
   background-image: url("assets/img/fondos/banda.png");
   background-position: center;
   background-color: #ccc0af;
-  top: 50px;
+  top: 68px;
   right: 0;
   left: 0;
-  height: 105px; }
+  height: 135px; }
 
 .logo-magnolia {
   position: relative;
-  width: 218px;
+  width: 280px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -268,14 +268,14 @@ body {
   padding: 0; }
   .brand div {
     position: absolute;
-    top: -42px;
+    top: -53px;
     left: 0;
     right: 0;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 218px 188px;
-    width: 218px;
-    height: 188px; }
+    background-size: 280px 241px;
+    width: 280px;
+    height: 241px; }
 
 .navbar,
 .navbar-default,
@@ -313,7 +313,7 @@ body {
     font-weight: normal;
     font-style: normal;
     letter-spacing: 1px;
-    letter-spacing: 1px; }
+    font-size: 1.14rem; }
 #navbar li:nth-child(even) {
   background-color: #bcdad6;
   -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
@@ -359,7 +359,8 @@ body {
       font-family: 'yanone_regular';
       font-weight: normal;
       font-style: normal;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      font-size: 1.14rem; }
   #navbar .heading .que_ofrecemos, #navbar .heading .como_pedir, #navbar .heading .preguntas_consejos {
     background-color: #66c5bd;
     background-clip: padding-box;
@@ -695,7 +696,7 @@ body {
   #wings-navbar #wings-menu-background {
     position: absolute;
     z-index: -10;
-    margin: 205px -30px 0;
+    margin: 256px -30px 0;
     background-image: url("assets/img/fondos/triangulito_izq.png"), url("assets/img/fondos/triangulito_der.png");
     background-position: left 44px, right 44px;
     background-repeat: no-repeat, no-repeat;
@@ -720,9 +721,9 @@ body {
 
   #content-background {
     background-image: url("assets/img/fondos/fondo_amarillo.png");
-    background-position: center -205px;
+    background-position: center -256px;
     padding-top: 0;
-    margin-top: 205px;
+    margin-top: 256px;
     background-color: #fff9e9;
     padding-bottom: 44px; }
 
@@ -777,7 +778,7 @@ body {
     border: 0;
     margin: 0; }
     #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-      padding: 12px 12px; }
+      padding: 12px 8px; }
   #navbar li.current_page {
     background-color: #ccc0af;
     background-clip: padding-box;
@@ -837,7 +838,7 @@ body {
       display: block; }
     #footer .fixed {
       position: fixed;
-      top: 235px;
+      top: 286px;
       height: 176px;
       width: 44px; }
     #footer .blancos {
@@ -959,8 +960,8 @@ body {
     padding: 12px 50px; }
 
   #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-    padding-left: 27px;
-    padding-right: 27px; }
+    padding-left: 23px;
+    padding-right: 23px; }
   #navbar .heading {
     display: none; }
 
@@ -975,8 +976,8 @@ body {
     width: 1170px; }
 
   #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-    padding-left: 41px;
-    padding-right: 41px; }
+    padding-left: 37px;
+    padding-right: 37px; }
   #navbar .heading {
     display: none; }
 

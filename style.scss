@@ -121,10 +121,12 @@ p{
 }
 
 // ===== Objetos ===========================================
-$alto-banda-magnolia: 105px;
-$caja-banda-magnolia: 50px;
+$logo-alto: 241px;
+$logo-ancho: 280px;
+$alto-banda-magnolia: 135px;
+$caja-banda-magnolia: $gutter;
+$padding-top-content: $caja-banda-magnolia + $logo-alto;
 $xy-menu-button: 44px;
-$padding-top-content: ($caja-banda-magnolia * 2) + $alto-banda-magnolia;
 
 body {
   background-image: url("assets/img/fondos/fondo_turquesa.png");
@@ -197,7 +199,7 @@ body {
     display: block;
     background: none;
     padding: 0;
-    margin-bottom: 0;
+    margin-bottom: $gutter / 2;
     li {
       a{
         color: $gris;
@@ -334,14 +336,14 @@ body {
   background-image: url("assets/img/fondos/banda.png");
   background-position: center;
   background-color: $marron;
-  top: $caja-banda-magnolia;
+  top: (($logo-alto + ( $caja-banda-magnolia * 2 ) - $alto-banda-magnolia) / 2);
   right: 0;
   left: 0;
   height: $alto-banda-magnolia;
 }
 .logo-magnolia {
   position: relative;
-  width: 218px;
+  width: $logo-ancho;
   margin-left: auto;
   margin-right: auto;
 }
@@ -350,14 +352,14 @@ body {
   padding: 0;
   div {
     position: absolute;
-    top: -42px;
+    top: -((( $logo-alto - $alto-banda-magnolia) / 2));
     left: 0;
     right: 0;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 218px 188px;
-    width: 218px;
-    height: 188px;
+    background-size: $logo-ancho $logo-alto;
+    width: $logo-ancho;
+    height: $logo-alto;
   }
 }
 .navbar,
@@ -395,7 +397,7 @@ body {
       padding: 4px 0;
       color: $blanco;
       @include font-yanone_regular;
-      letter-spacing: 1px;
+      font-size: 1.14rem;
     }
   }
   li:nth-child(even) {
@@ -449,6 +451,7 @@ body {
         color: $blanco;
         text-align: center;
         @include font-yanone_regular;
+        font-size: 1.14rem;
       }
     }
     .que_ofrecemos, .como_pedir, .preguntas_consejos {
@@ -972,14 +975,14 @@ body {
       text-align: right;
     }
   }
-// ===== Header ======
+  // ===== Header ======
   #navbar{
     li,li:nth-child(even) {
       background-color: $turquesa-claro;
       border: 0;
       margin: 0;
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding: 12px 12px;
+        padding: 12px 8px;
       }
     }
     li.current_page {
@@ -1205,8 +1208,8 @@ body {
   #navbar{
     li,li:nth-child(even) {
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding-left: 27px;
-        padding-right: 27px;
+        padding-left: 23px;
+        padding-right: 23px;
       }
     }
     .heading{
@@ -1238,8 +1241,8 @@ body {
   #navbar{
     li,li:nth-child(even) {
       a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding-left: 41px;
-        padding-right: 41px;
+        padding-left: 37px;
+        padding-right: 37px;
       }
     }
     .heading{
