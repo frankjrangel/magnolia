@@ -34,19 +34,51 @@
 <div class="seccion">
   <div class="nav_categoria">
     <div class="row">
-      <div class="col-xs-9">
+      <div class="col-xs-12 col-sm-7">
         <ol class="breadcrumb">
           <li><a href="<?php echo get_page_link(50); ?>">CATÁLOGO</a></li>
           <li id="activa"><a href="<?php echo $term_link.'?t='.$term_id; ?>"><?php echo $term_name; ?></a></li>
         </ol>
       </div>
-      <div class="col-xs-3">
+      <div class="col-xs-12 col-sm-5">
         <?php if ($total_pages > 1): ?>
 
           <div class="pags">
-            <?php previous_posts_link( '<' , $total_pages); ?>
-            <span><?php echo  $paged . '&#47;' . $total_pages; ?></span>
-            <?php next_posts_link( '>' , $total_pages ); ?>
+            <?php if ($total_pages > 2): ?>
+              <?php if( $paged == '1' ): ?>
+                <span class="page-numbers current">1</span>
+                <a class="page-numbers"
+                  href="<?php echo $term_link.'page/2/?t='.$term_id; ?>">2</a>
+                <a class="page-numbers"
+                  href="<?php echo $term_link.'page/3/?t='.$term_id; ?>">3</a>
+              <?php next_posts_link( '<span class="prev_next">></span>' , $total_pages ); ?>
+              <?php elseif ( $paged == $total_pages ): ?>
+                <?php previous_posts_link( '<span class="prev_next"><</span>' , $total_pages); ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-2).'/?t='.$term_id; ?>"><?php echo $paged-2; ?></a>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-1).'/?t='.$term_id; ?>"><?php echo $paged-1; ?></a>
+                  <span class="page-numbers current"><?php echo $paged; ?></span>
+                <?php else : ?>
+                <?php previous_posts_link( '<span class="prev_next"><</span>' , $total_pages); ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-1).'/?t='.$term_id; ?>"><?php echo $paged-1; ?></a>
+                  <span class="page-numbers current"><?php echo $paged; ?></span>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged+1).'/?t='.$term_id; ?>"><?php echo $paged+1; ?></a>
+                   <?php next_posts_link( '<span class="prev_next">></span>' , $total_pages ); ?>
+               <?php endif; ?>
+            <?php else : ?>
+              <?php if( $paged == '1' ): ?>
+                    <span class="page-numbers current">1</span>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/2/?t='.$term_id; ?>">2</a>
+                <?php else : ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/1/?t='.$term_id; ?>">1</a>
+                  <span class="page-numbers current">2</span>
+                <?php endif; ?>
+            <?php endif; ?>
           </div>
 
         <?php endif; ?>
@@ -61,7 +93,7 @@
       <div class="productos">
         <div class="row">
 
-          <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post();
+          <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) :    $loop->the_post();
             $link = get_permalink();
             $foto_1 = get_field('foto_1');
             $foto_2 = get_field('foto_2');
@@ -112,4 +144,53 @@
   </div>
 </div>
 
+<div class="seccion pags_movil">
+  <div class="nav_categoria">
+    <div class="row">
+      <div class="col-xs-12">
+        <?php if ($total_pages > 1): ?>
+
+          <div class="pags">
+            <?php if ($total_pages > 2): ?>
+              <?php if( $paged == '1' ): ?>
+                <span class="page-numbers current">1</span>
+                <a class="page-numbers"
+                  href="<?php echo $term_link.'page/2/?t='.$term_id; ?>">2</a>
+                <a class="page-numbers"
+                  href="<?php echo $term_link.'page/3/?t='.$term_id; ?>">3</a>
+              <?php next_posts_link( '<span class="prev_next">></span>' , $total_pages ); ?>
+              <?php elseif ( $paged == $total_pages ): ?>
+                <?php previous_posts_link( '<span class="prev_next"><</span>' , $total_pages); ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-2).'/?t='.$term_id; ?>"><?php echo $paged-2; ?></a>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-1).'/?t='.$term_id; ?>"><?php echo $paged-1; ?></a>
+                  <span class="page-numbers current"><?php echo $paged; ?></span>
+                <?php else : ?>
+                <?php previous_posts_link( '<span class="prev_next"><</span>' , $total_pages); ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-1).'/?t='.$term_id; ?>"><?php echo $paged-1; ?></a>
+                  <span class="page-numbers current"><?php echo $paged; ?></span>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged+1).'/?t='.$term_id; ?>"><?php echo $paged+1; ?></a>
+                   <?php next_posts_link( '<span class="prev_next">></span>' , $total_pages ); ?>
+               <?php endif; ?>
+            <?php else : ?>
+              <?php if( $paged == '1' ): ?>
+                    <span class="page-numbers current">1</span>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/2/?t='.$term_id; ?>">2</a>
+                <?php else : ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/1/?t='.$term_id; ?>">1</a>
+                  <span class="page-numbers current">2</span>
+                <?php endif; ?>
+            <?php endif; ?>
+          </div>
+
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</div>
 <?php get_footer(); ?>

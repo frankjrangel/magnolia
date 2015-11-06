@@ -93,7 +93,7 @@ body {
   background-color: #fff9e9;
   left: 0;
   right: 0;
-  padding: 0 44px 10px;
+  padding: 5px 44px 10px;
   margin: 0; }
 
 #content-background {
@@ -122,15 +122,38 @@ body {
   font-style: normal;
   letter-spacing: 1px; }
   .nav_categoria .breadcrumb {
+    display: block;
     background: none;
     padding: 0;
-    margin-bottom: -15px; }
-    .nav_categoria .breadcrumb a {
-      color: #a8a8a8; }
+    margin-bottom: 0; }
+    .nav_categoria .breadcrumb li a {
+      color: #a8a8a8;
+      padding: 14px 0;
+      line-height: 21px; }
     .nav_categoria .breadcrumb #activa a {
       color: #474747; }
   .nav_categoria .pags {
-    text-align: right; }
+    text-align: center; }
+    .nav_categoria .pags a {
+      padding: 14px 10px;
+      line-height: 18px; }
+    .nav_categoria .pags .prev_next {
+      font-size: 1.4rem; }
+    .nav_categoria .pags .current {
+      font-weight: bold;
+      color: #fff;
+      background-color: #ccc0af;
+      background-clip: padding-box;
+      padding: 7px 10px;
+      border: 3px;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round;
+      /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round;
+      /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round; }
+
+.pags_movil {
+  display: block; }
 
 .shortcuts-que_ofrecemos,
 .shortcuts-como_pedir,
@@ -154,9 +177,15 @@ body {
   .shortcuts-como_pedir a,
   .shortcuts-preguntas_consejos a {
     background-color: #ccc0af;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
     display: block;
-    padding: 12px 15px;
-    min-height: 44px;
+    padding: 4px 15px;
     text-align: center; }
   .shortcuts-que_ofrecemos p,
   .shortcuts-como_pedir p,
@@ -167,40 +196,55 @@ body {
 
 .form {
   color: #a8a8a8; }
-  .form .form-content .field-wrap {
+  .form .form-content .ninja-forms-response-msg, .form .form-content .ninja-forms-error-msg {
+    background: #fff9e9;
+    text-align: center;
+    padding: 0 12px;
+    margin-bottom: 5px;
+    opacity: 0.95; }
+    .form .form-content .ninja-forms-response-msg p, .form .form-content .ninja-forms-error-msg p {
+      color: #ae9b80; }
+  .form .form-content .ninja-forms-success-msg {
+    background: #fff;
+    padding: 20px; }
+  .form .form-content .ninja-forms-field-error {
+    color: #ae9b80;
+    background: #fff9e9;
+    text-align: center;
+    padding: 0 12px;
+    opacity: 0.95; }
+  .form .form-content .text-wrap {
     margin-bottom: 5px; }
   .form .form-content .textarea-wrap {
     margin-bottom: 0; }
+    .form .form-content .textarea-wrap .ninja-forms-field-error {
+      position: relative;
+      top: -5px; }
   .form .form-content .ninja-forms-field {
     border: none;
     min-height: 44px;
     padding: 12px 16px; }
-  .form .form-content .ninja-forms-field-error {
-    color: #ae9b80;
-    background: #fff;
-    text-align: center;
-    margin-top: 1px; }
-    .form .form-content .ninja-forms-field-error:last-child {
-      margin-top: -4px; }
   .form .form-content textarea {
     height: 88px;
     min-width: 100%;
     max-width: 100%; }
   .form .form-content #ninja_forms_field_16, .form .form-content #ninja_forms_field_7 {
     background-color: #66c5bd;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+    /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
     color: #fff;
     font-family: 'yanone_regular';
     font-weight: normal;
     font-style: normal;
     letter-spacing: 1px;
     width: 50%;
-    margin-left: 25%; }
-
-.ninja-forms-success-msg {
-  padding: 20px;
-  background: #fff; }
-  .ninja-forms-success-msg p {
-    color: #b8a790; }
+    margin-left: 25%;
+    padding: 4px 16px; }
 
 .background-banda-logo {
   position: absolute;
@@ -253,10 +297,17 @@ body {
   text-decoration: none; }
 #navbar li {
   background-color: #66c5bd;
+  background-clip: padding-box;
+  border: 8px;
+  -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+  /* Safari 3.1-5 */
+  -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+  /* Opera 11-12.1 */
+  border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
   margin-bottom: 7px;
   text-align: center; }
   #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus {
-    padding: 12px 0;
+    padding: 4px 0;
     color: #fff;
     font-family: 'yanone_regular';
     font-weight: normal;
@@ -264,13 +315,18 @@ body {
     letter-spacing: 1px;
     letter-spacing: 1px; }
 #navbar li:nth-child(even) {
-  background-color: #bcdad6; }
+  background-color: #bcdad6;
+  -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+  /* Safari 3.1-5 */
+  -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+  /* Opera 11-12.1 */
+  border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; }
 #navbar button {
   position: absolute;
   right: 0;
   height: 44px;
   width: 44px;
-  margin: 0;
+  margin: 5px 0 0;
   padding: 9px 12px;
   z-index: 1031; }
   #navbar button .icon-bar {
@@ -287,6 +343,7 @@ body {
   padding: 0 44px; }
   #navbar .heading .titulo {
     display: none;
+    margin: 5px 0;
     height: 44px; }
   #navbar .heading .collapsed .titulo {
     position: relative;
@@ -295,7 +352,7 @@ body {
     cursor: pointer;
     height: 44px; }
   #navbar .heading .titulo {
-    padding: 12px 0; }
+    padding: 4px 0; }
     #navbar .heading .titulo p {
       color: #fff;
       text-align: center;
@@ -304,9 +361,23 @@ body {
       font-style: normal;
       letter-spacing: 1px; }
   #navbar .heading .que_ofrecemos, #navbar .heading .como_pedir, #navbar .heading .preguntas_consejos {
-    background-color: #66c5bd; }
+    background-color: #66c5bd;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+    /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; }
   #navbar .heading .catalogo, #navbar .heading .hacer_pedido, #navbar .heading .contacto {
-    background-color: #bcdad6; }
+    background-color: #bcdad6;
+    background-clip: padding-box;
+    border: 8px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+    /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+    /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; }
   #navbar .heading .categoria {
     background-color: #fff;
     padding: 12px 15px;
@@ -376,7 +447,13 @@ body {
   .categorias .categoria {
     margin: 15px 0; }
     .categorias .categoria a {
-      display: block; }
+      display: block;
+      padding-top: 82.63%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .categorias .producto_del_mes a {
+    padding-top: 34.5%; }
 
 .productos {
   margin: -15px 0; }
@@ -402,6 +479,10 @@ body {
         padding: 16px 12px; }
         .productos .producto-tarjeta .producto-data .producto-info h5, .productos .producto-tarjeta .producto-data .producto-info p {
           margin: 0; }
+        .productos .producto-tarjeta .producto-data .producto-info h5 {
+          color: #474747; }
+        .productos .producto-tarjeta .producto-data .producto-info p {
+          color: #a8a8a8; }
 
 .producto {
   margin: -15px 0; }
@@ -444,7 +525,7 @@ body {
 .pasos {
   margin-top: -30px; }
   .pasos .paso {
-    margin: 15px;
+    margin: 15px 15px 0;
     background-color: #66c5bd;
     background-clip: padding-box;
     border: 8px;
@@ -484,7 +565,7 @@ body {
     padding: 45px 0;
     background-image: url(assets/img/fondos/hojas_pasos_movil.png);
     background-position: center;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     background-clip: border-box; }
     .pasos .fondo_hojas .mensaje_como_pedir {
@@ -492,6 +573,13 @@ body {
       text-align: center; }
       .pasos .fondo_hojas .mensaje_como_pedir .mensaje_caja {
         background-color: #bcdad6;
+        background-clip: padding-box;
+        border: 8px;
+        -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+        /* Safari 3.1-5 */
+        -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+        /* Opera 11-12.1 */
+        border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
         padding: 15px; }
         .pasos .fondo_hojas .mensaje_como_pedir .mensaje_caja p {
           font-family: 'yanone_regular';
@@ -655,6 +743,9 @@ body {
     background-position: center top;
     background-repeat: no-repeat; }
 
+  .pags_movil {
+    display: none; }
+
   #fondo_pedido {
     background-image: url(assets/img/hacer_pedido/fondo_bicicleta.png); }
 
@@ -678,26 +769,35 @@ body {
     background-repeat: no-repeat;
     padding: 90px 0; }
 
+  .nav_categoria .pags {
+    text-align: right; }
+
   #navbar li, #navbar li:nth-child(even) {
     background-color: #66c5bd;
+    border: 0;
     margin: 0; }
     #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
       padding: 12px 12px; }
   #navbar li.current_page {
     background-color: #ccc0af;
     background-clip: padding-box;
-    margin-top: -4px;
     height: 52px;
+    margin-top: -4px;
     margin-bottom: -4px;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round;
+    border: 2px;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round;
     /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round;
     /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_menu_active.svg) 12% round; }
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round; }
     #navbar li.current_page a, #navbar li.current_page a:active, #navbar li.current_page a:visited, #navbar li.current_page a:hover, #navbar li.current_page a:link, #navbar li.current_page a:focus {
-      padding-top: 8px;
-      padding-bottom: 8px; }
+      padding-top: 7px;
+      padding-bottom: 7px;
+      background-origin: border-box;
+      border: 7px;
+      -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+      -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+      border-image: url(assets/img/bordes/rayado_9.svg) 33% round; }
   #navbar .heading {
     display: none; }
   #navbar .redes_blancos_fixed {
@@ -843,10 +943,10 @@ body {
         margin: auto; }
         .pasos .fondo_hojas .mensaje_como_pedir .mensaje_caja {
           background: none;
+          border: 0;
           padding: 15px 0; }
-
-  .col-sm-2 {
-    width: 20%; }
+    .pasos .col-sm-2 {
+      width: 20%; }
 
   .datos_contacto {
     margin-top: 0; } }
