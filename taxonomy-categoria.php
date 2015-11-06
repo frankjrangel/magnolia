@@ -44,21 +44,42 @@
         <?php if ($total_pages > 1): ?>
 
           <div class="pags">
-
-            <?php
-              global $wp_query;
-              $big = 999999999; // need an unlikely integer
-              echo paginate_links( array(
-              	'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-              	'format' => '?paged=%#%',
-              	'current' => max( 1, get_query_var('paged') ),
-              	'total' => $total_pages,
-                'prev_text' => '<',
-                'next_text' => '>',
-                'show_all' => ( $total_pages < 5)?  true : false ,
-                'mid_size'  => 1
-              ) );
-            ?>
+            <?php if ($total_pages > 2): ?>
+              <?php if( $paged == '1' ): ?>
+                <span class="page-numbers current">1</span>
+                <a class="page-numbers"
+                  href="<?php echo $term_link.'page/2/?t='.$term_id; ?>">2</a>
+                <a class="page-numbers"
+                  href="<?php echo $term_link.'page/3/?t='.$term_id; ?>">3</a>
+              <?php next_posts_link( '<span class="prev_next">></span>' , $total_pages ); ?>
+              <?php elseif ( $paged == $total_pages ): ?>
+                <?php previous_posts_link( '<span class="prev_next"><</span>' , $total_pages); ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-2).'/?t='.$term_id; ?>"><?php echo $paged-2; ?></a>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-1).'/?t='.$term_id; ?>"><?php echo $paged-1; ?></a>
+                  <span class="page-numbers current"><?php echo $paged; ?></span>
+                <?php else : ?>
+                <?php previous_posts_link( '<span class="prev_next"><</span>' , $total_pages); ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-1).'/?t='.$term_id; ?>"><?php echo $paged-1; ?></a>
+                  <span class="page-numbers current"><?php echo $paged; ?></span>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged+1).'/?t='.$term_id; ?>"><?php echo $paged+1; ?></a>
+                   <?php next_posts_link( '<span class="prev_next">></span>' , $total_pages ); ?>
+               <?php endif; ?>
+            <?php else : ?>
+              <?php if( $paged == '1' ): ?>
+                    <span class="page-numbers current">1</span>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/2/?t='.$term_id; ?>">2</a>
+                <?php else : ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/1/?t='.$term_id; ?>">1</a>
+                  <span class="page-numbers current">2</span>
+                <?php endif; ?>
+            <?php endif; ?>
+          </div>
 
         <?php endif; ?>
       </div>
@@ -130,17 +151,41 @@
         <?php if ($total_pages > 1): ?>
 
           <div class="pags">
-            <?php
-              echo paginate_links( array(
-                'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-                'format' => '?paged=%#%',
-                'current' => max( 1, get_query_var('paged') ),
-                'total' => $total_pages,
-                'prev_text' => '<',
-                'next_text' => '>'
-              ) );
-            ?>
-
+            <?php if ($total_pages > 2): ?>
+              <?php if( $paged == '1' ): ?>
+                <span class="page-numbers current">1</span>
+                <a class="page-numbers"
+                  href="<?php echo $term_link.'page/2/?t='.$term_id; ?>">2</a>
+                <a class="page-numbers"
+                  href="<?php echo $term_link.'page/3/?t='.$term_id; ?>">3</a>
+              <?php next_posts_link( '<span class="prev_next">></span>' , $total_pages ); ?>
+              <?php elseif ( $paged == $total_pages ): ?>
+                <?php previous_posts_link( '<span class="prev_next"><</span>' , $total_pages); ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-2).'/?t='.$term_id; ?>"><?php echo $paged-2; ?></a>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-1).'/?t='.$term_id; ?>"><?php echo $paged-1; ?></a>
+                  <span class="page-numbers current"><?php echo $paged; ?></span>
+                <?php else : ?>
+                <?php previous_posts_link( '<span class="prev_next"><</span>' , $total_pages); ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged-1).'/?t='.$term_id; ?>"><?php echo $paged-1; ?></a>
+                  <span class="page-numbers current"><?php echo $paged; ?></span>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/'.($paged+1).'/?t='.$term_id; ?>"><?php echo $paged+1; ?></a>
+                   <?php next_posts_link( '<span class="prev_next">></span>' , $total_pages ); ?>
+               <?php endif; ?>
+            <?php else : ?>
+              <?php if( $paged == '1' ): ?>
+                    <span class="page-numbers current">1</span>
+                  <a class="page-numbers"
+                    href="<?php echo $term_link.'page/2/?t='.$term_id; ?>">2</a>
+                <?php else : ?>
+                    <a class="page-numbers"
+                    href="<?php echo $term_link.'page/1/?t='.$term_id; ?>">1</a>
+                  <span class="page-numbers current">2</span>
+                <?php endif; ?>
+            <?php endif; ?>
           </div>
 
         <?php endif; ?>
