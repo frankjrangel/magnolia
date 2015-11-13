@@ -17,7 +17,10 @@ function wpbootstrap_scripts_with_jquery(){
 		'scriptA' => '/js/init.js',
 		'scriptB' => '/js/menuFixed.js',
 		'scriptC' => '/js/bumper.js',
-		'scriptD' => '/js/supportsSVG.js'
+		'scriptD' => '/js/supportsSVG.js',
+		'scriptE' => '/js/slider.js',
+		'scriptPP1' => '/js/PIE.js',
+		'scriptPP2' => '/js/html5shiv.min.js',
 		);
 	foreach( $scripts as $key=>$sc ){
 		wp_register_script( $key , get_template_directory_uri() . $sc , array('jquery'));

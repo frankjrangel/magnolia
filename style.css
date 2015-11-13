@@ -443,6 +443,79 @@ body {
 .prod_1 a, .prod_2 a {
   height: 122px; }
 
+#slider {
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  /*Slider Control*/ }
+  #slider .slide_button {
+    /* Check set_index()*/
+    opacity: 0.3;
+    position: relative;
+    z-index: 90; }
+  #slider .slide_button:hover {
+    opacity: 0.9 !important; }
+  #slider .wrapper {
+    overflow: hidden; }
+    #slider .wrapper .slides {
+      display: block;
+      height: inherit;
+      margin: 0;
+      padding: 0; }
+      #slider .wrapper .slides .slide {
+        background-color: #474747;
+        opacity: 0.8;
+        float: left;
+        list-style-type: none;
+        height: inherit; }
+  #slider #slide_prev {
+    position: absolute;
+    margin-left: 5px;
+    top: 50%;
+    left: 0;
+    margin-top: -31px; }
+    #slider #slide_prev div {
+      cursor: pointer;
+      display: block;
+      height: 62px;
+      width: 32px;
+      background-repeat: no-repeat;
+      background-image: url(assets/slider/slider_controls.png);
+      background-size: 64px 86px;
+      background-position: left top; }
+  #slider #slide_next {
+    position: absolute;
+    margin-right: 5px;
+    top: 50%;
+    right: 0;
+    margin-top: -31px; }
+    #slider #slide_next div {
+      cursor: pointer;
+      display: block;
+      height: 62px;
+      width: 32px;
+      background-repeat: no-repeat;
+      background-image: url(assets/slider/slider_controls.png);
+      background-size: 64px 86px;
+      background-position: -33px top; }
+  #slider #slider_index {
+    position: absolute;
+    margin-bottom: 5px;
+    left: 50%;
+    bottom: 0; }
+    #slider #slider_index .index {
+      cursor: pointer;
+      float: left;
+      display: block;
+      height: 16px;
+      width: 16px;
+      margin: 0 5px 0 5px;
+      background-repeat: no-repeat;
+      background-image: url(assets/slider/slider_controls.png);
+      background-size: 48px 66px;
+      background-position: -9px -49px; }
+
 .banner-giving_back {
   margin-left: 15px;
   margin-right: 15px; }
