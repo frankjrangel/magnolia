@@ -8,10 +8,10 @@
       $term_id  = '14';
       $term = get_term_by( 'id' , $term_id , $taxonomy );
       $link = esc_attr(get_term_link($term)). '?t='.$term_id;
-      $foto_1200 = get_field('banner_1200', 10 );
-      $foto_992 = get_field('banner_992', 10 );
-      $foto_768 = get_field('banner_768', 10 );
       $redes = get_field('banner-redes');
+      $foto_giving_back = get_field('foto_giving_back');
+      $mensaje_giving_back = get_field('mensaje_giving_back');
+      $fondo_giving_back = get_field('banner_giving_back');
       $foto = get_field('banner-productos');
       $p_1 = get_field('otro_producto_1');
       $p_2 = get_field('otro_producto_2');
@@ -67,7 +67,6 @@
     </div>
   </div>
 </div>
-
 <div class="seccion banner_como_pedir">
   <div id="fondo_pasos">
     <div class="seccion letrero_pasos">
@@ -136,8 +135,6 @@
     </div>
   </div>
 </div>
-
-
 <div class="seccion banner-productos">
     <div class="row">
       <div class="prod_0 col-xs-12 col-sm-5 col-md-4">
@@ -203,6 +200,26 @@
           <img class="img-responsive"
               src="<?php echo $redes ?>"  alt="Redes">
         </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="seccion banner-giving_back">
+  <div class="row">
+    <div class="col-xs-12 col-sm-7 col-lg-8">
+      <div class="sh fondo" style="background-image:url(<?php echo $fondo_giving_back; ?>);" >
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-5 col-lg-4">
+      <div class="sh giving_back" style="background-image:url(<?php echo $fondo_giving_back; ?>);" >
+        <div class="foto" >
+          <img class="img-responsive"
+              src="<?php echo $foto_giving_back; ?>"  alt="Giving Back">
+        </div>
+            <div class="mensaje">
+              <p><?php echo $mensaje_giving_back; ?></p>
+            </div>
       </div>
     </div>
   </div>

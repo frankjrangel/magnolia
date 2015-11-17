@@ -227,9 +227,9 @@ body {
       background-clip: padding-box;
       padding: 7px 10px;
       border: 3px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round;
     }
   }
 }
@@ -256,9 +256,9 @@ body {
     background-color: $marron;
     background-clip: padding-box;
     border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round;
     display: block;
     padding: 4px 15px;
     text-align: center;
@@ -317,9 +317,9 @@ body {
       background-color: $turquesa-claro;
       background-clip: padding-box;
       border: 8px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
       color: $blanco;
       @include font-yanone_regular;
       width: 50%;
@@ -387,9 +387,9 @@ body {
     background-color: $turquesa-claro;
     background-clip: padding-box;
     border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
 
     margin-bottom: 7px;
     text-align: center;
@@ -402,9 +402,9 @@ body {
   }
   li:nth-child(even) {
       background-color: $turquesa-pastel;
-      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
 
   }
   button {
@@ -458,17 +458,17 @@ body {
       background-color: $turquesa-claro;
       background-clip: padding-box;
       border: 8px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
     }
     .catalogo, .hacer_pedido, .contacto {
       background-color: $turquesa-pastel;
       background-clip: padding-box;
       border: 8px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
     }
     .categoria {
       background-color: $blanco;
@@ -552,6 +552,33 @@ body {
 .prod_1, .prod_2 {
   a{
     height: 122px;
+  }
+}
+.banner-giving_back{
+  margin-left: $gutter;
+  margin-right: $gutter;
+  .fondo{
+    display: none;
+  }
+  .giving_back{
+    margin: 0 (-($gutter));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 80%;
+    .foto{
+      padding: 0 100px;
+    }
+    .mensaje{
+      background-color: $blanco;
+      p{
+        @include font-yanone_regular;
+        color: $gris;
+        text-align: center;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        padding: $gutter;
+      }
+    }
   }
 }
 
@@ -679,9 +706,9 @@ body {
     background-color: $turquesa-claro;
     background-clip: padding-box;
     border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round; /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
     .num_pasos{
       @include font-amatic_bold;
       color: $blanco;
@@ -704,9 +731,9 @@ body {
     background-color: $turquesa-pastel;
     background-clip: padding-box;
     border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; /* Safari 3.1-5 */
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; /* Opera 11-12.1 */
+    border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
   }
   .fondo_hojas{
     padding: ($gutter * 3) 0;
@@ -721,9 +748,9 @@ body {
         background-color: $turquesa-pastel;
         background-clip: padding-box;
         border: 8px;
-        -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Safari 3.1-5 */
-        -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round; /* Opera 11-12.1 */
-        border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% round;
+        -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; /* Safari 3.1-5 */
+        -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; /* Opera 11-12.1 */
+        border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
         padding: $gutter;
         p{
           @include font-yanone_regular;
@@ -959,9 +986,9 @@ body {
   #fondo_contacto{
       background-image: url(assets/img/contacto/fondo_tazas.png );
       border: 7px;
-      -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+      -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round;
       background-origin: border-box;
   }
   .form {
@@ -992,17 +1019,17 @@ body {
       margin-top: -4px;
       margin-bottom: -4px;
       border: 2px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_marron.svg) 3% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round;
       a,a:active,a:visited,a:hover,a:link,a:focus{
         padding-top: 7px;
         padding-bottom: 7px;
         background-origin: border-box;
         border: 7px;
-        -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
-        -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
-        border-image: url(assets/img/bordes/rayado_9.svg) 33% round;
+        -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round;
+        -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round;
+        border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round;
       }
     }
     .heading{
@@ -1018,9 +1045,9 @@ body {
       background-color: $marron;
       background-clip: padding-box;
       border: 3px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_marron.svg) 4% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_marron.svg) 4% fill round;
 
       a {
         display: block;
@@ -1100,9 +1127,9 @@ body {
             background-position: center;
             width: 100%;
             border: 6px;
-            -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Safari 3.1-5 */
-            -o-border-image: url(assets/img/bordes/rayado.svg) 11% round; /* Opera 11-12.1 */
-            border-image: url(assets/img/bordes/rayado.svg) 11% round;
+            -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% fill round; /* Safari 3.1-5 */
+            -o-border-image: url(assets/img/bordes/rayado.svg) 11% fill round; /* Opera 11-12.1 */
+            border-image: url(assets/img/bordes/rayado.svg) 11% fill round;
             background-origin: border-box;
           }
           a+a{
@@ -1119,13 +1146,41 @@ body {
   }
   .prod_1, .prod_2 {
     a{
-      height: 135px;
+      height: 136px;
     }
   }
   .banner-redes,
   .prod_1,
   .prod_2{
     display: block;
+  }
+  .banner-giving_back{
+    margin-left: $gutter;
+    margin-right: $gutter;
+    .fondo{
+      display: block;
+      margin: 0 (-($gutter));
+      background-repeat: no-repeat;
+      background-size: 125%;
+      background-position: 31% 67%;
+    }
+    .giving_back{
+      .foto{
+        padding: 0 45px;
+        background-color: $blanco;
+      }
+      .mensaje{
+        background-color: $blanco;
+        p{
+          @include font-yanone_regular;
+          color: $gris;
+          text-align: center;
+          letter-spacing: 1px;
+          font-size: 1.2rem;
+          padding: $gutter;
+        }
+      }
+    }
   }
 
   // ===== Como pedir ========================================
@@ -1144,9 +1199,9 @@ body {
       background-color: $marron;
       background-clip: padding-box;
       border: 8px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_marron.svg) 12% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round;
 
       .num_pasos{
         @include font-amatic_bold;
@@ -1165,9 +1220,9 @@ body {
       background-color: $morado;
       background-clip: padding-box;
       border: 8px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round; /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round; /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_morado.svg) 12% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% fill round; /* Safari 3.1-5 */
+      -o-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% fill round; /* Opera 11-12.1 */
+      border-image: url(assets/img/bordes/rasgado_morado.svg) 12% fill round;
     }
     .fondo_hojas{
       background: none;
@@ -1254,6 +1309,12 @@ body {
   .prod_1, .prod_2, .prod_3 {
     a{
       height: 185px;
+    }
+  }
+  .banner-giving_back{
+    .fondo{
+      background-size: 100%;
+      background-position: 50% 65%;
     }
   }
 
