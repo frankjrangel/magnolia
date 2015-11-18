@@ -10,15 +10,6 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 
-  <!--[if lt IE 9]>
-      <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.min.js"> </script>
-      <script src="<?php echo get_template_directory_uri(); ?>/js/PIE.js"> </script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"> </script>
-      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"> </script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <!--<![endif]-->
 
   <!-- Le styles -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">

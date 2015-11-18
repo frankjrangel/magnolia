@@ -214,7 +214,7 @@
             <ul class="slides">
 
               <li class="slide sh">
-                <div class="sh giving_back"  >
+                <div class="giving_back"  >
                   <div class="foto" >
                     <img class="img-responsive"
                         src="<?php echo $foto_giving_back; ?>"  alt="Giving Back">
