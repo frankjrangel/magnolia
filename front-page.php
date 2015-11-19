@@ -192,18 +192,49 @@
     </div>
   </div>
 </div>
+
 <div class="seccion banner-redes">
   <div class="row">
     <div class="col-xs-12">
-      <div class="banner">
-        <a href="https://instagram.com/magnolia_gift">
-          <img class="img-responsive"
-              src="<?php echo $redes ?>"  alt="Redes">
-        </a>
+      <div id="slider" style="background-image:url(<?php echo $redes; ?>);">
+
+        <div id="slide_prev">
+          <div class="slide_button" ></div>
+        </div>
+        <div id="slide_next">
+          <div class="slide_button" ></div>
+        </div>
+        <div id="slider_index">
+          <div class="index slide_button"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1">
+            <div class="wrapper">
+
+            <ul class="slides">
+
+              <li class="slide sh">
+                <div class="giving_back"  >
+                  <div class="foto" >
+                    <img class="img-responsive"
+                        src="<?php echo $foto_giving_back; ?>"  alt="Giving Back">
+                  </div>
+                      <div class="mensaje">
+                        <h2>1</h2>
+                      </div>
+                </div>
+              </li>
+
+            </ul>
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 
 <div class="seccion banner-giving_back">
   <div class="row">

@@ -145,12 +145,13 @@ body {
       background-color: #ccc0af;
       background-clip: padding-box;
       padding: 7px 10px;
-      border: 3px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round;
-      /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round;
-      /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round; }
+      border: 3px solid transparent;
+      border-color: #ccc0af;
+      -moz-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+      -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+      -o-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+      border-image: url(assets/img/bordes/rasgado_marron.png) 3% fill round; }
 
 .pags_movil {
   display: block; }
@@ -178,12 +179,13 @@ body {
   .shortcuts-preguntas_consejos a {
     background-color: #ccc0af;
     background-clip: padding-box;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round;
+    border: 8px solid transparent;
+    border-color: #ccc0af;
+    -moz-border-image: url(assets/img/bordes/rasgado_marron.png) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.png) 12% round;
+    -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_marron.png) 12% round;
+    border-image: url(assets/img/bordes/rasgado_marron.png) 12% fill round;
     display: block;
     padding: 4px 15px;
     text-align: center; }
@@ -194,57 +196,61 @@ body {
     color: #fff;
     font-weight: bold; }
 
-.form {
-  color: #a8a8a8; }
-  .form .form-content .ninja-forms-response-msg, .form .form-content .ninja-forms-error-msg {
-    background: #fff9e9;
-    text-align: center;
-    padding: 0 12px;
-    margin-bottom: 5px;
-    opacity: 0.95; }
-    .form .form-content .ninja-forms-response-msg p, .form .form-content .ninja-forms-error-msg p {
-      color: #ae9b80; }
-  .form .form-content .ninja-forms-success-msg {
-    background: #fff;
-    padding: 20px; }
-  .form .form-content .ninja-forms-field-error {
-    color: #ae9b80;
-    background: #fff9e9;
-    text-align: center;
-    padding: 0 12px;
-    opacity: 0.95; }
-  .form .form-content .text-wrap {
-    margin-bottom: 5px; }
-  .form .form-content .textarea-wrap {
-    margin-bottom: 0; }
-    .form .form-content .textarea-wrap .ninja-forms-field-error {
-      position: relative;
-      top: -5px; }
-  .form .form-content .ninja-forms-field {
-    border: none;
-    min-height: 44px;
-    padding: 12px 16px; }
-  .form .form-content textarea {
-    height: 88px;
-    min-width: 100%;
-    max-width: 100%; }
-  .form .form-content #ninja_forms_field_16, .form .form-content #ninja_forms_field_7 {
-    background-color: #66c5bd;
-    background-clip: padding-box;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
-    color: #fff;
-    font-family: 'yanone_regular';
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 1px;
-    width: 50%;
-    margin-left: 25%;
-    padding: 4px 16px; }
+.form-content .hp-wrap {
+  visibility: hidden;
+  height: 0;
+  display: none; }
+.form-content .field-wrap {
+  margin-bottom: 5px;
+  background-color: #fff; }
+.form-content .textarea-wrap textarea {
+  height: 88px;
+  min-width: 100%;
+  max-width: 100%; }
+.form-content .submit-wrap {
+  background: none; }
+.form-content .ninja-forms-field {
+  color: #a8a8a8;
+  background-color: #fff;
+  border: none;
+  min-height: 44px;
+  padding: 12px 16px;
+  width: 100%; }
+.form-content .ninja-forms-response-msg, .form-content .ninja-forms-error-msg {
+  background: #fff9e9;
+  text-align: center;
+  padding: 0 12px;
+  margin-bottom: 5px;
+  opacity: 0.95; }
+  .form-content .ninja-forms-response-msg p, .form-content .ninja-forms-error-msg p {
+    color: #ae9b80; }
+.form-content .ninja-forms-success-msg {
+  background: #fff;
+  padding: 20px; }
+.form-content .ninja-forms-field-error {
+  color: #ae9b80;
+  background-color: #fff9e9;
+  text-align: center;
+  padding: 0 12px;
+  opacity: 0.95; }
+.form-content #ninja_forms_field_16, .form-content #ninja_forms_field_7 {
+  background-color: #66c5bd;
+  background-clip: padding-box;
+  border: 8px solid transparent;
+  border-color: #66c5bd;
+  -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+  -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+  -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+  -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+  border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round;
+  color: #fff;
+  font-family: 'yanone_regular';
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 1px;
+  width: 50%;
+  margin-left: 25%;
+  padding: 4px 16px; }
 
 .background-banda-logo {
   position: absolute;
@@ -298,12 +304,13 @@ body {
 #navbar li {
   background-color: #66c5bd;
   background-clip: padding-box;
-  border: 8px;
-  -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
-  /* Safari 3.1-5 */
-  -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
-  /* Opera 11-12.1 */
-  border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
+  border: 8px solid;
+  border-color: #66c5bd;
+  -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+  -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+  -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+  -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+  border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round;
   margin-bottom: 7px;
   text-align: center; }
   #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus {
@@ -316,11 +323,12 @@ body {
     font-size: 1.14rem; }
 #navbar li:nth-child(even) {
   background-color: #bcdad6;
-  -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
-  /* Safari 3.1-5 */
-  -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
-  /* Opera 11-12.1 */
-  border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; }
+  border-color: #bcdad6;
+  -moz-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+  -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+  -ms-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+  -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+  border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% fill round; }
 #navbar button {
   position: absolute;
   right: 0;
@@ -364,21 +372,23 @@ body {
   #navbar .heading .que_ofrecemos, #navbar .heading .como_pedir, #navbar .heading .preguntas_consejos {
     background-color: #66c5bd;
     background-clip: padding-box;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; }
+    border: 8px solid transparent;
+    border-color: #66c5bd;
+    -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round; }
   #navbar .heading .catalogo, #navbar .heading .hacer_pedido, #navbar .heading .contacto {
     background-color: #bcdad6;
     background-clip: padding-box;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; }
+    border: 8px solid transparent;
+    border-color: #bcdad6;
+    -moz-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    -ms-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% fill round; }
   #navbar .heading .categoria {
     background-color: #fff;
     padding: 12px 15px;
@@ -442,6 +452,79 @@ body {
 
 .prod_1 a, .prod_2 a {
   height: 122px; }
+
+#slider {
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  /*Slider Control*/ }
+  #slider .slide_button {
+    /* Check set_index()*/
+    opacity: 0.3;
+    position: relative;
+    z-index: 90; }
+  #slider .slide_button:hover {
+    opacity: 0.9 !important; }
+  #slider .wrapper {
+    overflow: hidden; }
+    #slider .wrapper .slides {
+      display: block;
+      height: inherit;
+      margin: 0;
+      padding: 0; }
+      #slider .wrapper .slides .slide {
+        background-color: #474747;
+        opacity: 0.8;
+        float: left;
+        list-style-type: none;
+        height: inherit; }
+  #slider #slide_prev {
+    position: absolute;
+    margin-left: 5px;
+    top: 50%;
+    left: 0;
+    margin-top: -31px; }
+    #slider #slide_prev div {
+      cursor: pointer;
+      display: block;
+      height: 62px;
+      width: 32px;
+      background-repeat: no-repeat;
+      background-image: url(assets/slider/slider_controls.png);
+      background-size: 64px 86px;
+      background-position: left top; }
+  #slider #slide_next {
+    position: absolute;
+    margin-right: 5px;
+    top: 50%;
+    right: 0;
+    margin-top: -31px; }
+    #slider #slide_next div {
+      cursor: pointer;
+      display: block;
+      height: 62px;
+      width: 32px;
+      background-repeat: no-repeat;
+      background-image: url(assets/slider/slider_controls.png);
+      background-size: 64px 86px;
+      background-position: -33px top; }
+  #slider #slider_index {
+    position: absolute;
+    margin-bottom: 5px;
+    left: 50%;
+    bottom: 0; }
+    #slider #slider_index .index {
+      cursor: pointer;
+      float: left;
+      display: block;
+      height: 16px;
+      width: 16px;
+      margin: 0 5px 0 5px;
+      background-repeat: no-repeat;
+      background-image: url(assets/slider/slider_controls.png);
+      background-size: 48px 66px;
+      background-position: -9px -49px; }
 
 .banner-giving_back {
   margin-left: 15px;
@@ -554,12 +637,13 @@ body {
     margin: 15px 15px 0;
     background-color: #66c5bd;
     background-clip: padding-box;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_turquesa_claro.svg) 12% fill round; }
+    border: 8px solid transparent;
+    border-color: #66c5bd;
+    -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round; }
     .pasos .paso .num_pasos {
       font-family: 'amatic_bold';
       font-weight: normal;
@@ -581,12 +665,13 @@ body {
   .pasos .paso.par {
     background-color: #bcdad6;
     background-clip: padding-box;
-    border: 8px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round; }
+    border: 8px solid transparent;
+    order-color: #bcdad6;
+    -moz-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    -ms-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% fill round; }
   .pasos .fondo_hojas {
     padding: 45px 0;
     background-image: url(assets/img/fondos/hojas_pasos_movil.png);
@@ -600,12 +685,13 @@ body {
       .pasos .fondo_hojas .mensaje_como_pedir .mensaje_caja {
         background-color: #bcdad6;
         background-clip: padding-box;
-        border: 8px;
-        -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
-        /* Safari 3.1-5 */
-        -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
-        /* Opera 11-12.1 */
-        border-image: url(assets/img/bordes/rasgado_turquesa_pastel.svg) 12% fill round;
+        border: 8px solid transparent;
+        border-color: #bcdad6;
+        -moz-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+        -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+        -ms-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+        -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+        border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% fill round;
         padding: 15px; }
         .pasos .fondo_hojas .mensaje_como_pedir .mensaje_caja p {
           font-family: 'yanone_regular';
@@ -781,12 +867,12 @@ body {
 
   #fondo_contacto {
     background-image: url(assets/img/contacto/fondo_tazas.png);
-    border: 7px;
-    -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round;
+    border: 7px solid transparent;
+    -moz-border-image: url(assets/img/bordes/rayado.png) 33% round;
+    -webkit-border-image: url(assets/img/bordes/rayado.png) 33% round;
+    -ms-border-image: url(assets/img/bordes/rayado.png) 33% round;
+    -o-border-image: url(assets/img/bordes/rayado.png) 33% round;
+    border-image: url(assets/img/bordes/rayado.png) 33% fill round;
     background-origin: border-box; }
 
   .form {
@@ -810,20 +896,23 @@ body {
     height: 52px;
     margin-top: -4px;
     margin-bottom: -4px;
-    border: 2px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_marron.svg) 3% fill round; }
+    border: 2px solid transparent;
+    border-color: #ccc0af;
+    -moz-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+    -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+    -o-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+    border-image: url(assets/img/bordes/rasgado_marron.png) 3% fill round; }
     #navbar li.current_page a, #navbar li.current_page a:active, #navbar li.current_page a:visited, #navbar li.current_page a:hover, #navbar li.current_page a:link, #navbar li.current_page a:focus {
       padding-top: 7px;
       padding-bottom: 7px;
       background-origin: border-box;
-      border: 7px;
-      -webkit-border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round;
-      -o-border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round;
-      border-image: url(assets/img/bordes/rayado_9.svg) 33% fill round; }
+      border: 7px solid transparent;
+      -moz-border-image: url(assets/img/bordes/rayado.png) 33% round;
+      -webkit-border-image: url(assets/img/bordes/rayado.png) 33% round;
+      -ms-border-image: url(assets/img/bordes/rayado.png) 33% round;
+      -o-border-image: url(assets/img/bordes/rayado.png) 33% round;
+      border-image: url(assets/img/bordes/rayado.png) 33% fill round; }
   #navbar .heading {
     display: none; }
   #navbar .redes_blancos_fixed {
@@ -835,12 +924,13 @@ body {
     margin-left: 15px;
     background-color: #ccc0af;
     background-clip: padding-box;
-    border: 3px;
-    -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% fill round;
-    /* Safari 3.1-5 */
-    -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 4% fill round;
-    /* Opera 11-12.1 */
-    border-image: url(assets/img/bordes/rasgado_marron.svg) 4% fill round; }
+    border: 3px solid transparent;
+    border-color: #ccc0af;
+    -moz-border-image: url(assets/img/bordes/rasgado_marron.png) 4% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_marron.png) 4% round;
+    -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 4% round;
+    -o-border-image: url(assets/img/bordes/rasgado_marron.png) 4% round;
+    border-image: url(assets/img/bordes/rasgado_marron.png) 4% fill round; }
     #navbar .redes_blancos_fixed a {
       display: block;
       float: left;
@@ -903,12 +993,12 @@ body {
           background-repeat: no-repeat;
           background-position: center;
           width: 100%;
-          border: 6px;
-          -webkit-border-image: url(assets/img/bordes/rayado.svg) 11% fill round;
-          /* Safari 3.1-5 */
-          -o-border-image: url(assets/img/bordes/rayado.svg) 11% fill round;
-          /* Opera 11-12.1 */
-          border-image: url(assets/img/bordes/rayado.svg) 11% fill round;
+          border: 7px solid transparent;
+          -moz-border-image: url(assets/img/bordes/rayado.png) 33% round;
+          -webkit-border-image: url(assets/img/bordes/rayado.png) 33% round;
+          -ms-border-image: url(assets/img/bordes/rayado.png) 33% round;
+          -o-border-image: url(assets/img/bordes/rayado.png) 33% round;
+          border-image: url(assets/img/bordes/rayado.png) 33% fill round;
           background-origin: border-box; }
         .banner-productos .otros_productos .row div a + a {
           position: absolute;
@@ -962,12 +1052,13 @@ body {
       margin: 0 -7.5px;
       background-color: #ccc0af;
       background-clip: padding-box;
-      border: 8px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round;
-      /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round;
-      /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_marron.svg) 12% fill round; }
+      border: 8px solid transparent;
+      border-color: #ccc0af;
+      -moz-border-image: url(assets/img/bordes/rasgado_marron.png) 12% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.png) 12% round;
+      -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 12% round;
+      -o-border-image: url(assets/img/bordes/rasgado_marron.png) 12% round;
+      border-image: url(assets/img/bordes/rasgado_marron.png) 12% fill round; }
       .pasos .paso .num_pasos {
         font-family: 'amatic_bold';
         font-weight: normal;
@@ -981,12 +1072,13 @@ body {
     .pasos .paso.par {
       background-color: #c6b6b8;
       background-clip: padding-box;
-      border: 8px;
-      -webkit-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% fill round;
-      /* Safari 3.1-5 */
-      -o-border-image: url(assets/img/bordes/rasgado_morado.svg) 12% fill round;
-      /* Opera 11-12.1 */
-      border-image: url(assets/img/bordes/rasgado_morado.svg) 12% fill round; }
+      border: 9px solid transparent;
+      border-color: #c6b6b8;
+      -moz-border-image: url(assets/img/bordes/rasgado_morado.png) 12% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_morado.png) 12% round;
+      -ms-border-image: url(assets/img/bordes/rasgado_morado.png) 12% round;
+      -o-border-image: url(assets/img/bordes/rasgado_morado.png) 12% round;
+      border-image: url(assets/img/bordes/rasgado_morado.png) 12% fill round; }
     .pasos .fondo_hojas {
       background: none;
       padding: 0; }
