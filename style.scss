@@ -101,13 +101,14 @@ $baseLineheight: $baseFontsize * 1.3; //  <------------
   line-height: ($Lineheight * $baseLineheight) + px;
   line-height: ($Lineheight) + rem;
 }
+$texto_menu: 1.29rem;
+$linea_altura_menu: 20px;
 
 // ===== Elementos ==========================================
 h1 {
   font-family: 'amatic_regular';
   @include font-size(4);
   color: $marron;
-
 }
 a,a:active,a:visited,a:hover,a:link,a:focus{
   text-decoration: none;
@@ -127,6 +128,7 @@ $alto-banda-magnolia: 135px;
 $caja-banda-magnolia: $gutter;
 $padding-top-content: $caja-banda-magnolia + $logo-alto;
 $xy-menu-button: 44px;
+
 
 body {
   background-image: url("assets/img/fondos/fondo_turquesa.png");
@@ -296,7 +298,8 @@ body {
   .ninja-forms-field {
     color: $gris;
     background-color: $blanco;
-    border: none;
+    border-width: 0;
+    border-color: none;
     min-height: $xy-menu-button;
     padding: 12px 16px;
     width: 100%;
@@ -389,40 +392,39 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  a {
-    display: block;
-    text-decoration: none;
-  }
-  li {
-    background-color: $turquesa-claro;
-    background-clip: padding-box;
-    border: 8px solid ;
-    border-color: $turquesa-claro;
-    -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-    -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-    border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round;
+    li {
+      background-color: $turquesa-claro;
+      background-clip: padding-box;
+      border: 8px solid ;
+      border-color: $turquesa-claro;
+      -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+      -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+      -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+      border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round;
 
-    margin-bottom: 7px;
-    text-align: center;
-    a,a:active,a:visited,a:hover,a:link,a:focus{
-      padding: 4px 0;
-      color: $blanco;
-      @include font-yanone_regular;
-      font-size: 1.14rem;
+      margin-bottom: 7px;
+      text-align: center;
+      a,a:active,a:visited,a:hover,a:link,a:focus{
+        display: block;
+        text-decoration: none;
+        padding: 4px 0;
+        color: $blanco;
+        @include font-yanone_regular;
+        font-size: $texto_menu;
+        line-height: $linea_altura_menu;
+      }
     }
-  }
-  li:nth-child(even) {
-      background-color: $turquesa-pastel;
-      border-color: $turquesa-pastel;
-      -moz-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
-      -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
-      -ms-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
-      -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
-      border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% fill round;
+    li:nth-child(even) {
+        background-color: $turquesa-pastel;
+        border-color: $turquesa-pastel;
+        -moz-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+        -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+        -ms-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+        -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+        border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% fill round;
 
+    }
   }
   button {
     position: absolute;
@@ -468,7 +470,8 @@ body {
         color: $blanco;
         text-align: center;
         @include font-yanone_regular;
-        font-size: 1.14rem;
+        font-size: $texto_menu;
+        line-height: $linea_altura_menu;
       }
     }
     .que_ofrecemos, .como_pedir, .preguntas_consejos {
@@ -507,7 +510,6 @@ body {
   .redes_blancos_fixed {
     display: none;
   }
-
 }
 
 // ===== Footer ==========================================
@@ -551,7 +553,6 @@ body {
 .banner-productos{
   display: block;
 }
-.banner-redes,
 .prod_1,
 .prod_2,
 .prod_3{
@@ -598,11 +599,67 @@ body {
       margin: 0;
       padding: 0;
       .slide {
-        background-color: $negro;
-        opacity: 0.8;
-        float: left;
-        list-style-type: none;
-        height: inherit;
+        padding-top: 30px;
+        padding-bottom: $gutter;
+        .cuerda{
+          position: absolute;
+          left: -2.215px;
+          right: -2.215px;
+          top: 6px;
+
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          padding-top: 11%;
+        }
+        .post_red{
+          padding: 0 ( $gutter - 8px );
+          background-color: $blanco;
+          background-clip: padding-box;
+          float: left;
+          list-style-type: none;
+
+          border: 8px solid transparent;
+          border-color: $blanco;
+          -moz-border-image: url(assets/img/bordes/rasgado_blanco.png) 12% round;
+          -webkit-border-image: url(assets/img/bordes/rasgado_blanco.png) 12% round;
+          -ms-border-image: url(assets/img/bordes/rasgado_blanco.png) 12% round;
+          -o-border-image: url(assets/img/bordes/rasgado_blanco.png) 12% round;
+          border-image: url(assets/img/bordes/rasgado_blanco.png) 12% fill round;
+
+          .titulo_red{
+            height: $xy-menu-button;
+            a{
+              display: block;
+              width: 100%;
+              height: $xy-menu-button;
+
+              background-repeat: no-repeat;
+              background-position: 0 8px;
+              p{
+                margin-left: $xy-menu-button - 5px;
+                padding-top: 14px;
+                padding-bottom: 10px;
+                line-height: 20px;
+              }
+            }
+          }
+          .foto{
+            padding-top: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+          }
+          .mensaje{
+            p{
+              margin: $gutter 0;
+              text-align: center;
+            }
+            .titulo{
+              font-weight: bold;
+            }
+          }
+        }
       }
     }
   }
@@ -964,6 +1021,18 @@ body {
     text-align: center;
   }
 }
+// ===== 404 =================================
+.pag404{
+  .fondo{
+    background-position: center;
+    background-color: lighten( $turquesa-pastel , 7% );
+    background-clip: content-box;
+    background-size: 30px;
+    img{
+      padding: ($gutter * 3) $gutter;
+    }
+  }
+}
 
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
@@ -1029,8 +1098,9 @@ body {
   #collapse-menu {
     background-color: $turquesa-claro;
     background-image: none;
-    padding: 0 30px;
+    padding: 0 14px;
     margin: 0 -30px;
+    min-height: $xy-menu-button;
   }
   #wings-navbar {
     #wings-menu-background {
@@ -1121,37 +1191,43 @@ body {
   }
   // ===== Header ======
   #navbar{
-    li,li:nth-child(even) {
-      background-color: $turquesa-claro;
-      border: 0;
-      margin: 0;
-      a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding: 12px 8px;
+    ul{
+      width: 100%;
+      text-align: center;
+      li,li:nth-child(even) {
+        float: none;
+        display: inline-block;
+        background-color: $turquesa-claro;
+        border: 0;
+        margin: 0;
+        a,a:active,a:visited,a:hover,a:link,a:focus{
+          padding: 12px 5px;
+        }
       }
-    }
-    li.current_page {
-      background-color: $marron;
-      background-clip: padding-box;
-      height: 52px;
-      margin-top: -4px;
-      margin-bottom: -4px;
-      border: 2px solid transparent;
-      border-color: $marron;
-      -moz-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
-      -webkit-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
-      -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
-      -o-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
-      border-image: url(assets/img/bordes/rasgado_marron.png) 3% fill round;
-      a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding-top: 7px;
-        padding-bottom: 7px;
-        background-origin: border-box;
-        border: 7px solid transparent;
-        -moz-border-image: url(assets/img/bordes/rayado.png) 33% round;
-        -webkit-border-image: url(assets/img/bordes/rayado.png) 33% round;
-        -ms-border-image: url(assets/img/bordes/rayado.png) 33% round;
-        -o-border-image: url(assets/img/bordes/rayado.png) 33% round;
-        border-image: url(assets/img/bordes/rayado.png) 33% fill round;
+      li.current_page {
+        background-color: $marron;
+        background-clip: padding-box;
+        height: 52px;
+        margin-top: -4px;
+        margin-bottom: -4px;
+        border: 2px solid transparent;
+        border-color: $marron;
+        -moz-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+        -webkit-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+        -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+        -o-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+        border-image: url(assets/img/bordes/rasgado_marron.png) 3% fill round;
+        a,a:active,a:visited,a:hover,a:link,a:focus{
+          padding-top: 7px;
+          padding-bottom: 7px;
+          background-origin: border-box;
+          border: 7px solid transparent;
+          -moz-border-image: url(assets/img/bordes/rayado.png) 33% round;
+          -webkit-border-image: url(assets/img/bordes/rayado.png) 33% round;
+          -ms-border-image: url(assets/img/bordes/rayado.png) 33% round;
+          -o-border-image: url(assets/img/bordes/rayado.png) 33% round;
+          border-image: url(assets/img/bordes/rayado.png) 33% fill round;
+        }
       }
     }
     .heading{
@@ -1173,7 +1249,6 @@ body {
       -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 4% round;
       -o-border-image: url(assets/img/bordes/rasgado_marron.png) 4% round;
       border-image: url(assets/img/bordes/rasgado_marron.png) 4% fill round;
-
       a {
         display: block;
         float: left;
@@ -1276,7 +1351,6 @@ body {
       height: 136px;
     }
   }
-  .banner-redes,
   .prod_1,
   .prod_2{
     display: block;
@@ -1394,10 +1468,12 @@ body {
   }
   // ===== Header ======
   #navbar{
-    li,li:nth-child(even) {
-      a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding-left: 23px;
-        padding-right: 23px;
+    ul{
+      li,li:nth-child(even) {
+        a,a:active,a:visited,a:hover,a:link,a:focus{
+          padding-left: 20px;
+          padding-right: 20px;
+        }
       }
     }
     .heading{
@@ -1427,10 +1503,12 @@ body {
   }
   // ===== Header ======
   #navbar{
-    li,li:nth-child(even) {
-      a,a:active,a:visited,a:hover,a:link,a:focus{
-        padding-left: 37px;
-        padding-right: 37px;
+    ul{
+      li,li:nth-child(even) {
+        a,a:active,a:visited,a:hover,a:link,a:focus{
+          padding-left: 35px;
+          padding-right: 35px;
+        }
       }
     }
     .heading{

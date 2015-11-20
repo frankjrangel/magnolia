@@ -98,7 +98,7 @@ add_filter('upload_mimes','cc_mime_types');
 	    'public'        => true,
 	    'menu_position' => 4,
 			'menu_icon'     => 'dashicons-cart',
-	    'supports'      => array(  'nombre' , 'page-attributes'  ),
+	    'supports'      => array(  'title' , 'page-attributes'  ),
 	    'has_archive'   => true
 	  );
 	  register_post_type( 'nombre', $args );
@@ -228,6 +228,35 @@ function paso_post_type() {
   register_post_type( 'paso', $args );
 }
 add_action( 'init', 'paso_post_type' );
+
+function slide_post_type() {
+	$labels = array(
+		'name'               => 'Slides',
+		'singular_name'      => 'Slide',
+		'all_items'          => 'Todos',
+		'add_new'            => 'Agregar Nuevo',
+		'add_new_item'       => 'Agregar Nuevo',
+		'edit_item'          => 'Editar',
+		'new_item'           => 'Nuevo',
+		'view_item'          => 'Ver',
+		'search_items'       => 'Buscar',
+		'not_found'          => 'No existe',
+		'not_found_in_trash' => 'No existe',
+		'parent_item_colon'  => ' ',
+		'menu_name'          => 'Slides'// o apunta a name
+	);
+	$args = array(
+		'labels'        => $labels,
+		'description'   => 'Slides',
+		'public'        => true,
+		'menu_position' => 6,
+		'menu_icon'     => 'dashicons-image-flip-horizontal',
+		'supports'      => array(  'title' , 'page-attributes'  ),
+		'has_archive'   => true
+	);
+	register_post_type( 'slide', $args );
+}
+add_action( 'init', 'slide_post_type' );
 
 /* ==== REMOVING =====
 

@@ -212,7 +212,8 @@ body {
 .form-content .ninja-forms-field {
   color: #a8a8a8;
   background-color: #fff;
-  border: none;
+  border-width: 0;
+  border-color: none;
   min-height: 44px;
   padding: 12px 16px;
   width: 100%; }
@@ -298,37 +299,37 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-#navbar a {
-  display: block;
-  text-decoration: none; }
-#navbar li {
-  background-color: #66c5bd;
-  background-clip: padding-box;
-  border: 8px solid;
-  border-color: #66c5bd;
-  -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-  -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-  -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-  -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
-  border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round;
-  margin-bottom: 7px;
-  text-align: center; }
-  #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus {
-    padding: 4px 0;
-    color: #fff;
-    font-family: 'yanone_regular';
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 1px;
-    font-size: 1.14rem; }
-#navbar li:nth-child(even) {
-  background-color: #bcdad6;
-  border-color: #bcdad6;
-  -moz-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
-  -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
-  -ms-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
-  -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
-  border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% fill round; }
+  #navbar ul li {
+    background-color: #66c5bd;
+    background-clip: padding-box;
+    border: 8px solid;
+    border-color: #66c5bd;
+    -moz-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    -ms-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% round;
+    border-image: url(assets/img/bordes/rasgado_turquesa_claro.png) 12% fill round;
+    margin-bottom: 7px;
+    text-align: center; }
+    #navbar ul li a, #navbar ul li a:active, #navbar ul li a:visited, #navbar ul li a:hover, #navbar ul li a:link, #navbar ul li a:focus {
+      display: block;
+      text-decoration: none;
+      padding: 4px 0;
+      color: #fff;
+      font-family: 'yanone_regular';
+      font-weight: normal;
+      font-style: normal;
+      letter-spacing: 1px;
+      font-size: 1.29rem;
+      line-height: 20px; }
+  #navbar ul li:nth-child(even) {
+    background-color: #bcdad6;
+    border-color: #bcdad6;
+    -moz-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    -webkit-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    -ms-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    -o-border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% round;
+    border-image: url(assets/img/bordes/rasgado_turquesa_pastel.png) 12% fill round; }
 #navbar button {
   position: absolute;
   right: 0;
@@ -368,7 +369,8 @@ body {
       font-weight: normal;
       font-style: normal;
       letter-spacing: 1px;
-      font-size: 1.14rem; }
+      font-size: 1.29rem;
+      line-height: 20px; }
   #navbar .heading .que_ofrecemos, #navbar .heading .como_pedir, #navbar .heading .preguntas_consejos {
     background-color: #66c5bd;
     background-clip: padding-box;
@@ -432,7 +434,6 @@ body {
 .banner-productos {
   display: block; }
 
-.banner-redes,
 .prod_1,
 .prod_2,
 .prod_3 {
@@ -474,11 +475,53 @@ body {
       margin: 0;
       padding: 0; }
       #slider .wrapper .slides .slide {
-        background-color: #474747;
-        opacity: 0.8;
-        float: left;
-        list-style-type: none;
-        height: inherit; }
+        padding-top: 30px;
+        padding-bottom: 15px; }
+        #slider .wrapper .slides .slide .cuerda {
+          position: absolute;
+          left: -2.215px;
+          right: -2.215px;
+          top: 6px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          padding-top: 11%; }
+        #slider .wrapper .slides .slide .post_red {
+          padding: 0 7px;
+          background-color: #fff;
+          background-clip: padding-box;
+          float: left;
+          list-style-type: none;
+          border: 8px solid transparent;
+          border-color: #fff;
+          -moz-border-image: url(assets/img/bordes/rasgado_blanco.png) 12% round;
+          -webkit-border-image: url(assets/img/bordes/rasgado_blanco.png) 12% round;
+          -ms-border-image: url(assets/img/bordes/rasgado_blanco.png) 12% round;
+          -o-border-image: url(assets/img/bordes/rasgado_blanco.png) 12% round;
+          border-image: url(assets/img/bordes/rasgado_blanco.png) 12% fill round; }
+          #slider .wrapper .slides .slide .post_red .titulo_red {
+            height: 44px; }
+            #slider .wrapper .slides .slide .post_red .titulo_red a {
+              display: block;
+              width: 100%;
+              height: 44px;
+              background-repeat: no-repeat;
+              background-position: 0 8px; }
+              #slider .wrapper .slides .slide .post_red .titulo_red a p {
+                margin-left: 39px;
+                padding-top: 14px;
+                padding-bottom: 10px;
+                line-height: 20px; }
+          #slider .wrapper .slides .slide .post_red .foto {
+            padding-top: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; }
+          #slider .wrapper .slides .slide .post_red .mensaje p {
+            margin: 15px 0;
+            text-align: center; }
+          #slider .wrapper .slides .slide .post_red .mensaje .titulo {
+            font-weight: bold; }
   #slider #slide_prev {
     position: absolute;
     margin-left: 5px;
@@ -759,6 +802,14 @@ body {
   font-weight: bold;
   text-align: center; }
 
+.pag404 .fondo {
+  background-position: center;
+  background-color: #d3e7e4;
+  background-clip: content-box;
+  background-size: 30px; }
+  .pag404 .fondo img {
+    padding: 45px 15px; }
+
 /* Ultra small devices (phones, less than 480px) */
 /* Extra small devices (tablets, 480px and up) */
 @media (min-width: 480px) {
@@ -801,8 +852,9 @@ body {
   #collapse-menu {
     background-color: #66c5bd;
     background-image: none;
-    padding: 0 30px;
-    margin: 0 -30px; }
+    padding: 0 14px;
+    margin: 0 -30px;
+    min-height: 44px; }
 
   #wings-navbar #wings-menu-background {
     position: absolute;
@@ -884,35 +936,40 @@ body {
   .nav_categoria .pags {
     text-align: right; }
 
-  #navbar li, #navbar li:nth-child(even) {
-    background-color: #66c5bd;
-    border: 0;
-    margin: 0; }
-    #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-      padding: 12px 8px; }
-  #navbar li.current_page {
-    background-color: #ccc0af;
-    background-clip: padding-box;
-    height: 52px;
-    margin-top: -4px;
-    margin-bottom: -4px;
-    border: 2px solid transparent;
-    border-color: #ccc0af;
-    -moz-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
-    -webkit-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
-    -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
-    -o-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
-    border-image: url(assets/img/bordes/rasgado_marron.png) 3% fill round; }
-    #navbar li.current_page a, #navbar li.current_page a:active, #navbar li.current_page a:visited, #navbar li.current_page a:hover, #navbar li.current_page a:link, #navbar li.current_page a:focus {
-      padding-top: 7px;
-      padding-bottom: 7px;
-      background-origin: border-box;
-      border: 7px solid transparent;
-      -moz-border-image: url(assets/img/bordes/rayado.png) 33% round;
-      -webkit-border-image: url(assets/img/bordes/rayado.png) 33% round;
-      -ms-border-image: url(assets/img/bordes/rayado.png) 33% round;
-      -o-border-image: url(assets/img/bordes/rayado.png) 33% round;
-      border-image: url(assets/img/bordes/rayado.png) 33% fill round; }
+  #navbar ul {
+    width: 100%;
+    text-align: center; }
+    #navbar ul li, #navbar ul li:nth-child(even) {
+      float: none;
+      display: inline-block;
+      background-color: #66c5bd;
+      border: 0;
+      margin: 0; }
+      #navbar ul li a, #navbar ul li a:active, #navbar ul li a:visited, #navbar ul li a:hover, #navbar ul li a:link, #navbar ul li a:focus, #navbar ul li:nth-child(even) a, #navbar ul li:nth-child(even) a:active, #navbar ul li:nth-child(even) a:visited, #navbar ul li:nth-child(even) a:hover, #navbar ul li:nth-child(even) a:link, #navbar ul li:nth-child(even) a:focus {
+        padding: 12px 5px; }
+    #navbar ul li.current_page {
+      background-color: #ccc0af;
+      background-clip: padding-box;
+      height: 52px;
+      margin-top: -4px;
+      margin-bottom: -4px;
+      border: 2px solid transparent;
+      border-color: #ccc0af;
+      -moz-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+      -webkit-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+      -ms-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+      -o-border-image: url(assets/img/bordes/rasgado_marron.png) 3% round;
+      border-image: url(assets/img/bordes/rasgado_marron.png) 3% fill round; }
+      #navbar ul li.current_page a, #navbar ul li.current_page a:active, #navbar ul li.current_page a:visited, #navbar ul li.current_page a:hover, #navbar ul li.current_page a:link, #navbar ul li.current_page a:focus {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        background-origin: border-box;
+        border: 7px solid transparent;
+        -moz-border-image: url(assets/img/bordes/rayado.png) 33% round;
+        -webkit-border-image: url(assets/img/bordes/rayado.png) 33% round;
+        -ms-border-image: url(assets/img/bordes/rayado.png) 33% round;
+        -o-border-image: url(assets/img/bordes/rayado.png) 33% round;
+        border-image: url(assets/img/bordes/rayado.png) 33% fill round; }
   #navbar .heading {
     display: none; }
   #navbar .redes_blancos_fixed {
@@ -1011,7 +1068,6 @@ body {
   .prod_1 a, .prod_2 a {
     height: 136px; }
 
-  .banner-redes,
   .prod_1,
   .prod_2 {
     display: block; }
@@ -1101,9 +1157,9 @@ body {
   .navbar-default .navbar-nav > li a, .navbar-default .navbar-nav > li a:active, .navbar-default .navbar-nav > li a:visited, .navbar-default .navbar-nav > li a:hover, .navbar-default .navbar-nav > li a:link, .navbar-default .navbar-nav > li a:focus {
     padding: 12px 50px; }
 
-  #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-    padding-left: 23px;
-    padding-right: 23px; }
+  #navbar ul li a, #navbar ul li a:active, #navbar ul li a:visited, #navbar ul li a:hover, #navbar ul li a:link, #navbar ul li a:focus, #navbar ul li:nth-child(even) a, #navbar ul li:nth-child(even) a:active, #navbar ul li:nth-child(even) a:visited, #navbar ul li:nth-child(even) a:hover, #navbar ul li:nth-child(even) a:link, #navbar ul li:nth-child(even) a:focus {
+    padding-left: 20px;
+    padding-right: 20px; }
   #navbar .heading {
     display: none; }
 
@@ -1117,9 +1173,9 @@ body {
   .container {
     width: 1170px; }
 
-  #navbar li a, #navbar li a:active, #navbar li a:visited, #navbar li a:hover, #navbar li a:link, #navbar li a:focus, #navbar li:nth-child(even) a, #navbar li:nth-child(even) a:active, #navbar li:nth-child(even) a:visited, #navbar li:nth-child(even) a:hover, #navbar li:nth-child(even) a:link, #navbar li:nth-child(even) a:focus {
-    padding-left: 37px;
-    padding-right: 37px; }
+  #navbar ul li a, #navbar ul li a:active, #navbar ul li a:visited, #navbar ul li a:hover, #navbar ul li a:link, #navbar ul li a:focus, #navbar ul li:nth-child(even) a, #navbar ul li:nth-child(even) a:active, #navbar ul li:nth-child(even) a:visited, #navbar ul li:nth-child(even) a:hover, #navbar ul li:nth-child(even) a:link, #navbar ul li:nth-child(even) a:focus {
+    padding-left: 35px;
+    padding-right: 35px; }
   #navbar .heading {
     display: none; }
 

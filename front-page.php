@@ -193,16 +193,26 @@
   </div>
 </div>
 
+
+<?php
+  $loop_redes = new WP_Query( array(
+    'post_type' => 'slide',
+    'posts_per_page' => -1,
+    'orderby' => 'date',
+    'order' => 'DESC'
+  ) );
+?>
+
 <div class="seccion banner-redes">
   <div class="row">
     <div class="col-xs-12">
       <div id="slider" style="background-image:url(<?php echo $redes; ?>);">
 
         <div id="slide_prev">
-          <div class="slide_button" ></div>
+          <div class="slide_button" ><</div>
         </div>
         <div id="slide_next">
-          <div class="slide_button" ></div>
+          <div class="slide_button" >></div>
         </div>
         <div id="slider_index">
           <div class="index slide_button"></div>
@@ -211,21 +221,53 @@
           <div class="col-xs-10 col-xs-offset-1">
             <div class="wrapper">
 
-            <ul class="slides">
+            <div class="slides">
 
-              <li class="slide sh">
-                <div class="giving_back"  >
-                  <div class="foto" >
-                    <img class="img-responsive"
-                        src="<?php echo $foto_giving_back; ?>"  alt="Giving Back">
-                  </div>
-                      <div class="mensaje">
-                        <h2>1</h2>
-                      </div>
-                </div>
-              </li>
+<?php  while ( $loop_redes->have_posts() ) : $loop_redes->the_post(); ?>
 
-            </ul>
+<?php
+  $red = get_field( 'red' );
+  $red_link = get_field( $red , 30 );
+  $foto = get_field( 'foto' );
+  $titulo = get_field( 'titulo' );
+  $texto = get_field( 'texto' );
+?>
+
+  <?php if ( ( $foto != null ) || ( $titulo != null ) || ( $texto != null ) ):?>
+    <div class="slide">
+      <div class="cuerda" style="background-image:
+      url(<?php echo get_template_directory_uri(); ?>/assets/img/bordes/cuerda.svg );">
+      </div>
+      <div class="post_red"  >
+        <div class="titulo_red">
+          <a href="<?php echo $red_link;?>" target="_blank"
+          style="background-image:
+          url(<?php echo get_template_directory_uri(); ?>/assets/img/redes/<?php echo $red; ?>_logo.svg );">
+            <p><?php echo $red;?></p>
+          </a>
+        </div>
+        <?php if ( $foto != null ):?>
+          <div class="foto"
+           style="background-image:url(<?php echo $foto; ?>);">
+          </div>
+        <?php endif; ?>
+        <?php if ( ( $titulo != null ) || ( $texto != null ) ):?>
+          <div class="mensaje">
+            <?php if ( $titulo != null ):?>
+              <p class="titulo"><?php echo $titulo; ?></p>
+            <?php endif; ?>
+            <?php if ( $texto != null ):?>
+              <p class="texto"><?php echo $texto; ?></p>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
+      </div>
+    </div>
+  <?php endif; ?>
+
+<?php endwhile; wp_reset_query(); ?>
+
+          </div>
 
             </div>
           </div>
