@@ -584,12 +584,20 @@ body {
   background-size: contain;
 	width: 100%;
   .slide_button{/* Check set_index()*/
-  	opacity: 0.3;
+  	opacity: 0.7;
   	position: relative;
   	z-index: 90;
+
+    text-align: center;
+    @include font-amatic_bold;
+    color: $blanco;
+    font-size: 55px;
+    cursor:  pointer;
+    display: block;
+    width:8.3333%; //$xy-menu-button - 10px ;
   }
   .slide_button:hover{
-  	opacity: 0.9 !important;
+  	opacity: 1 !important;
   }
   .wrapper{
     overflow: hidden;
@@ -603,9 +611,9 @@ body {
         padding-bottom: $gutter;
         .cuerda{
           position: absolute;
-          left: -2.215px;
-          right: -2.215px;
-          top: 6px;
+          top: 15px;
+          left: -1px;
+          right: -1px;
 
           background-repeat: no-repeat;
           background-position: center;
@@ -666,55 +674,17 @@ body {
   /*Slider Control*/
   #slide_prev{
   	position: absolute;
-  	margin-left: 5px;
+  	margin-left: 4px;
   	top: 50%;
   	left: 0;
-  	margin-top: -31px;
-    div{
-    	cursor:  pointer;
-    	display: block;
-    	height: 62px;
-    	width: 32px;
-    	background-repeat:no-repeat;
-    	background-image: url(assets/slider/slider_controls.png);
-    	background-size: 64px 86px;
-    	background-position: left top;
-    }
+  	margin-top: -53px;
   }
   #slide_next{
   	position: absolute;
-  	margin-right: 5px;
+  	margin-right: 4px;
   	top: 50%;
   	right: 0;
-  	margin-top: -31px;
-    div{
-    	cursor:  pointer;
-    	display: block;
-    	height: 62px;
-    	width: 32px;
-    	background-repeat:no-repeat;
-    	background-image: url(assets/slider/slider_controls.png);
-    	background-size: 64px 86px;
-    	background-position: -33px top;
-    }
-  }
-  #slider_index{
-  	position: absolute;
-  	margin-bottom: 5px;
-  	left: 50%;
-  	bottom: 0;
-    .index{
-    	cursor:  pointer;
-    	float: left;
-    	display: block;
-    	height: 16px;
-    	width: 16px;
-    	margin: 0 5px 0 5px;
-    	background-repeat:no-repeat;
-    	background-image: url(assets/slider/slider_controls.png);
-    	background-size: 48px 66px;
-    	background-position: -9px -49px;
-    }
+  	margin-top: -53px;
   }
 }
 .banner-giving_back{
@@ -1075,6 +1045,17 @@ body {
     @include font-size(1);
   }
 
+  // ===== Que Ofrecemos =====================================
+  #slider {
+    .slide_button{/* Check set_index()*/
+      font-size: 75px;
+      width: $xy-menu-button - 10px ;
+    }
+  }
+  #slide_prev, #slide_prev{
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {

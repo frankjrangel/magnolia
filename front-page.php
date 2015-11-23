@@ -206,7 +206,8 @@
 <div class="seccion banner-redes">
   <div class="row">
     <div class="col-xs-12">
-      <div id="slider" style="background-image:url(<?php echo $redes; ?>);">
+      <div id="slider"
+      style="background-image: url( <?php echo get_template_directory_uri(); ?>/assets/img/fondos/margen_slider.svg );">
 
         <div id="slide_prev">
           <div class="slide_button" ><</div>
@@ -214,14 +215,11 @@
         <div id="slide_next">
           <div class="slide_button" >></div>
         </div>
-        <div id="slider_index">
-          <div class="index slide_button"></div>
-        </div>
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1">
-            <div class="wrapper">
+            <div class="wrapper" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/img/fondos/fondo_slide.jpg );">
 
-            <div class="slides">
+            <div class="row slides">
 
 <?php  while ( $loop_redes->have_posts() ) : $loop_redes->the_post(); ?>
 
@@ -234,7 +232,7 @@
 ?>
 
   <?php if ( ( $foto != null ) || ( $titulo != null ) || ( $texto != null ) ):?>
-    <div class="slide">
+    <div class="col-xs-12 slide">
       <div class="cuerda" style="background-image:
       url(<?php echo get_template_directory_uri(); ?>/assets/img/bordes/cuerda.svg );">
       </div>
@@ -267,8 +265,7 @@
 
 <?php endwhile; wp_reset_query(); ?>
 
-          </div>
-
+              </div>
             </div>
           </div>
         </div>
