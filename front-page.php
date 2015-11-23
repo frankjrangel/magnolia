@@ -226,6 +226,11 @@
 
 <?php
   $red = get_field( 'red' );
+  if ( ( $red == 'twitter' ) || ( $red == 'instagram' ) ){
+    $red_name = '@Magnolia_Gift';
+  }elseif ( ( $red == 'facebook' ) || ( $red == 'pinterest' ) ) {
+    $red_name = 'Magnolia Gift';
+  }
   $red_link = get_field( $red , 30 );
   $foto = get_field( 'foto' );
   $titulo = get_field( 'titulo' );
@@ -242,7 +247,7 @@
           <a href="<?php echo $red_link;?>" target="_blank"
           style="background-image:
           url(<?php echo get_template_directory_uri(); ?>/assets/img/redes/<?php echo $red; ?>_logo.svg );">
-            <p><?php echo $red;?></p>
+            <p><?php echo $red_name;?></p>
           </a>
         </div>
         <?php if ( $foto != null ):?>
