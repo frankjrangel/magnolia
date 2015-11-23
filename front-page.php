@@ -202,6 +202,7 @@
     'order' => 'DESC'
   ) );
 ?>
+<?php if ( $loop_redes->have_posts() ):?>
 
 <div class="seccion banner-redes">
   <div class="row">
@@ -273,6 +274,7 @@
     </div>
   </div>
 </div>
+<?php endif; ?>
 
 
 <div class="seccion banner-giving_back">
