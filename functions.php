@@ -231,8 +231,8 @@ add_action( 'init', 'paso_post_type' );
 
 function slide_post_type() {
 	$labels = array(
-		'name'               => 'Slides',
-		'singular_name'      => 'Slide',
+		'name'               => 'Gente Magnolia',
+		'singular_name'      => 'Testimonio',
 		'all_items'          => 'Todos',
 		'add_new'            => 'Agregar Nuevo',
 		'add_new_item'       => 'Agregar Nuevo',
@@ -243,11 +243,11 @@ function slide_post_type() {
 		'not_found'          => 'No existe',
 		'not_found_in_trash' => 'No existe',
 		'parent_item_colon'  => ' ',
-		'menu_name'          => 'Slides'// o apunta a name
+		'menu_name'          => 'Gente Magnolia'// o apunta a name
 	);
 	$args = array(
 		'labels'        => $labels,
-		'description'   => 'Slides',
+		'description'   => 'Gente Magnolia',
 		'public'        => true,
 		'menu_position' => 6,
 		'menu_icon'     => 'dashicons-image-flip-horizontal',
