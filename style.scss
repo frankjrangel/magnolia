@@ -690,9 +690,6 @@ body {
 .banner-giving_back{
   margin-left: $gutter;
   margin-right: $gutter;
-  .fondo{
-    display: none;
-  }
   .giving_back{
     margin: 0 (-($gutter));
     background-repeat: no-repeat;
@@ -1343,8 +1340,8 @@ body {
       display: block;
       margin: 0 (-($gutter));
       background-repeat: no-repeat;
-      background-size: 125%;
-      background-position: 31% 67%;
+      background-size: 71%;
+      background-position: -10% 70%;
     }
     .giving_back{
       .foto{
@@ -1505,8 +1502,7 @@ body {
   }
   .banner-giving_back{
     .fondo{
-      background-size: 100%;
-      background-position: 50% 65%;
+      background-position: -10% 53%;
     }
   }
 

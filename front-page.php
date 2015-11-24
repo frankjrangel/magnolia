@@ -222,54 +222,54 @@
 
             <div class="row slides">
 
-<?php  while ( $loop_redes->have_posts() ) : $loop_redes->the_post(); ?>
+  <?php  while ( $loop_redes->have_posts() ) : $loop_redes->the_post(); ?>
 
-<?php
-  $red = get_field( 'red' );
-  if ( ( $red == 'twitter' ) || ( $red == 'instagram' ) ){
-    $red_name = '@Magnolia_Gift';
-  }elseif ( ( $red == 'facebook' ) || ( $red == 'pinterest' ) ) {
-    $red_name = 'Magnolia Gift';
-  }
-  $red_link = get_field( $red , 30 );
-  $foto = get_field( 'foto' );
-  $titulo = get_field( 'titulo' );
-  $texto = get_field( 'texto' );
-?>
+    <?php
+      $red = get_field( 'red' );
+      if ( ( $red == 'twitter' ) || ( $red == 'instagram' ) ){
+        $red_name = '@Magnolia_Gift';
+      }elseif ( ( $red == 'facebook' ) || ( $red == 'pinterest' ) ) {
+        $red_name = 'Magnolia Gift';
+      }
+      $red_link = get_field( $red , 30 );
+      $foto = get_field( 'foto' );
+      $titulo = get_field( 'titulo' );
+      $texto = get_field( 'texto' );
+    ?>
 
-  <?php if ( ( $foto != null ) || ( $titulo != null ) || ( $texto != null ) ):?>
-    <div class="col-xs-12 slide">
-      <div class="cuerda" style="background-image:
-      url(<?php echo get_template_directory_uri(); ?>/assets/img/bordes/cuerda.svg );">
-      </div>
-      <div class="post_red"  >
-        <div class="titulo_red">
-          <a href="<?php echo $red_link;?>" target="_blank"
-          style="background-image:
-          url(<?php echo get_template_directory_uri(); ?>/assets/img/redes/<?php echo $red; ?>_logo.svg );">
-            <p><?php echo $red_name;?></p>
-          </a>
+    <?php if ( ( $foto != null ) || ( $titulo != null ) || ( $texto != null ) ):?>
+      <div class="col-xs-12 slide">
+        <div class="cuerda" style="background-image:
+        url(<?php echo get_template_directory_uri(); ?>/assets/img/bordes/cuerda.svg );">
         </div>
-        <?php if ( $foto != null ):?>
-          <div class="foto"
-           style="background-image:url(<?php echo $foto; ?>);">
+        <div class="post_red"  >
+          <div class="titulo_red">
+            <a href="<?php echo $red_link;?>" target="_blank"
+            style="background-image:
+            url(<?php echo get_template_directory_uri(); ?>/assets/img/redes/<?php echo $red; ?>_logo.svg );">
+              <p><?php echo $red_name;?></p>
+            </a>
           </div>
-        <?php endif; ?>
-        <?php if ( ( $titulo != null ) || ( $texto != null ) ):?>
-          <div class="mensaje">
-            <?php if ( $titulo != null ):?>
-              <p class="titulo"><?php echo $titulo; ?></p>
-            <?php endif; ?>
-            <?php if ( $texto != null ):?>
-              <p class="texto"><?php echo $texto; ?></p>
-            <?php endif; ?>
-          </div>
-        <?php endif; ?>
+          <?php if ( $foto != null ):?>
+            <div class="foto"
+             style="background-image:url(<?php echo $foto; ?>);">
+            </div>
+          <?php endif; ?>
+          <?php if ( ( $titulo != null ) || ( $texto != null ) ):?>
+            <div class="mensaje">
+              <?php if ( $titulo != null ):?>
+                <p class="titulo"><?php echo $titulo; ?></p>
+              <?php endif; ?>
+              <?php if ( $texto != null ):?>
+                <p class="texto"><?php echo $texto; ?></p>
+              <?php endif; ?>
+            </div>
+          <?php endif; ?>
+        </div>
       </div>
-    </div>
-  <?php endif; ?>
+    <?php endif; ?>
 
-<?php endwhile; wp_reset_query(); ?>
+  <?php endwhile; wp_reset_query(); ?>
 
               </div>
             </div>
@@ -283,13 +283,9 @@
 
 
 <div class="seccion banner-giving_back">
-  <div class="row">
-    <div class="col-xs-12 col-sm-7 col-lg-8">
-      <div class="sh fondo" style="background-image:url(<?php echo $fondo_giving_back; ?>);" >
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-5 col-lg-4">
-      <div class="sh giving_back" style="background-image:url(<?php echo $fondo_giving_back; ?>);" >
+  <div class="row fondo" style="background-image:url(<?php echo $fondo_giving_back; ?>);">
+    <div class="col-xs-12 col-sm-5 col-sm-offset-7 col-lg-4 col-lg-offset-8">
+      <div class="giving_back" style="background-image:url(<?php echo $fondo_giving_back; ?>);" >
         <div class="foto" >
           <img class="img-responsive"
               src="<?php echo $foto_giving_back; ?>"  alt="Giving Back">
