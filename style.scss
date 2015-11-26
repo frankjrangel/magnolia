@@ -1,9 +1,9 @@
 /*
-Theme Name: Magnolia
+Theme Name: Magnolia Gift
 Theme URI: http://www.movatic.com/
-Author: Movatic
+Author: Movatic - Hector Mendez
 Author URI: http://www.movatic.com/
-Description: Tema personalizado de wordpress con catalogo de compra para Magnolia Gift
+Description: Tema personalizado de Wordpress con catalogo de compra para Magnolia Gift
 Version: 1.0
 */
 // ===== Tipografías ==========================================
@@ -87,19 +87,18 @@ $blanco: #fff;
 
 // ===== Escalas ==========================================
 $gutter: 15px;
-$baseFontsize: 12;  //  <------------
+$baseFontSize: 12;
+$baseLineHeight: 1.3;
 html {
-  font-size: $baseFontsize + px;
+  font-size: $baseFontSize + px;
 }
-$baseFontsize: $baseFontsize / 10;
-$baseLineheight: $baseFontsize * 1.3; //  <------------
 @mixin font-size($sizeValue){
-  font-size: ($sizeValue * $baseFontsize) + px;
+  font-size: ($sizeValue * $baseFontSize) + px;
   font-size: ($sizeValue) + rem;
 }
-@mixin line-height($Lineheight){
-  line-height: ($Lineheight * $baseLineheight) + px;
-  line-height: ($Lineheight) + rem;
+@mixin line-height($LineHeight){
+  line-height: ($LineHeight * $baseFontSize * $baseLineHeight) + px;
+  line-height: ($LineHeight  * $baseLineHeight) + rem;
 }
 $texto_menu: 1.29rem;
 $linea_altura_menu: 20px;
@@ -1007,19 +1006,17 @@ body {
 
   // ===== Escalas =====
 
-  $baseFontsize: 14;
+  $baseFontSize: 14;
   html {
-    font-size: $baseFontsize + px;
+    font-size: $baseFontSize + px;
   }
-  $baseFontsize: $baseFontsize / 10;
-  $baseLineheight: $baseFontsize * 1.3;
   @mixin font-size($sizeValue){
-    font-size: ($sizeValue * $baseFontsize) + px;
+    font-size: ($sizeValue * $baseFontSize) + px;
     font-size: ($sizeValue) + rem;
   }
-  @mixin line-height($Lineheight){
-    line-height: ($Lineheight * $baseLineheight) + px;
-    line-height: ($Lineheight) + rem;
+  @mixin line-height($LineHeight){
+    line-height: ($LineHeight * $baseFontSize * $baseLineHeight) + px;
+    line-height: ($LineHeight  * $baseLineHeight) + rem;
   }
 
   // ===== Elementos =====

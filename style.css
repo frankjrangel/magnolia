@@ -1,9 +1,9 @@
 /*
-Theme Name: Magnolia
+Theme Name: Magnolia Gift
 Theme URI: http://www.movatic.com/
-Author: Movatic
+Author: Movatic - Hector Mendez
 Author URI: http://www.movatic.com/
-Description: Tema personalizado de wordpress con catalogo de compra para Magnolia Gift
+Description: Tema personalizado de Wordpress con catalogo de compra para Magnolia Gift
 Version: 1.0
 */
 @font-face {
@@ -37,20 +37,20 @@ html {
 
 h1 {
   font-family: 'amatic_regular';
-  font-size: 4.8px;
+  font-size: 48px;
   font-size: 4rem;
   color: #ccc0af; }
 
 a, a:active, a:visited, a:hover, a:link, a:focus {
   text-decoration: none;
-  font-size: 1.2px;
+  font-size: 12px;
   font-size: 1rem;
   color: #474747; }
 
 p {
   color: #ccc0af;
   margin: 0;
-  font-size: 1.2px;
+  font-size: 12px;
   font-size: 1rem; }
 
 body {
@@ -794,19 +794,19 @@ body {
 
   h1 {
     font-family: 'amatic_regular';
-    font-size: 5.6px;
+    font-size: 56px;
     font-size: 4rem;
     color: #ccc0af; }
 
   a {
     text-decoration: none;
-    font-size: 1.4px;
+    font-size: 14px;
     font-size: 1rem; }
 
   p {
     color: #ccc0af;
     margin: 0;
-    font-size: 1.4px;
+    font-size: 14px;
     font-size: 1rem; }
 
   #slider .slide_button {
